@@ -6,7 +6,11 @@ layout: single
 author_profile: true
 ---
 
-I am a results-driven development professional with expertise in economic policy management, monitoring and evaluation (M&E), and program implementation. My academic background and work experience span across development research, financial operations, and performance monitoring. I bring a strong commitment to evidence-based decision-making, data-driven insights, and inclusive development. 
+**Welcome**
+
+I am Wanjivwa Sinkala, a development economist and operations professional driven by a deep commitment to inclusive growth, evidence-based decision-making, and institutional integrity. My academic background in **Economic Policy Management**, **Monitoring and Evaluation (M&E)**, and **Development Studies with Economic** supports a cross-cutting career in development research, financial operations, and program delivery.
+
+I work at the intersection of policy, systems, and practice ensuring that programs are not only well-designed but also effectively implemented, monitored, and refined. With hands-on experience across the development, retail, and banking sectors, I bring a results-oriented approach that emphasizes accountability, learning, and sustainable impact.
 
 My research Interests includes but not limited to;
 
