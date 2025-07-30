@@ -1,6 +1,6 @@
 ---
-permalink: /about me/
-title: "About Me"
+permalink: /aboutwanjivwa/
+title: "Aboutwanjivwa"
 ---
 
 **About Me**
