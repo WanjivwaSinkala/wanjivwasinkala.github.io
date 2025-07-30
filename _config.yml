@@ -60,7 +60,8 @@ plugins:
 author:
   name   : "Wanjivwa Sinkala"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Development economist and operations professional with experience across development, finance, and retail sectors. Skilled in monitoring and evaluation, compliance, and stakeholder engagement. I’m passionate about systems that drive accountability, performance, and inclusive development.
+."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
