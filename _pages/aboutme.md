@@ -7,7 +7,7 @@ I am Wanjivwa Sinkala, a Zambian development economist and operations profession
 
 Over the past seven years, I’ve worked at the intersection of development programming, operational systems, and risk management. My professional journey spans roles in the development, retail, and banking sectors, where I’ve strengthened administrative structures, enhanced internal controls, and ensured compliance across diverse programmatic and financial functions.
 
-From coordinating reforestation and climate resilience efforts with Plant A Million Zambia, Care International, and Standard Chartered Bank, to overseeing procurement and compliance in Zambia’s fast-paced retail environment, I have consistently contributed to initiatives that are both impact-driven and ethically grounded.
+From coordinating reforestation and climate resilience efforts with Plant A Million Zambia, in collaboration with Care International, and Standard Chartered Bank, to overseeing procurement and compliance in Zambia’s fast-paced retail environment, I have consistently contributed to initiatives that are both impact-driven and ethically grounded.
 
 My core competencies include process evaluation, risk mitigation, stakeholder coordination, and resource accountability. I have hands-on experience with Microsoft Office tools and foundational exposure to M&E systems and reporting platforms, which support my ability to deliver structured insights and performance tracking.
 
