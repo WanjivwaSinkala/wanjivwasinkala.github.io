@@ -19,7 +19,7 @@ _— Mahatma Gandhi_
 _“True development is not only achieved through policies and plans, but through the quiet discipline of systems that serve people with fairness and purpose.”_
 _- WS_
 
-**Education**
+## Education
 
 I hold the following academic qualifications:
 
