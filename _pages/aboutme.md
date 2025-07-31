@@ -19,10 +19,10 @@ _— Mahatma Gandhi_
 _“True development is not only achieved through policies and plans, but through the quiet discipline of systems that serve people with fairness and purpose.”_
 _- WS_
 
-## Education
+**Education**
 
 I hold the following academic qualifications:
 
-- **Postgraduate Diploma in Monitoring and Evaluation Methods** – University of Zambia, 2025  
-- **Master of Arts in Economic Policy Management** – University of Zambia, 2021  
-- **Bachelor of Arts in Development Studies with Economics** – University of Zambia, 2013
+- **Postgraduate Diploma in Monitoring and Evaluation Methods**, University of Zambia, 2025  
+- **Master of Arts in Economic Policy Management**, University of Zambia, 2021  
+- **Bachelor of Arts in Development Studies with Economics**, University of Zambia, 2013
