@@ -1,13 +1,11 @@
 ---
-title: "Posts by Experience"
+title: "Experience"
 layout: single
 permalink: /experience/
 author_profile: true
 ---
 
 
-
-### Experience
 
 ### Administration Manager – Plant A Million Zambia (PAMZ) *(July 2021 – November 2021)*
 - Coordinated procurement and logistics for reforestation projects with Care International and Standard Chartered Bank, enabling the distribution of over 1,600 tree seedlings.
