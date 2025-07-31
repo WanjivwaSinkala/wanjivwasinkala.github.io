@@ -6,15 +6,8 @@ layout: single
 author_profile: true
 ---
 
-**Welcome**
+**Welcome to my website**
 
-I am Wanjivwa Sinkala, a development economist and operations professional driven by a deep commitment to inclusive growth, evidence-based decision-making, and institutional integrity. My academic background in **Economic Policy Management**, **Monitoring and Evaluation (M&E)**, and **Development Studies with Economic** supports a cross-cutting career in development research, financial operations, and program delivery.
+I am a development economist with interests in economic policy, program evaluation, and financial inclusion. I hold a Master of Arts in Economic Policy Management and a Postgraduate Diploma in Monitoring and Evaluation methods (M&E) from the University of Zambia.
 
-I work at the intersection of policy, systems, and practice ensuring that programs are not only well-designed but also effectively implemented, monitored, and refined. With hands-on experience across the development, retail, and banking sectors, I bring a results-oriented approach that emphasizes accountability, learning, and sustainable impact.
-
-My research Interests includes but not limited to;
-
-- Economic policy and sustainable development
-- Monitoring and evaluation systems
-- Livelihood and market systems development
-- Financial inclusion and development finance
+Previously, I supported reforestation and institutional strengthening initiatives through collaborations with Care International, Standard Chartered Bank, and the Plant A Million Zambia campaign. My background includes roles across the development, retail, and banking sectors, with a focus on administration, operations, compliance, and systems improvement.
