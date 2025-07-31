@@ -1,9 +1,11 @@
 ---
 title: "Posts by Experience"
-layout: experience
+layout: single
 permalink: /experience/
 author_profile: true
 ---
+
+
 
 ### Experience
 
