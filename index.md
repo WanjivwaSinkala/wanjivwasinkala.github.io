@@ -22,9 +22,8 @@ author_profile: true
 
 **Welcome to my website**
 
-I’m **Wanjivwa Sinkala**, a development economist dedicated to advancing inclusive growth, institutional effectiveness, and evidence-based decision-making in Sub-Saharan Africa.
-
-Through my work in **economic policy**, **program evaluation**, and **financial inclusion**, I help organizations design and scale initiatives that deliver real impact.
+I’m Wanjivwa Sinkala, a development economist focused on advancing inclusive growth, strengthening institutions, and supporting evidence-informed decision-making.
+I collaborate with organizations and policymakers to shape effective strategies, assess impact, and deliver sustainable development outcomes.
 
 ---
 
@@ -32,17 +31,20 @@ Through my work in **economic policy**, **program evaluation**, and **financial 
 
 <div class="feature__item">
   <h3> Program Evaluation</h3>
-  <p>Applying monitoring and evaluation principles to strengthen project outcomes and learning.</p>
+  <p>Using evaluation as a tool for learning and improvement.
+I design and apply monitoring and evaluation frameworks that generate insights, support accountability, and drive better program performance.</p>
 </div>
 
 <div class="feature__item">
-  <h3> Policy & Economics</h3>
-  <p>Supporting policy dialogue and institutional reform grounded in economic analysis and inclusive growth strategies.</p>
+  <h3> Policy and Economics</h3>
+  <p>Bridging analysis and action.
+I provide economic policy guidance rooted in data, helping leaders craft solutions that foster equity, resilience, and long-term development.</p>
 </div>
 
 <div class="feature__item">
   <h3> Institutional Strengthening</h3>
-  <p>Partnering with governments, NGOs, and private sector actors to build capacity and operational resilience.</p>
+  <p>Empowering systems to work better.
+I work with public, private, and nonprofit institutions to build capacity, enhance operations, and improve their ability to deliver results.</p>
 </div>
 
 </div>
