@@ -60,9 +60,9 @@ plugins:
 author:
   name   : "Wanjivwa Sinkala"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "<div style="text-align: justify;">
-  Qualified in economic policy, M&E, and development studies, I’m driven to learn and apply systems that boost accountability and impact.</div>."
+  bio    : '<div style="text-align: justify;">Qualified in economic policy, M&E, and development studies, I’m driven to learn and apply systems that boost accountability and impact.</div>'
   location: "Zambia"
+
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
