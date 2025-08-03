@@ -3,7 +3,7 @@ permalink: /aboutme/
 title: "About Me"
 classes: wide
 ---
-<div style="text-align: center;">
+<div style="text-align: Justified;">
   
 I am Wanjivwa Sinkala, a Zambian development economist and operations professional dedicated to advancing institutional integrity, results-based practice, and inclusive growth. I hold a Master of Arts in Economic Policy Management, a Postgraduate Diploma in Monitoring and Evaluation Methods, and a Bachelor of Arts in Development Studies with Economics, all awarded by the University of Zambia.
 
@@ -25,7 +25,7 @@ _- WS_
 
 ## Education
 
-<div style="text-align: center;">
+<div style="text-align: Justified;">
   
 I hold the following academic qualifications:
 
