@@ -31,17 +31,17 @@ Through my work in **economic policy**, **program evaluation**, and **financial 
 <div class="feature__wrapper">
 
 <div class="feature__item">
-  <h3>🔍 Program Evaluation</h3>
+  <h3> Program Evaluation</h3>
   <p>Applying monitoring and evaluation principles to strengthen project outcomes and learning.</p>
 </div>
 
 <div class="feature__item">
-  <h3>📊 Policy & Economics</h3>
+  <h3> Policy & Economics</h3>
   <p>Supporting policy dialogue and institutional reform grounded in economic analysis and inclusive growth strategies.</p>
 </div>
 
 <div class="feature__item">
-  <h3>🤝 Institutional Strengthening</h3>
+  <h3> Institutional Strengthening</h3>
   <p>Partnering with governments, NGOs, and private sector actors to build capacity and operational resilience.</p>
 </div>
 
@@ -49,4 +49,7 @@ Through my work in **economic policy**, **program evaluation**, and **financial 
 
 ---
 
-📌 Learn more about my [professional journey](/aboutme/), [projects](/projects/), or [get in touch](/contact/).
+Learn more about my 
+[professional journey](/aboutme/), 
+[projects](/projects/), or 
+[get in touch](/contact/).
