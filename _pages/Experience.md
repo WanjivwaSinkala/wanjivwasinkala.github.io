@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 
-
+<div style="text-align: justify;">
 ### Administration Manager – Plant A Million Zambia (PAMZ) *(July 2021 – November 2021)*
 - Coordinated procurement and logistics for reforestation projects with Care International and Standard Chartered Bank, enabling the distribution of over 1,600 tree seedlings.
 - Managed inventory, procurement, and stakeholder communication to ensure timely project delivery.
@@ -37,3 +37,4 @@ author_profile: true
 ### Credit Risk Officer – Access Bank Zambia Limited *(September 2013 – March 2014)*
 - Evaluated credit applications and conducted collateral reviews to support prudent lending.
 - Prepared credit risk reports and drafted offer letters in alignment with regulatory standards.
+</div>
