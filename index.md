@@ -5,11 +5,11 @@
 layout: splash
 title: "Wanjivwa Sinkala"
 header:
-  overlay_color: "#000"
+  overlay_color: "#001f3f" # Navy tone"
   overlay_filter: "0.3"
   overlay_image: /assets/images/Homebackground_Pic.jpg
   actions:
-    - label: "About Me"
+   # - label: "About Me"
       url: "/aboutme/"
     - label: "Projects"
       url: "/projects/"
