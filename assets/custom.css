@@ -1,10 +1,11 @@
-/* assets/css/custom.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 body,
 h1, h2, h3, h4, h5, h6,
 .site-title, .site-subtitle,
-.page__title, .page__meta, .archive__item-title {
+.page__title, .page__meta,
+.archive__item-title, .masthead,
+.author__content, .sidebar, .page__lead,
+.archive__item-excerpt {
   font-family: 'Inter', sans-serif !important;
 }
