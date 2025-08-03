@@ -1,6 +1,6 @@
 ---
 title: "Experience"
-layout: splash
+layout: single
 permalink: /experience/
 author_profile: true
 ---
