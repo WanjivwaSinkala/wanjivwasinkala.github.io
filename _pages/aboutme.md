@@ -23,15 +23,15 @@ My core competencies include process evaluation, risk mitigation, stakeholder co
 I approach development with the belief that impact must be measurable, sustainable, and people centered. Whether I am reviewing operational frameworks or supporting frontline implementation, my focus remains clear: to enable systems that are transparent, responsive, and purpose-driven.
 </p>
 
-<p style="text-align: justify;">
-_“The best way to find yourself is to lose yourself in the service of others.”_
-_— Mahatma Gandhi_
+_<p style="text-align: justify;">
+“The best way to find yourself is to lose yourself in the service of others.”_
 </p>
+_- Mahatma Gandhi_
 
-<p style="text-align: justify;">
-_“True development is not only achieved through policies and plans, but through the quiet discipline of systems that serve people with fairness and purpose.”_
-_- WS_
+_<p style="text-align: justify;">
+“True development is not only achieved through policies and plans, but through the quiet discipline of systems that serve people with fairness and purpose.”_
 </p>
+- WS
 
 ## Education
 
