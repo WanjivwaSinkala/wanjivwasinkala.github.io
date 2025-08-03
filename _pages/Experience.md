@@ -5,9 +5,8 @@ permalink: /experience/
 author_profile: true
 ---
 
-<div style="text-align: justify; line-height: 1.6;">
-<strong>Administration Manager</strong> – Plant A Million Zambia (PAMZ) <span style="float: right;">*(July 2021 – November 2021)*</span>
-</div>
+
+<strong>Administration Manager</strong> – Plant A Million Zambia (PAMZ) *(July 2021 – November 2021)*
 
 <div style="text-align: justify; line-height: 1.6;"> 
 - Coordinated procurement and logistics for reforestation projects with Care International and Standard Chartered Bank, enabling the distribution of over 1,600 tree seedlings.
@@ -19,9 +18,8 @@ author_profile: true
 - Facilitated internal and external reporting, contributing to collaboration and learning across project partners.
 </div>
 <br>
-<div style="text-align: justify; line-height: 1.6;">
-<strong>Administration Manager (Rehired)</strong> – Edcon (T/A Jet Supermarket Zambia) <span style="float: right;">*(March 2018 – October 2020)*</span>
-</div>
+ 
+<strong>Administration Manager (Rehired)</strong> – Edcon (T/A Jet Supermarket Zambia) *(March 2018 – October 2020)*
   
 <div style="text-align: justify; line-height: 1.6;">  
 - Oversaw administrative and financial operations for a high-volume branch, managing a team of 20+.
@@ -38,7 +36,7 @@ author_profile: true
 </div>
 <br>
 
-<strong>Risk Manager</strong> – Masscash Holdings (Pty) Ltd (T/A Jumbo Wholesale Zambia Ltd) <span style="float: right;">*(June 2017 – March 2018)*</span>
+<strong>Risk Manager</strong> – Masscash Holdings (Pty) Ltd (T/A Jumbo Wholesale Zambia Ltd) *(June 2017 – March 2018)* 
 
 
 <div style="text-align: justify; line-height: 1.6;">  
@@ -55,7 +53,7 @@ author_profile: true
 </div>
 <br>
 
-<strong>Administration Manager</strong> – Edcon (T/A Jet Supermarket Zambia) <span style="float: right;">*(March 2015 – May 2017)*</span>
+<strong>Administration Manager</strong> – Edcon (T/A Jet Supermarket Zambia) *(March 2015 – May 2017)* 
 
 <div style="text-align: justify; line-height: 1.6;">  
 - Directed store-level operations with a focus on profitability and procedural integrity.
@@ -71,7 +69,7 @@ author_profile: true
 </div>
 <br>
 
-<strong>Accounts Services Clerk</strong> – Standard Chartered Bank (Zambia) Plc <span style="float: right;">*(September 2014 – December 2014)*</span>
+<strong>Accounts Services Clerk</strong> – Standard Chartered Bank (Zambia) Plc *(September 2014 – December 2014)* 
 
 <div style="text-align: justify; line-height: 1.6;">  
 - Conducted quality assurance on compliance records and maintained customer onboarding files.
@@ -81,7 +79,7 @@ author_profile: true
 </div>
 <br>
 
-<strong>Credit Risk Officer</strong> – Access Bank Zambia Limited <span style="float: right;">*(September 2013 – March 2014)*</span>
+<strong>Credit Risk Officer</strong> – Access Bank Zambia Limited  *(September 2013 – March 2014)* 
 
 <div style="text-align: justify; line-height: 1.6;">  
 - Evaluated credit applications and conducted collateral reviews to support prudent lending.
