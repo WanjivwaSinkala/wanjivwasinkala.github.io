@@ -22,8 +22,9 @@ author_profile: true
 
 **Welcome to my website**
 
-I’m Wanjivwa Sinkala, a development economist focused on advancing inclusive growth, strengthening institutions, and supporting evidence-informed decision-making.
-I collaborate with organizations and policymakers to shape effective strategies, assess impact, and deliver sustainable development outcomes.
+<div style="text-align: justify;">
+  I’m Wanjivwa Sinkala, a development economist focused on advancing inclusive growth, strengthening institutions, and supporting evidence-informed decision-making. I collaborate with organizations and policymakers to shape effective strategies, assess impact, and deliver sustainable development outcomes.
+</div>
 
 ---
 
