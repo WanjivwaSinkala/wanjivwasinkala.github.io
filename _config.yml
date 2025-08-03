@@ -60,7 +60,8 @@ plugins:
 author:
   name   : "Wanjivwa Sinkala"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "I hold academic credentials in economic policy, monitoring and evaluation, and development studies. I apply systems-driven approaches to strengthen institutions, improve compliance, and promote transparency across development, financial, and administrative sectors."
+  bio    : "<div style="text-align: justify;">
+  Qualified in economic policy, M&E, and development studies, I’m driven to learn and apply systems that boost accountability and impact.</div>."
   location: "Zambia"
   links:
     - label: "Website"
