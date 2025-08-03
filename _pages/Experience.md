@@ -8,10 +8,15 @@ author_profile: true
 <div style="text-align: justify; line-height: 1.6;">
 
 ### <strong>Administration Manager</strong> – Plant A Million Zambia (PAMZ) <span style="float: right;">*(July 2021 – November 2021)*</span>
+<div style="text-align: justify; line-height: 1.6;">
 - Coordinated procurement and logistics for reforestation projects with Care International and Standard Chartered Bank, enabling the distribution of over 1,600 tree seedlings.
+  </div>
+  <div style="text-align: justify; line-height: 1.6;">
 - Managed inventory, procurement, and stakeholder communication to ensure timely project delivery.
+</div>
+<div style="text-align: justify; line-height: 1.6;">
 - Facilitated internal and external reporting, contributing to collaboration and learning across project partners.
-
+</div>
 <br>
 
 ### <strong>Administration Manager (Rehired)</strong> – Edcon (T/A Jet Supermarket Zambia) <span style="float: right;">*(March 2018 – October 2020)*</span>
