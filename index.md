@@ -5,7 +5,7 @@
 layout: splash
 title: "Wanjivwa Sinkala"
 header:
-  overlay_color: "#001f3f" # Navy tone"
+  overlay_color: "#001f3f" # Navy tone
   overlay_filter: "0.3"
   overlay_image: /assets/images/Homebackground_Pic.jpg
   actions:
