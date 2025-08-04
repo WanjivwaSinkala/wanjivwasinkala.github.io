@@ -5,8 +5,8 @@
 layout: splash
 title: "Wanjivwa Sinkala"
 header:
-  overlay_color: "#d4af37" # Navy tone
-  overlay_filter: "0.3"
+  overlay_color: "#001f3f"  # Deep navy for readability
+  overlay_filter: "0.5"
   overlay_image: /assets/images/zambia_pic.png
   actions:
     - label: "About Me"
@@ -53,9 +53,7 @@ I work with public, private, and nonprofit institutions to build capacity, enhan
 ---
 
 <div style="text-align: center; font-weight: 500; font-size: 1.1rem; color: #003366; margin-top: 2em;">
-  Learn more about my 
-  <a href="/aboutme/" style="color: #d4af37; text-decoration: underline;">professional journey</a>, 
-  <a href="/projects/" style="color: #d4af37; text-decoration: underline;">projects</a>, or 
-  <a href="/contact/" style="color: #d4af37; text-decoration: underline;">get in touch</a>.
+  Explore my <a href="/aboutme/" style="color: #d4af37;">story</a>, view my <a href="/projects/" style="color: #d4af37;">work</a>, or <a href="/contact/" style="color: #d4af37;">connect with me</a>.
 </div>
+
 
