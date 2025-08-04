@@ -47,6 +47,15 @@ I provide economic policy guidance rooted in data, helping leaders craft solutio
 I work with public, private, and nonprofit institutions to build capacity, enhance operations, and improve their ability to deliver results.</p>
 </div>
 
+---
+
+**Professional Experience**
+    <div style="max-width: 900px; margin: 3em auto; color: #222;">
+      <h2 style="color: #003366;">Professional Experience</h2>
+      <p>With over seven years’ experience across development, banking, and retail, I’ve partnered with organizations like Edcon Zambia, Standard Chartered Bank, and Access Bank to drive results and impact.</p>
+      <p><a href="/aboutme/" style="color: #d4af37; font-weight: bold;">Read more about my professional journey →</a></p>
+    </div>
+
 </div>
 
 ---
