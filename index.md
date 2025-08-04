@@ -49,7 +49,7 @@ I work with public, private, and nonprofit institutions to build capacity, enhan
 
 ---
 
-**Professional Experience**
+**
     <div style="max-width: 900px; margin: 3em auto; color: #222;">
       <h2 style="color: #003366;">Professional Experience</h2>
       <p>With over seven years’ experience across development, banking, and retail, I’ve partnered with organizations like Edcon Zambia, Standard Chartered Bank, and Access Bank to drive results and impact.</p>
