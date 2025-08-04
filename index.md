@@ -6,7 +6,7 @@ layout: splash
 title: "Wanjivwa Sinkala"
 header:
   overlay_image: /assets/images/zambia_pic.png
-overlay_filter: "rgba(0,31,63,0.6)"  # Proper filter syntax
+  overlay_filter: rgba(0,31,63,0.6)
   actions:
     - label: "About Me"
       url: "/aboutme/"
