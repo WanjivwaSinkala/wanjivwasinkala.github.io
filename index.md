@@ -52,7 +52,10 @@ I work with public, private, and nonprofit institutions to build capacity, enhan
 
 ---
 
-Learn more about my 
-[professional journey](/aboutme/), 
-[projects](/projects/), or 
-[get in touch](/contact/).
+<div style="text-align: center; font-weight: 500; font-size: 1.1rem; color: #003366; margin-top: 2em;">
+  Learn more about my 
+  <a href="/aboutme/" style="color: #d4af37; text-decoration: underline;">professional journey</a>, 
+  <a href="/projects/" style="color: #d4af37; text-decoration: underline;">projects</a>, or 
+  <a href="/contact/" style="color: #d4af37; text-decoration: underline;">get in touch</a>.
+</div>
+
