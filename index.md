@@ -37,7 +37,7 @@ author_profile: true
   </div>
 </div>
 
----
+<hr style="max-width: 900px; margin: 3em auto; border-color: #d4af37; opacity: 0.3;" />
 
 <!-- Professional Experience Teaser -->
 <div style="max-width: 900px; margin: 0 auto; color: #222;">
