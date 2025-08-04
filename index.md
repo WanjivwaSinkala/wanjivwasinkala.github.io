@@ -19,33 +19,37 @@ permalink: /
 author_profile: true
 ---
 
-<!-- Welcome Section -->
-<div style="max-width: 900px; margin: 0 auto; display: flex; gap: 2rem; justify-content: space-between; flex-wrap: wrap;">
-  <div style="flex: 1 1 30%; min-width: 250px; background: #f9f9f9; padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-    <h3 style="color: #003366; margin-bottom: 0.5em;">Program Evaluation</h3>
-    <p>I design and apply monitoring and evaluation frameworks that generate insights, support accountability, and drive program improvement.</p>
-  </div>
+**Welcome to my website**
 
-  <div style="flex: 1 1 30%; min-width: 250px; background: #f9f9f9; padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-    <h3 style="color: #003366; margin-bottom: 0.5em;">Policy and Economics</h3>
-    <p>I provide economic policy guidance rooted in data, helping leaders craft solutions that foster equity, resilience, and long-term development.</p>
-  </div>
-
-  <div style="flex: 1 1 30%; min-width: 250px; background: #f9f9f9; padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-    <h3 style="color: #003366; margin-bottom: 0.5em;">Institutional Strengthening</h3>
-    <p>I work with public, private, and nonprofit institutions to build capacity, enhance operations, and improve their ability to deliver results.</p>
-  </div>
+<div style="text-align: justify;">
+  I’m Wanjivwa Sinkala, a development economist focused on advancing inclusive growth, strengthening institutions, and supporting evidence-informed decision-making. I collaborate with organizations and policymakers to shape effective strategies, assess impact, and deliver sustainable development outcomes.
 </div>
 
-<!-- Horizontal rule (instead of ---) -->
-<hr style="max-width: 900px; margin: 3em auto; border-color: #d4af37; opacity: 0.3;" />
+---
 
-<!-- Professional Experience Teaser -->
-<div style="max-width: 900px; margin: 0 auto; color: #222;">
-  <h2 style="color: #003366; margin-bottom: 0.5em;">Professional Experience</h2>
-  <p>With over seven years’ experience across development, banking, and retail, I’ve partnered with organizations like Edcon Zambia, Standard Chartered Bank, and Access Bank to drive results and impact.</p>
-  <p><a href="/aboutme/" style="color: #d4af37; font-weight: 600; text-decoration: none;">Read more about my professional journey →</a></p>
+<div class="feature__wrapper">
+
+<div class="feature__item">
+  <h3> Program Evaluation</h3>
+  <p>Using evaluation as a tool for learning and improvement.
+I design and apply monitoring and evaluation frameworks that generate insights, support accountability, and drive better program performance.</p>
 </div>
+
+<div class="feature__item">
+  <h3> Policy and Economics</h3>
+  <p>Bridging analysis and action.
+I provide economic policy guidance rooted in data, helping leaders craft solutions that foster equity, resilience, and long-term development.</p>
+</div>
+
+<div class="feature__item">
+  <h3> Institutional Strengthening</h3>
+  <p>Empowering systems to work better.
+I work with public, private, and nonprofit institutions to build capacity, enhance operations, and improve their ability to deliver results.</p>
+</div>
+
+</div>
+
+---
 
 <!-- Footer Call to Action -->
 <div style="max-width: 900px; margin: 4em auto 3em auto; text-align: center; font-weight: 500; font-size: 1.1rem; color: #003366;">
