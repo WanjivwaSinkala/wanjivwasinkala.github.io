@@ -5,7 +5,6 @@
 layout: splash
 title: "Wanjivwa Sinkala"
 header:
-  overlay_color: "#001f3f"  # Deep navy for readability
   overlay_image: /assets/images/zambia_pic.png
 overlay_filter: "linear-gradient(rgba(0,31,63,0.6), rgba(0,31,63,0.6))"
   actions:
