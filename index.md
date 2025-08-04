@@ -7,7 +7,7 @@ title: "Wanjivwa Sinkala"
 header:
   overlay_color: "#d4af37" # Navy tone
   overlay_filter: "0.3"
-  overlay_image: /assets/images/zambia.png
+  overlay_image: /assets/images/zambia_pic.png
   actions:
     - label: "About Me"
       url: "/aboutme/"
