@@ -51,8 +51,7 @@ I work with public, private, and nonprofit institutions to build capacity, enhan
       <p>With over seven years’ experience across development, banking, and retail, I’ve partnered with organizations like Edcon Zambia, Standard Chartered Bank, and Access Bank to drive results and impact.</p>
       <p><a href="/aboutme/" style="color: #d4af37; font-weight: bold;">Read more about my professional journey →</a></p>
     </div>
-
 <!-- Footer Call to Action -->
-<div style="max-width: 900px; margin: 4em auto 3em auto; text-align: center; font-weight: 500; font-size: 1.1rem; color: #003366;">
+<div style="max-width: 900px; margin: 3em auto 2em auto; text-align: center; font-weight: 500; font-size: 1.1rem; color: #003366;">
   Explore my <a href="/aboutme/" style="color: #d4af37; text-decoration: none;">story</a>, view my <a href="/projects/" style="color: #d4af37; text-decoration: none;">work</a>, or <a href="/contact/" style="color: #d4af37; text-decoration: none;">connect with me</a>.
 </div>
