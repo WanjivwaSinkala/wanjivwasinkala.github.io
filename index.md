@@ -5,145 +5,118 @@
 ---
 layout: splash
 title: "Wanjivwa Sinkala"
+header:
+  overlay_image: /assets/images/zambia_pic.png
+  overlay_filter: rgba(0,31,63,0.6)
+  actions:
+    - label: "About Me"
+      url: "/aboutme/"
+    - label: "Projects"
+      url: "/projects/"
+    - label: "Download CV"
+      url: "/assets/Wanjivwa_Sinkala_CV.pdf"
 excerpt: "Development Economist | M&E Practitioner | Policy Analyst"
 permalink: /
+author_profile: true
 ---
 
 <style>
-  /* Background image container */
-  .page-bg {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    overflow: hidden;
-    z-index: -2;
+  .feature__item {
+    background: rgba(212, 175, 55, 0.1);
+    border-left: 5px solid #d4af37;
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
-  .page-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
-  }
-
-  /* Overlay to darken background */
-  .page-overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: -1;
-  }
-
-  main.page-content {
-    position: relative;
-    max-width: 960px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-    color: #eee;
-    z-index: 1;
-  }
-
-  h2 {
-    text-align: center;
-    color: #f39c12;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 1.8rem;
-  }
-
-  .card {
-    background: rgba(0,0,0,0.6);
-    border-radius: 12px;
-    padding: 2rem 1.5rem;
-    box-shadow: 0 6px 15px rgba(243, 156, 18, 0.3);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  .card:hover,
-  .card:focus {
-    outline: none;
-    transform: translateY(-7px);
-    box-shadow: 0 14px 28px rgba(243, 156, 18, 0.6);
-  }
-  .card h3 {
-    color: #f39c12;
-    margin-top: 0;
-    margin-bottom: 0.6rem;
+  .feature__item h3 {
+    color: #d4af37;
+    margin-bottom: 0.5rem;
     font-weight: 700;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
   }
-  .card p {
-    font-size: 1rem;
+  .feature__item p {
+    color: #222;
     line-height: 1.5;
-    color: #eee;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
   }
-
-  .experience {
-    margin-top: 4rem;
-    text-align: center;
+  /* Professional Experience section */
+  .professional-experience {
+    max-width: 900px;
+    margin: 3rem auto;
+    color: #222;
   }
-  .experience p {
-    font-size: 1.1rem;
-    max-width: 650px;
-    margin: 0.5rem auto 1.5rem auto;
+  .professional-experience h2 {
+    color: #d4af37;
+    margin-bottom: 1rem;
+  }
+  .professional-experience p {
     line-height: 1.6;
-    color: #f39c12dd;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    font-size: 1.1rem;
   }
-  a.btn-link {
-    color: #f39c12;
+  .professional-experience a {
+    color: #d4af37;
     font-weight: 700;
     text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
   }
-  a.btn-link:hover,
-  a.btn-link:focus {
-    border-color: #f39c12;
-    outline: none;
+  .professional-experience a:hover,
+  .professional-experience a:focus {
+    text-decoration: underline;
   }
-
-  @media (max-width: 600px) {
-    main.page-content {
-      margin: 2rem 1rem;
+  /* Footer call to action */
+  .footer-cta {
+    max-width: 900px;
+    margin: 3rem auto 2rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #003366;
+  }
+  .footer-cta a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .footer-cta a:hover,
+  .footer-cta a:focus {
+    text-decoration: underline;
+  }
+  /* Responsive text justification */
+  @media (max-width: 700px) {
+    div[style*="text-align: justify"] {
+      text-align: left !important;
     }
   }
 </style>
 
-<div class="page-bg" aria-hidden="true" role="img" aria-label="Forest background">
-  <img src="https://cdn.videvo.net/videvo_files/video/free/2019-07/small_watermarked/190624_01_Drone_Forest_04_preview.jpg" alt="" />
+<p><strong>Welcome to my website</strong></p>
+
+<div style="text-align: justify;">
+  I’m Wanjivwa Sinkala, a development economist focused on advancing inclusive growth, strengthening institutions, and supporting evidence-informed decision-making. I collaborate with organizations and policymakers to shape effective strategies, assess impact, and deliver sustainable development outcomes.
 </div>
-<div class="page-overlay"></div>
 
-<main class="page-content" role="main" tabindex="-1">
+<hr />
 
-  <h2>My Expertise Areas</h2>
-  <div class="grid" role="list">
-    <article class="card" role="listitem" tabindex="0" aria-labelledby="evalTitle">
-      <h3 id="evalTitle">Program Evaluation</h3>
-      <p>I design monitoring and evaluation frameworks to ensure learning, accountability, and improved program outcomes.</p>
-    </article>
+<div class="feature__item">
+  <h3>Program Evaluation</h3>
+  <p>Using evaluation as a tool for learning and improvement. I design and apply monitoring and evaluation frameworks that generate insights, support accountability, and drive better program performance.</p>
+</div>
 
-    <article class="card" role="listitem" tabindex="0" aria-labelledby="policyTitle">
-      <h3 id="policyTitle">Policy &amp; Economics</h3>
-      <p>I advise on policies that promote equitable and sustainable development, backed by rigorous data analysis.</p>
-    </article>
+<div class="feature__item">
+  <h3>Policy and Economics</h3>
+  <p>Bridging analysis and action. I provide economic policy guidance rooted in data, helping leaders craft solutions that foster equity, resilience, and long-term development.</p>
+</div>
 
-    <article class="card" role="listitem" tabindex="0" aria-labelledby="institutionTitle">
-      <h3 id="institutionTitle">Institutional Strengthening</h3>
-      <p>I collaborate with institutions across sectors to enhance capacity, efficiency, and impact delivery.</p>
-    </article>
-  </div>
+<div class="feature__item">
+  <h3>Institutional Strengthening</h3>
+  <p>Empowering systems to work better. I work with public, private, and nonprofit institutions to build capacity, enhance operations, and improve their ability to deliver results.</p>
+</div>
 
-  <section class="experience" aria-label="Professional Experience">
-    <p>With over seven years working with organizations including Edcon Zambia, Standard Chartered Bank, and Access Bank, I help drive meaningful change.</p>
-    <p><a href="/aboutme/" class="btn-link">Discover my journey &rarr;</a></p>
-  </section>
+<div class="professional-experience">
+  <h2>Professional Experience</h2>
+  <p>With over seven years’ experience across development, banking, and retail, I’ve partnered with organizations like Edcon Zambia, Standard Chartered Bank, and Access Bank to drive results and impact.</p>
+  <p><a href="/aboutme/">Read more about my professional journey →</a></p>
+</div>
 
-</main>
+<div class="footer-cta">
+  Explore my <a href="/aboutme/">story</a>, view my <a href="/projects/">work</a>, or <a href="/contact/">connect with me</a>.
+</div>
 
