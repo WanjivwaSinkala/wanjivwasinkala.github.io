@@ -1,4 +1,39 @@
-/* Homepage feature items styling */
+/* Reset basics */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F4F6F8;
+  color: #222;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Links */
+a {
+  color: #d4af37; /* Gold */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #bfa233; /* Darker gold */
+  outline: none;
+  text-decoration: underline;
+}
+
+/* Container for main content */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Feature items styling */
 .feature__item {
   background: white;
   padding: 1.5rem 2rem;
@@ -10,7 +45,7 @@
 }
 
 .feature__item h3 {
-  color: #003366;
+  color: #003366; /* Navy */
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 700;
@@ -22,23 +57,49 @@
   margin: 0;
 }
 
-/* Responsive text container */
+/* Professional Experience Section */
+h2 {
+  color: #d4af37; /* Gold */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Footer call-to-action */
+footer.site-footer {
+  background-color: #003366; /* Navy */
+  color: #d4af37; /* Gold */
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
 @media (max-width: 640px) {
-  .feature__item, div[style*="max-width: 900px"] {
+  .feature__item,
+  .container {
     margin-left: 1rem !important;
     margin-right: 1rem !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
+
+  .feature__item {
+    padding: 1rem 1.25rem;
+  }
 }
 
-/* Link hover effects */
-a:hover, a:focus {
-  color: #bfa233;
-  outline: none;
-}
-
-/* Underline links on focus for accessibility */
-a:focus {
-  text-decoration: underline;
+/* Accessibility focus for skip link */
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  background: #d4af37;
+  color: #003366;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 101;
 }
