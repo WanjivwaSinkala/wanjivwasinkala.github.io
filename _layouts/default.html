@@ -3,28 +3,35 @@
   <head>
     {% include head.html %}
     <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header role="banner">
-      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-      <nav role="navigation" aria-label="Main navigation">
-        <ul>
-          <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
-        </ul>
-      </nav>
+    <header role="banner" class="site-header">
+      <div class="container">
+        <h1 class="site-title">
+          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        </h1>
+        <nav role="navigation" aria-label="Main navigation" class="site-nav">
+          <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main role="main" id="main-content">
+    <main role="main" id="main-content" class="container">
       {{ content }}
     </main>
 
-    <footer role="contentinfo">
-      <p>&copy; {{ site.time | date: '%Y' }} Wanjivwa Sinkala</p>
+    <footer role="contentinfo" class="site-footer">
+      <div class="container">
+        <p>&copy; {{ site.time | date: '%Y' }} Wanjivwa Sinkala</p>
+      </div>
     </footer>
   </body>
 </html>
