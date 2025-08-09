@@ -7,9 +7,11 @@ author_profile: true
 
 <section class="experience-list">
 
+---
+
 ### Administration Manager  
 **Plant A Million Zambia (PAMZ)**  
-<em>July 2021 – November 2021</em>
+<em>July 2021 – November 2021</em>  
 <ul>
   <li>Coordinated procurement and logistics for reforestation projects with Care International and Standard Chartered Bank, enabling the distribution of over 1,600 tree seedlings.</li>
   <li>Managed inventory, procurement, and stakeholder communication to ensure timely project delivery.</li>
@@ -20,7 +22,7 @@ author_profile: true
 
 ### Administration Manager (Rehired)  
 **Edcon (T/A Jet Supermarket Zambia)**  
-<em>March 2018 – October 2020</em>
+<em>March 2018 – October 2020</em>  
 <ul>
   <li>Oversaw administrative and financial operations for a high-volume branch, managing a team of 20+.</li>
   <li>Conducted internal audits and verified documentation to uphold compliance and quality standards.</li>
@@ -32,7 +34,7 @@ author_profile: true
 
 ### Risk Manager  
 **Masscash Holdings (Pty) Ltd (T/A Jumbo Wholesale Zambia Ltd)**  
-<em>June 2017 – March 2018</em>
+<em>June 2017 – March 2018</em>  
 <ul>
   <li>Established foundational risk controls and compliance systems during the company’s market entry.</li>
   <li>Led contractor engagement, store setup, and infrastructure rollout.</li>
@@ -44,7 +46,7 @@ author_profile: true
 
 ### Administration Manager  
 **Edcon (T/A Jet Supermarket Zambia)**  
-<em>March 2015 – May 2017</em>
+<em>March 2015 – May 2017</em>  
 <ul>
   <li>Directed store-level operations with a focus on profitability and procedural integrity.</li>
   <li>Led cost-reduction initiatives through variance analysis, improving margins by 8%.</li>
@@ -56,7 +58,7 @@ author_profile: true
 
 ### Accounts Services Clerk  
 **Standard Chartered Bank (Zambia) Plc**  
-<em>September 2014 – December 2014</em>
+<em>September 2014 – December 2014</em>  
 <ul>
   <li>Conducted quality assurance on compliance records and maintained customer onboarding files.</li>
   <li>Updated static data and flagged anomalies to mitigate operational risk.</li>
@@ -66,7 +68,7 @@ author_profile: true
 
 ### Credit Risk Officer  
 **Access Bank Zambia Limited**  
-<em>September 2013 – March 2014</em>
+<em>September 2013 – March 2014</em>  
 <ul>
   <li>Evaluated credit applications and conducted collateral reviews to support prudent lending.</li>
   <li>Prepared credit risk reports and drafted offer letters in alignment with regulatory standards.</li>
