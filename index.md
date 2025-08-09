@@ -6,7 +6,7 @@
 layout: splash
 title: "Wanjivwa Sinkala"
 header:
-  overlay_image: /assets/images/zambia_pic.png
+  overlay_image: /assets/images/background_desk.jpg
   overlay_filter: rgba(0,31,63,0.6)
   actions:
     - label: "About Me"
