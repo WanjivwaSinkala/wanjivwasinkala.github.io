@@ -5,7 +5,7 @@ permalink: /experience/
 author_profile: true
 ---
 
-<div style="text-align: justify; line-height: 1.3;">
+<div class="experience-background" style="text-align: justify; line-height: 1.3;">
 
 <strong>Administration Manager</strong> – Plant A Million Zambia (PAMZ) <em>(July 2021 – November 2021)</em>
 <ul>
