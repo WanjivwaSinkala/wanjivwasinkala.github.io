@@ -5,15 +5,25 @@
     <title>{{ page.title | default: site.title }}</title>
   </head>
   <body>
-    <header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
       <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
+    <main role="main" id="main-content">
       {{ content }}
     </main>
 
-    <footer>
+    <footer role="contentinfo">
       <p>&copy; {{ site.time | date: '%Y' }} Wanjivwa Sinkala</p>
     </footer>
   </body>
