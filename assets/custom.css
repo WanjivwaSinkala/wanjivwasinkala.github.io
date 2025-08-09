@@ -9,3 +9,22 @@ h1, h2, h3, h4, h5, h6,
 .archive__item-excerpt {
   font-family: 'Inter', sans-serif !important;
 }
+
+.experience-background {
+  background: url('/assets/images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-bottom: 2em;
+  /* Optional overlay for better readability */
+  box-shadow: 0 0 0 100vmax rgba(255,255,255,0.7) inset;
+}
+
+.experience-background ul,
+.experience-background strong,
+.experience-background em {
+  background: rgba(255,255,255,0.85);
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
