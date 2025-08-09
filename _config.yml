@@ -9,26 +9,38 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: "Wanjivwa Sinkala Portfolio"
-email: ""
-description: >-
-  Experienced administration and risk manager with a passion for sustainability, financial accountability, and development impact.
-twitter_username: ""
-github_username: "wanjivwasinkala"
+title: Wanjivwa Sinkala Portfolio
+email:
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+twitter_username: username
+github_username: username
 minimal_mistakes_skin: neon
 search: true
+
+# --- ADD THIS SECTION ---
+navigation:
+  - title: "Home"
+    url: /
+  - title: "Projects"
+    url: /projects/
+  - title: "Experience"
+    url: /experience/
+  - title: "About"
+    url: /about/
+  - title: "Contact"
+    url: /contact/
+# --- END OF SECTION ---
 
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
-paginate: 5
+paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: Africa/Lusaka
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
@@ -47,10 +59,14 @@ author:
   avatar : "/assets/images/wanji_pic.jpg"
   bio    : '<div style="text-align: justify;">Qualified in economic policy, M&E, and development studies, I’m driven to learn and apply systems that boost accountability and impact.</div>'
   location: "Zambia"
+
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://wanjivwasinkala.github.io"
+  #  - label: "Twitter"
+   #   icon: "fab fa-fw fa-twitter-square"
+   #   url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/wanjivwasinkala"
@@ -60,9 +76,12 @@ author:
 
 footer:
   links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/wanjivwasinkala"
+      url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
@@ -78,14 +97,15 @@ defaults:
       comments: true
       share: true
       related: true
-      css: "assets/css/custom.css"
+      css: "assets/custom.css"
+  # _pages
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
       author_profile: true
-      css: "assets/css/custom.css"
+      css: "assets/custom.css"
 
 category_archive:
   type: liquid
