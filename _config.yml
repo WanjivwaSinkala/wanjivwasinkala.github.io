@@ -9,6 +9,10 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 title: Wanjivwa Sinkala Portfolio
 email:
 description: >- # this means to ignore newlines until "baseurl:"
@@ -20,23 +24,10 @@ github_username: username
 minimal_mistakes_skin: neon
 search: true
 
-# --- ADD THIS SECTION ---
-navigation:
-  - title: "Home"
-    url: /
-  - title: "Projects"
-    url: /projects/
-  - title: "Experience"
-    url: /experience/
-  - title: "About"
-    url: /about/
-  - title: "Contact"
-    url: /contact/
-# --- END OF SECTION ---
-
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
+# Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
@@ -44,6 +35,18 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
 
 # Plugins (previously gems:)
 plugins:
