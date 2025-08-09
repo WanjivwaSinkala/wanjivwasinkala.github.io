@@ -5,7 +5,17 @@ permalink: /experience/
 author_profile: true
 ---
 
-<div style="text-align: justify; line-height: 1.3;">
+<div style="
+  background-image: url('/assets/images/background_desk-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+">
+
+<div style="text-align: justify; line-height: 1.6; background-color: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 10px;">
 
 <strong>Administration Manager</strong> – Plant A Million Zambia (PAMZ) <em>(July 2021 – November 2021)</em>
 <ul>
@@ -50,4 +60,5 @@ author_profile: true
   <li>Prepared credit risk reports and drafted offer letters in alignment with regulatory standards.</li>
 </ul>
 
+</div>
 </div>
