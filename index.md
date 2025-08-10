@@ -11,17 +11,12 @@ header:
       url: "/projects/"
     - label: "Download CV"
       url: "/assets/Wanjivwa_Sinkala_CV.pdf"
+  <img src="/assets/images/profile_wanji_pic.jpg" alt="Wanjivwa Sinkala" class="profile-photo">
 excerpt: "Development Economist | M&E Practitioner | Policy Analyst"
 permalink: /
 author_profile: true
 ---
-
-<section class="hero">
-  <img src="/assets/images/profile_wanji_pic.jpg" alt="Wanjivwa Sinkala" class="profile-photo">
-  <div>
   
-</section>
-
 <hr class="section-divider"/>
 
 <section class="intro-text">
