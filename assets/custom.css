@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-$primary-color: #003366;
-$secondary-color: #d4af37;
-$text-color: #444;
-$light-bg: #f8f8f8;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 body,
 h1, h2, h3, h4, h5, h6,
@@ -13,135 +8,112 @@ h1, h2, h3, h4, h5, h6,
 .author__content, .sidebar, .page__lead,
 .archive__item-excerpt {
   font-family: 'Inter', sans-serif !important;
-}
-
-body {
-  background-color: #fff;
-  color: $text-color;
-  line-height: 1.6;
   margin: 0;
+  padding: 0;
 }
 
-/* General headings */
-h1, h2, h3 {
-  color: $primary-color;
+.intro-text {
+  max-width: 900px;
+  margin: 3em auto 4em auto;
+  text-align: center;
+  color: #003366; /* navy */
+}
+
+.intro-text h1 {
+  font-size: 2.5rem;
   font-weight: 700;
+  margin-bottom: 0.6em;
 }
 
-a {
-  color: $secondary-color;
+.intro-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.features {
+  max-width: 1000px;
+  margin: 0 auto 4em auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+  padding: 0 1em;
+}
+
+.feature__item {
+  background: #f8f8f8;
+  padding: 1.8rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.feature__item:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.feature__item h3 {
+  color: #d4af37; /* gold */
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.feature__item p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.professional-experience {
+  max-width: 900px;
+  margin: 0 auto 4em auto;
+  color: #222;
+  text-align: center;
+  padding: 0 1em;
+}
+
+.professional-experience h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.6em;
+  color: #d4af37;
+}
+
+.professional-experience p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+.professional-experience a {
+  color: #d4af37;
+  font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-a:hover {
-  color: darken($secondary-color, 10%);
+.professional-experience a:hover {
+  color: #003366;
 }
 
-/* Hero/Header */
-header {
-  background-color: $primary-color;
-  padding: 1.5rem;
+.footer-cta {
+  max-width: 900px;
+  margin: 3em auto 5em auto;
   text-align: center;
-}
-
-header h1 a {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-header nav a {
-  color: #fff;
-  margin: 0 0.75rem;
   font-weight: 500;
+  font-size: 1.1rem;
+  color: #003366;
 }
 
-header nav a:hover {
-  color: $secondary-color;
+.footer-cta a {
+  color: #d4af37;
+  text-decoration: none;
+  margin: 0 0.4em;
+  transition: color 0.3s ease;
 }
 
-/* Buttons */
-.btn, .page__content a.button {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background: $secondary-color;
-  color: #fff !important;
-  border-radius: 4px;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: darken($secondary-color, 8%);
-}
-
-/* Feature items */
-.feature__item {
-  background: #fff;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
-
-.feature__item:hover {
-  transform: translateY(-3px);
-}
-
-.feature__item h3 {
-  color: $primary-color;
-  margin-bottom: 0.5rem;
-}
-
-/* Section backgrounds */
-.section-light {
-  background: $light-bg;
-  padding: 2rem 1rem;
-}
-
-.section-dark {
-  background: $primary-color;
-  color: #fff;
-  padding: 2rem 1rem;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: $light-bg;
-  color: #666;
-  font-size: 0.9rem;
-}
-
-/* Experience background */
-.experience-background {
-  background: url('/assets/images/background_desk.jpg') no-repeat center center fixed;
-  background-size: cover;
-  padding: 40px 20px;
-  border-radius: 12px;
-  margin-bottom: 2em;
-  box-shadow: 0 0 0 100vmax rgba(255,255,255,0.7) inset;
-}
-
-.experience-background ul,
-.experience-background strong,
-.experience-background em {
-  background: rgba(255,255,255,0.85);
-  display: inline-block;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  header h1 a {
-    font-size: 1.5rem;
-  }
-
-  .feature__item {
-    padding: 1rem;
-  }
+.footer-cta a:hover {
+  color: #003366;
 }
