@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+/* Add this for better browser compatibility */
+body {
+  -webkit-text-size-adjust: 100%; /* Older WebKit browsers */
+  -ms-text-size-adjust: 100%;     /* Older Microsoft browsers */
+  text-size-adjust: 100%;         /* Standard property */
+}
+
 body,
 h1, h2, h3, h4, h5, h6,
 .site-title, .site-subtitle,
