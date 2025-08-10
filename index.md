@@ -15,7 +15,7 @@ excerpt: "Development Economist | M&E Practitioner | Policy Analyst"
 permalink: /
 author_profile: true
 ---
-  
+
 <hr class="section-divider"/>
 
 <section class="intro-text">
@@ -42,6 +42,39 @@ author_profile: true
     <p>Empowering systems to work better. I work with public, private, and nonprofit institutions to build capacity, enhance operations, and improve their ability to deliver results.</p>
   </div>
 </section>
+
+<hr class="section-divider"/>
+
+<section>
+  <h2 style="color:#d4af37; text-align:center; margin-bottom:1.5em;">Recent Projects & Publications</h2>
+  <div class="project-list">
+    <div class="project-item">
+      <div class="project-category">Global Economy</div>
+      <div class="project-title">Project Syndicate: The Sources of Global Economic Uncertainty (June 2025)</div>
+      <a class="project-link" href="YOUR_LINK_1" target="_blank">READ MORE <span aria-hidden="true">→</span></a>
+    </div>
+    <hr class="project-divider" />
+    <div class="project-item">
+      <div class="project-category">Global Economy</div>
+      <div class="project-title">Project Syndicate: Four Reasons Why US Treasury Yields Are Rising (June 2025)</div>
+      <a class="project-link" href="YOUR_LINK_2" target="_blank">READ MORE <span aria-hidden="true">→</span></a>
+    </div>
+    <hr class="project-divider" />
+    <div class="project-item">
+      <div class="project-category">Global Economy</div>
+      <div class="project-title">Project Syndicate: Making Sense of the New Global Economy (May 2025)</div>
+      <a class="project-link" href="YOUR_LINK_3" target="_blank">READ MORE <span aria-hidden="true">→</span></a>
+    </div>
+    <hr class="project-divider" />
+    <div class="project-item">
+      <div class="project-category">Global Economy</div>
+      <div class="project-title">Bloomberg The Pulse with Francine Lacqua: Inflation Could Rise Aggressively (May 2025)</div>
+      <a class="project-link" href="YOUR_LINK_4" target="_blank">READ MORE <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider"/>
 
 <section class="professional-experience">
   <h2>Professional Experience</h2>
