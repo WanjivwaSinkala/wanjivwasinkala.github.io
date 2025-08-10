@@ -16,6 +16,22 @@ permalink: /
 author_profile: true
 ---
 
+<section class="hero">
+  <img src="/assets/images/profile_wanji_pic.jpg" alt="Wanjivwa Sinkala" class="profile-photo">
+  <div>
+    <h1>Wanjivwa Sinkala</h1>
+    <p>Development Economist &nbsp;|&nbsp; M&E Practitioner &nbsp;|&nbsp; Policy Analyst</p>
+    <p class="tagline">Driving evidence-based impact for sustainable development.</p>
+    <a href="/assets/Wanjivwa_Sinkala_CV.pdf" class="btn-gold">Download CV</a>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" title="LinkedIn"><span aria-hidden="true">🌐</span> LinkedIn</a>
+      <!-- Add more social links as needed -->
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
 <section class="intro-text">
   <h1>Welcome</h1>
   <p>
