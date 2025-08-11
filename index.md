@@ -43,39 +43,6 @@ author_profile: true
 </section>
 
 <hr class="section-divider"/>
-
-<section>
-  <h2>Selected Projects and Publications</h2>
-  <div class="project-list">
-    <article class="project-item">
-      <div class="project-category">Monitoring & Evaluation</div>
-      <h3 class="project-title">Project Title Placeholder</h3>
-      <p class="project-desc">
-        I am currently in the process of documenting and curating selected projects from my professional and academic journey. Details for this project will be updated soon. 
-        <a href="#" class="read-more">Read more →</a>
-      </p>
-    </article>
-    
-<div class="project-list">
-    <article class="project-item">
-      <div class="project-category">Policy Analysis</div>
-      <h3 class="project-title">Project Title Placeholder</h3>
-      <p class="project-desc">
-        I am currently in the process of documenting and curating selected projects from my professional and academic journey. Details for this project will be updated soon. 
-        <a href="#" class="read-more">Read more →</a>
-      </p>
-    </article>
-
-<div class="project-list">
-    <article class="project-item">
-      <div class="project-category">Development Economics</div>
-      <h3 class="project-title">Project Title Placeholder</h3>
-      <p class="project-desc">
-        I am currently in the process of documenting and curating selected projects from my professional and academic journey. Details for this project will be updated soon. 
-        <a href="#" class="read-more">Read more →</a>
-      </p>
-    </article>
-
 <div class="project-list">
     <article class="project-item">
       <div class="project-category">Institutional Strengthening</div>
