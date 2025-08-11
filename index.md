@@ -2,8 +2,7 @@
 layout: splash
 title: "Wanjivwa Sinkala"
 header:
-  overlay_image: /assets/images/wanji_pic.jpg
-  overlay_filter: rgba(0,31,63,0.65)
+  
   actions:
     - label: "About Me"
       url: "/aboutme/"
