@@ -24,7 +24,7 @@
     .hero {
       position: relative;
       min-height: 100vh; /* full viewport height */
-      background-image: url('{{ page.header.overlay_image | default: "/assets/images/background_desk.jpg" }}');
+      background-image: url('{{ page.header.overlay_image | default: "/assets/images/default-bg.jpg" }}');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -40,14 +40,13 @@
 
     /* Content above overlay */
     .splash-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1400px;   /* wider to fill most of the laptop screen */
-  margin: 0 auto;
-  padding: 4rem 3rem;  /* more horizontal padding */
-  color: #fff;
-  line-height: 1.8;    /* easier reading */
-}
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      color: #fff;
+    }
 
     /* Profile photo styling */
     .profile-photo {
