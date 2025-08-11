@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: ""
+title: "Wanjivwa Sinkala"
 header:
   overlay_image: /assets/images/background_desk.jpg   # Replace with your actual background image path
   overlay_filter: rgba(0,31,63,0.65)
