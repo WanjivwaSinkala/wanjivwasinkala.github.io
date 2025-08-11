@@ -40,14 +40,14 @@
 
     /* Content above overlay */
     .splash-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1400px;   /* wider to fill most of the laptop screen */
-  margin: 0 auto;
-  padding: 4rem 3rem;  /* more horizontal padding */
-  color: #fff;
-  line-height: 1.8;    /* easier reading */
-}
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;   /* wider to fill most of the laptop screen */
+      margin: 0 auto;
+      padding: 4rem 3rem;  /* more horizontal padding */
+      color: #fff;
+      line-height: 1.8;    /* easier reading */
+    }
 
     /* Profile photo styling */
     .profile-photo {
@@ -58,21 +58,25 @@
       border: 4px solid #d4af37; /* gold border */
       box-shadow: 0 4px 18px rgba(0,0,0,0.2);
       display: block;
-      margin: 0 auto 1.5rem auto;
+      margin: 1rem auto 1.5rem auto;
     }
 
     /* Header styling */
     header {
       background-color: #000; /* black */
-      padding: 1rem 2rem;
+      padding: 1rem 2rem 2rem 2rem; /* extra bottom padding for photo */
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 10;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
       box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      margin: 0;
     }
 
     header h1 a {
@@ -83,6 +87,7 @@
     }
 
     nav {
+      margin-top: 0.5rem;
       display: flex;
       gap: 2rem;
     }
@@ -104,7 +109,7 @@
 
     /* Push down page content below fixed header */
     main {
-      padding-top: 70px;
+      padding-top: 260px; /* account for header + photo height */
     }
 
     /* Section dividers */
@@ -124,12 +129,21 @@
       nav {
         gap: 1rem;
       }
+
+      header {
+        padding: 1rem;
+      }
+
+      main {
+        padding-top: 220px; /* slightly less on smaller screens */
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+    <img src="/assets/images/wanji_pic.jpg" alt="Wanjivwa Sinkala" class="profile-photo" />
     <nav>
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/projects/' | relative_url }}">Projects</a>
