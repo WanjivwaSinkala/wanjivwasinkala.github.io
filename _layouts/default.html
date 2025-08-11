@@ -160,16 +160,17 @@
       <div class="splash-content">
 
         <section class="intro-container">
-          <div class="excerpt-text">
-            <h1>{{ page.title }}</h1>
-            {% if page.excerpt %}
-              <p>{{ page.excerpt }}</p>
-            {% endif %}
-          </div>
-          <div class="profile-photo-wrapper">
-            <img src="/assets/images/wanji_pic.jpg" alt="{{ page.title }}" class="profile-photo" />
-          </div>
-        </section>
+  <div class="profile-photo-wrapper">
+    <img src="/assets/images/wanji_pic.jpg" alt="{{ page.title }}" class="profile-photo" />
+  </div>
+  <div class="excerpt-text">
+    <h1>{{ page.title }}</h1>
+    {% if page.excerpt %}
+      <p>{{ page.excerpt }}</p>
+    {% endif %}
+  </div>
+</section>
+
 
         {{ content | markdownify }}
 
