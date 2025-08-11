@@ -2,7 +2,7 @@
 layout: splash
 title: "Wanjivwa Sinkala"
 header:
-  overlay_image: /assets/images/background.jpg   # Replace with your actual background image path
+  overlay_image: /assets/images/black_pic.jpg   # Replace with your actual background image path
   overlay_filter: rgba(0,31,63,0.65)
   actions:
     - label: "About Me"
@@ -17,9 +17,6 @@ author_profile: true
 ---
 
 <hr class="section-divider"/>
-
-<section class="intro-text">
-  <img src="/assets/images/wanji_pic.jpg" alt="Wanjivwa Sinkala" class="profile-photo" />
   <h1>Welcome</h1>
   <p>
     I’m <strong>Wanjivwa Sinkala</strong>, a development economist focused on advancing inclusive growth,
