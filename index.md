@@ -2,16 +2,6 @@
 layout: splash
 title: "Wanjivwa Sinkala"
 header:
-  overlay_image: /assets/images/background_desk.jpg   # Replace with your actual background image path
-  overlay_filter: rgba(0,31,63,0.65)
-  actions:
-    - label: "About Me"
-      url: "/aboutme/"
-    - label: "Projects"
-      url: "/projects/"
-    - label: "Download CV"
-      url: "/assets/Wanjivwa_Sinkala_CV.pdf"
-excerpt: "Passionate about advancing sustainable development through evidence-based approaches."
 permalink: /
 author_profile: true
 ---
