@@ -1,8 +1,8 @@
 ---
 layout: splash
-title: "Wanjivwa Sinkala"
+title: ""
 header:
-  overlay_image: /assets/images/background_desk.jpg
+  overlay_image: /assets/images/background_desk.jpg   # Replace with your actual background image path
   overlay_filter: rgba(0,31,63,0.65)
   actions:
     - label: "About Me"
@@ -11,30 +11,21 @@ header:
       url: "/projects/"
     - label: "Download CV"
       url: "/assets/Wanjivwa_Sinkala_CV.pdf"
-excerpt: "Driving Inclusive Growth & Impactful Development."
+excerpt: "Passionate about advancing sustainable development through evidence-based approaches."
 permalink: /
 author_profile: true
 ---
 
-<section class="intro-container" style="display:flex; align-items:center; gap:2rem; margin-bottom: 2rem;">
-  <div class="profile-photo-wrapper">
-    <img src="/assets/images/wanji_pic.jpg" alt="Wanjivwa Sinkala" class="profile-photo" />
-  </div>
-  <div class="excerpt-text">
-    <h1>Wanjivwa Sinkala</h1>
-    <p>
-      Driving Inclusive Growth & Impactful Development.<br />
-      I’m a Development Economist and M&E Practitioner passionate about turning data into actionable insights.
-    </p>
-    <nav class="action-links" style="font-weight:600; color:#d4af37;">
-      <a href="/aboutme/" style="color:#d4af37; text-decoration:none; margin-right:0.5rem;">About Me</a> | 
-      <a href="/projects/" style="color:#d4af37; text-decoration:none; margin: 0 0.5rem;">Projects</a> | 
-      <a href="/assets/Wanjivwa_Sinkala_CV.pdf" target="_blank" rel="noopener" style="color:#d4af37; text-decoration:none; margin-left:0.5rem;">Download CV</a>
-    </nav>
-  </div>
-</section>
-
 <hr class="section-divider"/>
+
+  <h1>Welcome</h1>
+  <p>
+    I’m <strong>Wanjivwa Sinkala</strong>, a development economist focused on advancing inclusive growth,
+    strengthening institutions, and supporting evidence-informed decision-making.
+    I collaborate with organizations and policymakers to shape effective strategies, assess impact,
+    and deliver sustainable development outcomes.
+  </p>
+</section>
 
 <section class="features">
   <div class="feature__item">
