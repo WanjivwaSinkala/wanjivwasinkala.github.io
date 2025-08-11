@@ -61,17 +61,16 @@
     }
 
     /* Hero section */
-    .splash-hero {
-      position: relative;
-      flex: 1 0 auto;
-      height: calc(100vh - 70px);
-      background: url('{{ page.header.overlay_image }}') no-repeat center center / cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 1rem;
-    }
+    .splash-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;   /* wider to fill most of the laptop screen */
+  margin: 0 auto;
+  padding: 4rem 3rem;  /* more horizontal padding */
+  color: #fff;
+  line-height: 1.8;    /* easier reading */
+}
+
     .splash-hero::before {
       content: "";
       position: absolute;
