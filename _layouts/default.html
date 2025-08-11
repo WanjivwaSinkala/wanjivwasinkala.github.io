@@ -7,6 +7,7 @@
   {% seo %}
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
   <style>
+    /* Reset and base */
     body, html {
       margin: 0; padding: 0; height: 100%;
       font-family: 'Inter', sans-serif;
@@ -19,17 +20,66 @@
       background: #001f3f; /* fallback */
     }
 
-    /* Header with nav only */
+    /* Hero background and overlay */
+    .hero {
+      position: relative;
+      min-height: 100vh; /* full viewport height */
+      background-image: url('{{ page.header.overlay_image | default: "/assets/images/background_desk.jpg" }}');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: {{ page.header.overlay_filter | default: "rgba(0,31,63,0.65)" }};
+      z-index: 1;
+    }
+
+    /* Content above overlay */
+    .splash-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;   /* wider to fill most of the laptop screen */
+  margin: 0 auto;
+  padding: 4rem 3rem;  /* more horizontal padding */
+  color: #fff;
+  line-height: 1.8;    /* easier reading */
+}
+
+    /* Profile photo styling */
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #d4af37; /* gold border */
+      box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+      display: block;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    /* Header styling */
     header {
-      background-color: #000;
+      background-color: #000; /* black */
       padding: 1rem 2rem;
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 10;
       display: flex;
-      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
       box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    header h1 a {
+      color: #d4af37; /* gold */
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.6rem;
     }
 
     nav {
@@ -38,7 +88,7 @@
     }
 
     nav a {
-      color: #fff;
+      color: #fff; /* white */
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
@@ -48,79 +98,38 @@
 
     nav a:hover,
     nav a:focus {
-      color: #d4af37;
+      color: #d4af37; /* gold on hover/focus */
       outline: none;
     }
 
-    /* Push content below fixed header */
+    /* Push down page content below fixed header */
     main {
-      padding-top: 60px; /* height of fixed header */
-      max-width: 900px;
-      margin: 0 auto;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      color: #fff;
+      padding-top: 70px;
     }
 
-    /* Intro section: title, roles, photo */
-    .intro-text {
-      text-align: center;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      color: #fff;
-    }
-
-    .intro-text h1 {
-      font-size: 3rem;
-      margin-bottom: 0.2rem;
-      font-weight: 700;
-      color: #d4af37;
-    }
-
-    .intro-text .roles {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-    }
-
-    .profile-photo {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #d4af37;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.2);
-      display: block;
-      margin: 0 auto 3rem auto;
-    }
-
-    /* Section divider */
+    /* Section dividers */
     .section-divider {
       border: 0;
       height: 2px;
       background: linear-gradient(to right, #d4af37 0%, #fff 50%, #d4af37 100%);
-      margin: 3rem 0 2rem 0;
+      margin: 3em 0 2em 0;
     }
 
     /* Responsive */
     @media (max-width: 700px) {
-      .intro-text h1 {
-        font-size: 2.2rem;
+      .splash-content {
+        padding: 2rem 1rem;
       }
-      .intro-text .roles {
-        font-size: 1rem;
-      }
-      .profile-photo {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 2rem;
+
+      nav {
+        gap: 1rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
+    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
     <nav>
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/projects/' | relative_url }}">Projects</a>
@@ -129,16 +138,11 @@
   </header>
 
   <main>
-    <section class="intro-text">
-      <h1>Wanjivwa Sinkala</h1>
-      <div class="roles">
-        Development Economist &nbsp;&nbsp;|&nbsp;&nbsp; M&E Practitioner &nbsp;&nbsp;|&nbsp;&nbsp; Policy Analyst
+    <section class="hero">
+      <div class="splash-content">
+        {{ content | markdownify }}
       </div>
-      <img src="/assets/images/wanji_pic.jpg" alt="Wanjivwa Sinkala" class="profile-photo" />
     </section>
-
-    <!-- Page content from markdown goes here -->
-    {{ content | markdownify }}
   </main>
 
   <footer style="text-align:center; padding: 2rem 1rem; background: #000; color: #d4af37;">
