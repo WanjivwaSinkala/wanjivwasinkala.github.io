@@ -4,33 +4,39 @@
   {% include head.html %}
   <title>{{ page.title | default: site.title }}</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh; /* Full screen height */
-      background: url('/assets/images/background.jpg') no-repeat center center/cover;
+    /* Reset and base styles */
+    html, body {
+      margin: 0; padding: 0; height: 100%;
+      font-family: 'Inter', Arial, sans-serif;
       color: white;
-      font-family: Arial, sans-serif;
+      background: #000; /* fallback bg */
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding-top: 70px; /* space for fixed header */
     }
 
+    /* Fixed header nav */
     header {
-      background-color: black;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
+      top: 0; left: 0; right: 0;
+      height: 70px;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
 
     header h1 {
       margin: 0;
-      font-size: 1.5em;
+      font-weight: 700;
+      font-size: 1.6rem;
     }
-
     header h1 a {
       color: white;
       text-decoration: none;
@@ -38,58 +44,106 @@
 
     nav ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       display: flex;
-      gap: 20px;
+      gap: 1.8rem;
     }
 
-    nav ul li a {
+    nav a {
       color: white;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      color: #d4af37; /* gold */
     }
 
-    nav ul li a:hover {
-      color: gold;
-    }
-
-    main {
-      padding-top: 80px; /* Avoid overlap with fixed header */
-      height: calc(100vh - 80px);
+    /* Hero section */
+    .splash-hero {
+      position: relative;
+      flex: 1 0 auto;
+      height: calc(100vh - 70px);
+      background: url('{{ page.header.overlay_image }}') no-repeat center center / cover;
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .splash-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: {{ page.header.overlay_filter }};
+      z-index: 1;
+    }
+    .splash-content {
+      position: relative;
+      max-width: 900px;
+      z-index: 2;
+      color: white;
+      line-height: 1.6;
+    }
+    .splash-content h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.6em;
+      color: #d4af37;
+    }
+    .splash-content p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
+    /* Footer */
     footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
+      background: #111;
       color: white;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .splash-content h1 {
+        font-size: 2rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+      nav a {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1><a href="{{ '/' | relative_url }}">My Portfolio</a></h1>
-    <nav>
-      <ul>
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
-        <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    {{ content }}
-  </main>
+<header>
+  <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+  <nav>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
+      <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <footer>
-    <p>&copy; {{ site.time | date: '%Y' }} Wanjivwa Sinkala</p>
-  </footer>
+<section class="splash-hero">
+  <div class="splash-content">
+    {{ content | markdownify }}
+  </div>
+</section>
+
+<footer>
+  <p>&copy; {{ site.time | date: '%Y' }} Wanjivwa Sinkala</p>
+</footer>
+
 </body>
 </html>
