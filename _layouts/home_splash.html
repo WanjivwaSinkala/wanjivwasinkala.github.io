@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="splash-header">
+  <div class="splash-header__content" style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+
+    <!-- Profile Picture -->
+    <div class="splash-header__image" style="flex: 0 0 auto;">
+      <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Wanjivwa Sinkala" style="max-width: 180px; border-radius: 50%;">
+    </div>
+
+    <!-- Name, Tagline, and Buttons -->
+    <div class="splash-header__text" style="flex: 1 1 auto;">
+      <h1 style="margin-bottom: 5px;">Wanjivwa Sinkala</h1>
+      <p style="font-size: 1.2rem; color: #666; margin-bottom: 15px;">
+        Shaping Policy. Enhancing Institutions. Delivering Results.<br>
+        Passionate about advancing sustainable development through evidence-based approaches.
+      </p>
+
+      <!-- Navigation Buttons -->
+      <div style="margin-top: 10px;">
+        <a href="#about" class="btn btn-primary" style="margin-right: 10px;">About Me</a>
+        <a href="#projects" class="btn btn-primary" style="margin-right: 10px;">Projects</a>
+        <a href="/assets/docs/Wanjivwa_Sinkala_CV.pdf" class="btn btn-secondary">Download CV</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Page Content -->
+<main id="main" role="main">
+  {{ content }}
+</main>
