@@ -16,46 +16,53 @@ permalink: /
 author_profile: true
 ---
 
-<section class="features">
-  <div class="feature__item">
+<!-- Hero Intro -->
+<div class="hero-intro">
+  <h1>Driving Inclusive Growth & Evidence-Based Policy</h1>
+  <p>I help shape strategies, assess impact, and strengthen institutions to deliver sustainable outcomes.</p>
+</div>
+
+<!-- Feature Grid -->
+<section class="features-grid">
+  <div class="feature-card">
     <h3>Program Evaluation</h3>
     <p>Using evaluation as a tool for learning and improvement. I design and apply monitoring and evaluation frameworks that generate insights, support accountability, and drive better program performance.</p>
   </div>
-  <div class="feature__item">
+  <div class="feature-card">
     <h3>Policy and Economics</h3>
     <p>Bridging analysis and action. I provide economic policy guidance rooted in data, helping leaders craft solutions that foster equity, resilience, and long-term development.</p>
   </div>
-  <div class="feature__item">
+  <div class="feature-card">
     <h3>Institutional Strengthening</h3>
     <p>Empowering systems to work better. I work with public, private, and nonprofit institutions to build capacity, enhance operations, and improve their ability to deliver results.</p>
   </div>
 </section>
 
+<!-- Divider -->
 <hr class="section-divider"/>
 
-<section class="project-list">
-  <article class="project-item">
-    <div class="project-category">Institutional Strengthening</div>
-    <h3 class="project-title">Project Title Placeholder</h3>
-    <p class="project-desc">
-      I am currently in the process of documenting and curating selected projects from my professional and academic journey. Details for this project will be updated soon. 
-      <a href="#" class="read-more">Read more →</a>
-    </p>
+<!-- Projects Preview -->
+<section class="projects-preview">
+  <h2>Selected Projects</h2>
+  <article class="project-card">
+    <div class="project-tag">Institutional Strengthening</div>
+    <h3>Project Title Placeholder</h3>
+    <p>I am currently documenting selected projects from my professional and academic journey. Details will be updated soon. 
+    <a href="#" class="read-more">Read more →</a></p>
   </article>
 </section>
 
+<!-- Divider -->
 <hr class="section-divider"/>
 
-<section class="professional-experience">
+<!-- Experience Section -->
+<section class="experience-section">
   <h2>Professional Experience</h2>
-  <p>
-    With over seven years’ experience across development, banking, and retail, I’ve partnered with organizations like Edcon Zambia, Standard Chartered Bank, and Access Bank to drive results and impact.
-  </p>
-  <p><a href="/aboutme/">Read more about my professional journey →</a></p>
+  <p>With over seven years’ experience across development, banking, and retail, I’ve partnered with organizations like Edcon Zambia, Standard Chartered Bank, and Access Bank to drive results and impact.</p>
+  <p><a href="/aboutme/" class="cta-link">Read more about my professional journey →</a></p>
 </section>
 
+<!-- Footer Call-to-Action -->
 <section class="footer-cta">
-  Explore my <a href="/aboutme/">story</a>,
-  view my <a href="/projects/">work</a>,
-  or <a href="/contact/">connect with me</a>.
+  <span>Explore my <a href="/aboutme/">story</a>, view my <a href="/projects/">work</a>, or <a href="/contact/">connect with me</a>.</span>
 </section>
