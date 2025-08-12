@@ -71,20 +71,73 @@
     nav {
       display: flex;
       gap: 2rem;
+      position: relative;
     }
 
-    nav a {
-      color: #fff;
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #d4af37; /* Rich Gold for all nav links */
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
       padding: 0.3rem 0.5rem;
       transition: color 0.3s ease;
+      cursor: pointer;
+      display: block;
     }
 
-    nav a:hover,
-    nav a:focus {
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: #fff;
+      outline: none;
+    }
+
+    /* Dropdown styles */
+    nav ul li ul.dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #222;
+      padding: 0.5rem 0;
+      border-radius: 4px;
+      min-width: 140px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+
+    nav ul li:hover > ul.dropdown {
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav ul li ul.dropdown li {
+      width: 100%;
+    }
+
+    nav ul li ul.dropdown li a {
+      padding: 0.5rem 1rem;
       color: #d4af37;
+      white-space: nowrap;
+    }
+
+    nav ul li ul.dropdown li a:hover,
+    nav ul li ul.dropdown li a:focus {
+      background-color: #bfa838; /* Slightly darker gold hover */
+      color: #000;
       outline: none;
     }
 
@@ -105,7 +158,7 @@
         padding: 2rem 1rem;
       }
 
-      nav {
+      nav ul {
         gap: 1rem;
       }
     }
@@ -115,9 +168,18 @@
   <header>
     <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
     <nav>
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/projects/' | relative_url }}">Projects</a>
-      <a href="{{ '/publications/' | relative_url }}">Publications</a>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+        <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
+        <li>
+          <a href="#">Resources ▾</a>
+          <ul class="dropdown" aria-label="submenu">
+            <li><a href="{{ '/resources/photos/' | relative_url }}">Photos</a></li>
+            <li><a href="{{ '/resources/videos/' | relative_url }}">Videos</a></li>
+          </ul>
+        </li>
+      </ul>
     </nav>
   </header>
 
