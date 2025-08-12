@@ -100,7 +100,7 @@ defaults:
       comments: true
       share: true
       related: true
-      css: "assets/custom.css"
+      css: "assets/style.css"
   # _pages
   - scope:
       path: "_pages"
@@ -108,7 +108,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      css: "assets/custom.css"
+      css: "assets/style.css"
 
 category_archive:
   type: liquid
