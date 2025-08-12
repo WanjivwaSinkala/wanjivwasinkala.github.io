@@ -1,0 +1,43 @@
+/* ==== GRID LAYOUT ==== */
+.feature__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==== FEATURE ITEM ==== */
+.feature__item {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* ==== TYPOGRAPHY ==== */
+.feature__item h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #CFAE3D; /* Gold */
+  margin-bottom: 0.5rem;
+}
+.feature__item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #0B1E38; /* Navy text */
+}
+
+/* ==== GENERAL LAYOUT ==== */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
