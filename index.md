@@ -2,16 +2,6 @@
 layout: splash
 title: "Wanjivwa Sinkala"
 header:
-  overlay_image: /assets/images/black_pic.jpg
-  overlay_filter: rgba(0,31,63,0.65)
-  actions:
-    - label: "About Me"
-      url: "/aboutme/"
-    - label: "Projects"
-      url: "/projects/"
-    - label: "Download CV"
-      url: "/assets/Wanjivwa_Sinkala_CV.pdf"
-excerpt: "Development Economist | M&E Practitioner | Policy Analyst"
 permalink: /
 author_profile: true
 ---
