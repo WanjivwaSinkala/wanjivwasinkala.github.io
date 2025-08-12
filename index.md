@@ -2,7 +2,7 @@
 layout: splash
 title: "Wanjivwa Sinkala"
 header:
-  overlay_image: /assets/images/black_pic.jpg   # Replace with your actual background image path
+  overlay_image: /assets/images/black_pic.jpg
   overlay_filter: rgba(0,31,63,0.65)
   actions:
     - label: "About Me"
@@ -15,16 +15,6 @@ excerpt: "Development Economist | M&E Practitioner | Policy Analyst"
 permalink: /
 author_profile: true
 ---
-
-<hr class="section-divider"/>
-  <h1>Welcome</h1>
-  <p>
-    I’m <strong>Wanjivwa Sinkala</strong>, a development economist focused on advancing inclusive growth,
-    strengthening institutions, and supporting evidence-informed decision-making.
-    I collaborate with organizations and policymakers to shape effective strategies, assess impact,
-    and deliver sustainable development outcomes.
-  </p>
-</section>
 
 <section class="features">
   <div class="feature__item">
