@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   <style>
-    /* Reset and base */
     body, html {
       margin: 0; padding: 0; height: 100%;
       font-family: 'Inter', sans-serif;
@@ -18,54 +17,39 @@
       -ms-text-size-adjust: 100%;
       text-size-adjust: 100%;
       color: #fff;
-      background: #001f3f; /* fallback */
+      background: #001f3f;
     }
 
-    /* Hero background and overlay */
     .hero {
       position: relative;
-      min-height: 100vh; /* full viewport height */
+      min-height: 100vh;
       background-image: url('{{ page.header.overlay_image | default: "/assets/images/bck_pic.jpg" }}');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      background-attachment: fixed;  /* Fix background so it doesn’t scroll */
+      background-attachment: fixed;
     }
 
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background-color: {{ page.header.overlay_filter | default: "rgba(0,0,0,0.7)" }}; /* stronger black overlay */
+      background-color: {{ page.header.overlay_filter | default: "rgba(0,0,0,0.7)" }};
       z-index: 1;
     }
 
-    /* Content above overlay */
     .splash-content {
       position: relative;
       z-index: 2;
-      max-width: 1400px;   /* wider to fill most of the laptop screen */
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 4rem 3rem;  /* more horizontal padding */
+      padding: 4rem 3rem;
       color: #fff;
-      line-height: 1.8;    /* easier reading */
+      line-height: 1.8;
     }
 
-    /* Profile photo styling */
-    .profile-photo {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #d4af37; /* gold border */
-      box-shadow: 0 4px 18px rgba(0,0,0,0.2);
-      display: block;
-      margin: 0 auto 1.5rem auto;
-    }
-
-    /* Header styling */
     header {
-      background-color: #000; /* black */
+      background-color: #000;
       padding: 1rem 2rem;
       position: fixed;
       top: 0;
@@ -78,7 +62,7 @@
     }
 
     header h1 a {
-      color: #d4af37; /* gold */
+      color: #d4af37;
       text-decoration: none;
       font-weight: 700;
       font-size: 1.6rem;
@@ -90,7 +74,7 @@
     }
 
     nav a {
-      color: #fff; /* white */
+      color: #fff;
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
@@ -100,16 +84,14 @@
 
     nav a:hover,
     nav a:focus {
-      color: #d4af37; /* gold on hover/focus */
+      color: #d4af37;
       outline: none;
     }
 
-    /* Push down page content below fixed header */
     main {
       padding-top: 70px;
     }
 
-    /* Section dividers */
     .section-divider {
       border: 0;
       height: 2px;
