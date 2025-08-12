@@ -16,43 +16,6 @@ permalink: /
 author_profile: true
 ---
 
-<style>
-  .intro-container {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    max-width: 900px;
-    margin: 2rem auto;
-    color: #000;
-  }
-  .intro-photo {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  }
-  .intro-text {
-    max-width: 600px;
-    font-family: 'Manrope', sans-serif;
-    font-size: 1.25rem;
-    line-height: 1.6;
-  }
-</style>
-
-<div class="intro-container">
-  <img src="/assets/images/wanji_pic.jpg" alt="Wanjivwa Sinkala" class="intro-photo" />
-  <div class="intro-text">
-    <h1>Baroness Wanjivwa Sinkala</h1>
-    <p>
-      She is a development economist focused on advancing inclusive growth, strengthening institutions, and supporting evidence-informed decision-making.
-      She collaborates with organizations and policymakers to shape effective strategies, assess impact, and deliver sustainable development outcomes.
-    </p>
-  </div>
-</div>
-
-<hr class="section-divider"/>
-
 <section class="features">
   <div class="feature__item">
     <h3>Program Evaluation</h3>
@@ -75,7 +38,7 @@ author_profile: true
     <div class="project-category">Institutional Strengthening</div>
     <h3 class="project-title">Project Title Placeholder</h3>
     <p class="project-desc">
-      I am currently in the process of documenting and curating selected projects from my professional and academic journey. Details for this project will be updated soon.
+      I am currently in the process of documenting and curating selected projects from my professional and academic journey. Details for this project will be updated soon. 
       <a href="#" class="read-more">Read more →</a>
     </p>
   </article>
