@@ -1,4 +1,5 @@
-splash
+---
+layout: splash
 title: "Wanjivwa Sinkala"
 header:
   overlay_image: /assets/images/black_pic.jpg
