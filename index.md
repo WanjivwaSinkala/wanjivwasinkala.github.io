@@ -4,7 +4,7 @@ title: "Wanjivwa Sinkala"
 header:
   overlay_image: /assets/images/black_pic.jpg
   overlay_filter: rgba(0,0,0,0.7)
-  actions:
+#  actions:
     - label: "About Me"
       url: "/aboutme/"
     - label: "Projects"
