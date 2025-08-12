@@ -1,9 +1,6 @@
 ---
 layout: splash
 title: "Wanjivwa Sinkala"
-header:
-permalink: /
-author_profile: true
 ---
 
 <section style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap; max-width: 1400px; margin: 3rem auto; padding: 0 1rem;">
