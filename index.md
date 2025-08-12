@@ -9,12 +9,73 @@ header:
       url: "/aboutme/"
     - label: "Projects"
       url: "/projects/"
+    - label: "Resources"
+      dropdown:
+        - label: "Photos"
+          url: "/resources/photos/"
+        - label: "Videos"
+          url: "/resources/videos/"
     - label: "Download CV"
       url: "/assets/Wanjivwa_Sinkala_CV.pdf"
 excerpt: "Development Economist | M&E Practitioner | Policy Analyst"
 permalink: /
 author_profile: true
 ---
+
+<style>
+/* Header tabs and dropdown styles - rich gold color */
+header nav a, header nav button {
+  color: #D4AF37; /* Rich Gold */
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Dropdown container */
+header nav li {
+  position: relative;
+  list-style: none;
+}
+
+/* Dropdown menu - initially hidden */
+header nav ul.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #222; /* dark background */
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  min-width: 140px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+/* Show dropdown on hover */
+header nav li:hover > ul.dropdown {
+  display: block;
+}
+
+/* Dropdown items */
+header nav ul.dropdown li {
+  padding: 8px 15px;
+}
+
+/* Dropdown links */
+header nav ul.dropdown li a {
+  color: #D4AF37;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+}
+
+/* Dropdown link hover */
+header nav ul.dropdown li a:hover {
+  background-color: #bfa838; /* darker gold hover */
+  color: #000;
+}
+</style>
 
 <!-- Hero Intro -->
 <div class="hero-intro">
