@@ -6,6 +6,7 @@
   <title>{{ page.title | default: site.title }}</title>
   {% seo %}
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   <style>
     /* Reset and base */
     body, html {
@@ -40,14 +41,14 @@
 
     /* Content above overlay */
     .splash-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1400px;   /* wider to fill most of the laptop screen */
-  margin: 0 auto;
-  padding: 4rem 3rem;  /* more horizontal padding */
-  color: #fff;
-  line-height: 1.8;    /* easier reading */
-}
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;   /* wider to fill most of the laptop screen */
+      margin: 0 auto;
+      padding: 4rem 3rem;  /* more horizontal padding */
+      color: #fff;
+      line-height: 1.8;    /* easier reading */
+    }
 
     /* Profile photo styling */
     .profile-photo {
