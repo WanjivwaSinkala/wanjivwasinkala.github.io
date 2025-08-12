@@ -62,6 +62,13 @@ author_profile: true
   <p><a href="/aboutme/" class="cta-link">Read more about my professional journey →</a></p>
 </section>
 
+<!-- Latest Articles Section -->
+<section id="comp-m4ida9ho" tabindex="-1" class="latest-articles-section">
+  <h2>
+    <a href="https://www.wanjivwasinkala.github.io/news-6" target="_self" rel="noopener noreferrer">Latest articles</a>
+  </h2>
+</section>
+
 <!-- Footer Call-to-Action -->
 <section class="footer-cta">
   <span>Explore my <a href="/aboutme/">story</a>, view my <a href="/projects/">work</a>, or <a href="/contact/">connect with me</a>.</span>
