@@ -39,21 +39,6 @@
     <h1 style="margin: 0;"><a href="{{ '/' | relative_url }}" style="color: #d4af37; text-decoration: none;">{{ site.title }}</a></h1>
   </header>
 
-  <main style="padding-top: 100px;">
-    <section class="hero">
-      <div class="splash-content">
-        <img src="/assets/images/wanji_pic.jpg" alt="Wanjivwa Sinkala" class="profile-photo" />
-        <div class="profile-name">{{ page.title }}</div>
-        <div class="tagline-main">Shaping Policy. Enhancing Institutions. Delivering Results.</div>
-        <div class="tagline-sub">Passionate about advancing sustainable development through evidence-based approaches.</div>
-        <div class="action-links">
-          <a href="{{ '/aboutme/' | relative_url }}">About Me</a>
-          <a href="{{ '/projects/' | relative_url }}">Projects</a>
-          <a href="{{ '/assets/Wanjivwa_Sinkala_CV.pdf' | relative_url }}" target="_blank" rel="noopener">Download CV</a>
-        </div>
-      </div>
-    </section>
-
     <div class="page-content">
       {{ content | markdownify }}
     </div>
