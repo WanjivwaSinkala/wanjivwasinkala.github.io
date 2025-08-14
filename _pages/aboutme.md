@@ -1,15 +1,71 @@
 ---
 permalink: /aboutme/
 title: "About Me"
-layout: splash
+layout: single
 classes: wide
 ---
 
-<div class="about-section" style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:2rem;">
-  <img src="/assets/images/profile.jpg" alt="Wanjivwa Sinkala" style="width:200px;height:200px;border-radius:50%;object-fit:cover;flex-shrink:0;">
-  
-  <div class="about-text" style="max-width:700px;">
-    <h1 class="page__title">About Me</h1>
+<style>
+/* Make the container stretch almost full screen */
+.page__content {
+  max-width: 95% !important;
+  margin: auto;
+}
+
+/* About Me section layout */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Profile picture styling */
+.about-section img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* About text area */
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Skills list layout */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5rem;
+  list-style: disc inside;
+  padding: 0;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-text {
+    max-width: 100%;
+  }
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<div class="about-section">
+  <img src="/assets/images/profile.jpg" alt="Wanjivwa Sinkala">
+
+  <div class="about-text">
+    <h1>About Me</h1>
     <p>I am Wanjivwa Sinkala, a Zambian development economist and operations professional dedicated to advancing institutional integrity, results-based practice, and inclusive growth. I hold a Master of Arts in Economic Policy Management, a Postgraduate Diploma in Monitoring and Evaluation Methods, and a Bachelor of Arts in Development Studies with Economics, all awarded by the University of Zambia.</p>
 
     <p>Over the past seven years, I’ve worked at the intersection of development programming, operational systems, and risk management. My professional journey spans roles in the development, retail, and banking sectors, where I’ve strengthened administrative structures, enhanced internal controls, and ensured compliance across diverse programmatic and financial functions.</p>
@@ -30,9 +86,9 @@ classes: wide
   </div>
 </div>
 
-<div class="skills" style="margin-top:3rem;">
+<div class="skills">
   <h2>Core Competencies</h2>
-  <ul style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0.5rem;list-style:disc inside;padding:0;">
+  <ul class="skills-list">
     <li>Process Evaluation & Impact Assessment</li>
     <li>Risk Mitigation & Compliance</li>
     <li>Stakeholder Coordination</li>
