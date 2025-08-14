@@ -207,30 +207,99 @@ a:hover {
 </section>
 
 <!-- Latest Articles Section -->
-<section id="comp-m4ida9ho" tabindex="-1" class="latest-articles-section fade-in">
-  <h2>
-    <a href="https://www.wanjivwasinkala.github.io/news-6" target="_self" rel="noopener noreferrer">Latest articles</a>
-  </h2>
+<section class="latest-articles-section">
+  <h2 class="fade-in">Latest Articles</h2>
+
+  <div class="articles-grid">
+    <article class="article-card fade-in">
+      <img src="/assets/images/article1_placeholder.png" alt="Article 1">
+      <div class="article-text">
+        <h3>Article Title 1</h3>
+        <p>Brief excerpt from the article to give readers an idea of the content. Keep it concise and engaging.</p>
+        <a href="#" class="read-more">Read more →</a>
+      </div>
+    </article>
+
+    <article class="article-card fade-in">
+      <img src="/assets/images/article2_placeholder.png" alt="Article 2">
+      <div class="article-text">
+        <h3>Article Title 2</h3>
+        <p>Brief excerpt from the article to give readers an idea of the content. Keep it concise and engaging.</p>
+        <a href="#" class="read-more">Read more →</a>
+      </div>
+    </article>
+
+    <article class="article-card fade-in">
+      <img src="/assets/images/article3_placeholder.png" alt="Article 3">
+      <div class="article-text">
+        <h3>Article Title 3</h3>
+        <p>Brief excerpt from the article to give readers an idea of the content. Keep it concise and engaging.</p>
+        <a href="#" class="read-more">Read more →</a>
+      </div>
+    </article>
+  </div>
 </section>
 
-<!-- Footer Call-to-Action -->
-<section class="footer-cta fade-in">
-  <span>Explore my <a href="/aboutme/">story</a>, view my <a href="/projects/">work</a>, or <a href="/contact/">connect with me</a>.</span>
-</section>
-
-<script>
-// Fade-in on scroll
-function fadeInOnScroll() {
-  const elements = document.querySelectorAll('.fade-in');
-  const windowBottom = window.innerHeight + window.scrollY;
-
-  elements.forEach(el => {
-    if (windowBottom > el.offsetTop + 100) {
-      el.classList.add('visible');
-    }
-  });
+<style>
+/* Articles Grid */
+.articles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-window.addEventListener('scroll', fadeInOnScroll);
-window.addEventListener('load', fadeInOnScroll);
-</script>
+/* Article Cards */
+.article-card {
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.article-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.article-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.article-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.article-card a.read-more {
+  margin-top: 0.5rem;
+  display: inline-block;
+  color: #000;
+  text-decoration: underline;
+}
+
+.article-card a.read-more:hover {
+  color: #d4af37;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .articles-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .article-card {
+    max-width: 100%;
+  }
+}
+</style>
+
