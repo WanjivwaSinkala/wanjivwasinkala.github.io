@@ -30,14 +30,13 @@ body, h1, h2, h3, h4, h5, h6, p, span, li, a {
   line-height: 1.6;
 }
 
-/* Links styling */
 a {
   color: #000 !important;
   text-decoration: underline;
 }
 
 a:hover {
-  color: #d4af37 !important;
+  color: #d4af37 !important; /* Gold on hover */
 }
 
 /* Fade-in effect */
@@ -52,7 +51,7 @@ a:hover {
   transform: translateY(0);
 }
 
-/* Hero intro */
+/* Hero Intro */
 .hero-intro {
   text-align: center;
   margin-bottom: 3rem;
@@ -93,7 +92,7 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-/* Project cards */
+/* Projects */
 .projects-preview .project-card {
   background: #f9f9f9;
   padding: 1.5rem;
@@ -117,7 +116,7 @@ a:hover {
   margin: 3rem 0;
 }
 
-/* Experience section */
+/* Experience Section */
 .experience-section {
   display: flex;
   flex-wrap: wrap;
@@ -133,6 +132,48 @@ a:hover {
   flex: 1 1 300px;
 }
 
+/* Articles Section */
+.articles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.article-card {
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+.article-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.article-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+.article-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.article-card a.read-more {
+  margin-top: 0.5rem;
+  display: inline-block;
+  color: #000;
+  text-decoration: underline;
+}
+.article-card a.read-more:hover {
+  color: #d4af37;
+}
+
 /* Footer CTA */
 .footer-cta span {
   display: block;
@@ -142,13 +183,16 @@ a:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .features-grid, .experience-section {
+  .features-grid, .experience-section, .articles-grid {
     flex-direction: column;
     align-items: center;
   }
-  .feature-card img, .project-card img, .experience-section img {
+  .feature-card img, .project-card img, .experience-section img, .article-card img {
     width: 120px;
     height: 120px;
+  }
+  .article-card {
+    max-width: 100%;
   }
 }
 </style>
@@ -206,10 +250,11 @@ a:hover {
   </div>
 </section>
 
-<!-- Latest Articles Section -->
-<section class="latest-articles-section">
-  <h2 class="fade-in">Latest Articles</h2>
+<hr class="section-divider"/>
 
+<!-- Latest Articles Section -->
+<section class="latest-articles-section fade-in">
+  <h2>Latest Articles</h2>
   <div class="articles-grid">
     <article class="article-card fade-in">
       <img src="/assets/images/article1_placeholder.png" alt="Article 1">
@@ -219,7 +264,6 @@ a:hover {
         <a href="#" class="read-more">Read more →</a>
       </div>
     </article>
-
     <article class="article-card fade-in">
       <img src="/assets/images/article2_placeholder.png" alt="Article 2">
       <div class="article-text">
@@ -228,7 +272,6 @@ a:hover {
         <a href="#" class="read-more">Read more →</a>
       </div>
     </article>
-
     <article class="article-card fade-in">
       <img src="/assets/images/article3_placeholder.png" alt="Article 3">
       <div class="article-text">
@@ -240,66 +283,24 @@ a:hover {
   </div>
 </section>
 
-<style>
-/* Articles Grid */
-.articles-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
+<!-- Footer Call-to-Action -->
+<section class="footer-cta fade-in">
+  <span>Explore my <a href="/aboutme/">story</a>, view my <a href="/projects/">work</a>, or <a href="/contact/">connect with me</a>.</span>
+</section>
+
+<script>
+// Fade-in on scroll
+function fadeInOnScroll() {
+  const elements = document.querySelectorAll('.fade-in');
+  const windowBottom = window.innerHeight + window.scrollY;
+
+  elements.forEach(el => {
+    if (windowBottom > el.offsetTop + 100) {
+      el.classList.add('visible');
+    }
+  });
 }
 
-/* Article Cards */
-.article-card {
-  display: flex;
-  flex-direction: column;
-  background: #f9f9f9;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  flex: 1 1 250px;
-  max-width: 300px;
-}
-
-.article-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.article-card h3 {
-  margin: 0.5rem 0;
-  font-size: 1.2rem;
-}
-
-.article-card p {
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-.article-card a.read-more {
-  margin-top: 0.5rem;
-  display: inline-block;
-  color: #000;
-  text-decoration: underline;
-}
-
-.article-card a.read-more:hover {
-  color: #d4af37;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .articles-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .article-card {
-    max-width: 100%;
-  }
-}
-</style>
-
+window.addEventListener('scroll', fadeInOnScroll);
+window.addEventListener('load', fadeInOnScroll);
+</script>
