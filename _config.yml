@@ -17,9 +17,7 @@
 title: Wanjivwa Sinkala Portfolio
 email:
 description: >-
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Portfolio of Wanjivwa Sinkala – Development Economist & Operations Professional.
 twitter_username: username
 github_username: username
 minimal_mistakes_skin: white
@@ -31,7 +29,7 @@ remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
 paginate: 5
 paginate_path: /page:num/
-timezone:
+timezone: Africa/Lusaka
 
 include:
   - _pages
@@ -46,16 +44,13 @@ plugins:
 
 author:
   name: "Wanjivwa Sinkala"
-  avatar: "/assets/images/wanji_pic.jpg"  # Make sure this image is at assets/images/wanji_pic.jpg
-  bio: '<div style="text-align: justify;">Qualified in economic policy, M&E, and development studies, I’m driven to learn and apply systems that boost accountability and impact.</div>'
+  avatar: "/assets/images/wanji_pic.jpg"
+  bio: '<div style="text-align: justify; color:#000;">Qualified in economic policy, M&E, and development studies, driven to apply systems that boost accountability and impact.</div>'
   location: "Zambia"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://wanjivwasinkala.github.io"
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter-square"
-    #   url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/wanjivwasinkala"
@@ -102,4 +97,3 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-
