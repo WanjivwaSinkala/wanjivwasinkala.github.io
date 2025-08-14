@@ -1,6 +1,6 @@
 ---
 permalink: /aboutme/
-title: "About Me"
+title: "About Wanji"
 layout: splash
 classes: wide
 ---
