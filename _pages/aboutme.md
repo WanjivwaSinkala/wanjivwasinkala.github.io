@@ -62,7 +62,7 @@ classes: wide
 </style>
 
 <div class="about-section">
-  <img src="/assets/images/profile.jpg" alt="Wanjivwa Sinkala">
+  <img src="/assets/images/wanji_pic.jpg" alt="Wanjivwa Sinkala">
 
   <div class="about-text">
     <h1>About Me</h1>
