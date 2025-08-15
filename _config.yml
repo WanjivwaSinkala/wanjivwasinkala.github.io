@@ -14,86 +14,29 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Wanjivwa Sinkala Portfolio
-email:
-description: >-
-  Portfolio of Wanjivwa Sinkala – Development Economist & Operations Professional.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: white
-search: true
+title: "Wanjivwa Sinkala"
+description: "Portfolio and professional profile"
+baseurl: "" # leave empty if deploying to your root repo
+url: "https://wanjivwasinkala.github.io" # replace USERNAME
 
-# Build settings
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-permalink: /:categories/:title/
-paginate: 5
-paginate_path: /page:num/
-timezone: Africa/Lusaka
-
-include:
-  - _pages
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: default
 
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
+  - jekyll-seo-tag
 
-author:
-  name: "Wanjivwa Sinkala"
-  avatar: "/assets/images/wanji_pic.jpg"
-  bio: '<div style="text-align: justify; color:#000;">Qualified in economic policy, M&E, and development studies, driven to apply systems that boost accountability and impact.</div>'
-  location: "Zambia"
-  links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://wanjivwasinkala.github.io"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/wanjivwasinkala"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
-
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
-
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-      css: "assets/style.css"
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-      css: "assets/style.css"
-
-category_archive:
-  type: liquid
-  path: /categories/
-
-tag_archive:
-  type: liquid
-  path: /tags/
+# Enable dropdown menus
+navigation:
+  - title: "About Me"
+    url: /aboutme/
+  - title: "Projects"
+    url: /projects/
+  - title: "Resources"
+    children:
+      - title: "Photos"
+        url: /resources/photos/
+      - title: "Videos"
+        url: /resources/videos/
+  - title: "Download CV"
+    url: /assets/Wanjivwa_Sinkala_CV.pdf
