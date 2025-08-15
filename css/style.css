@@ -24,10 +24,17 @@ a:hover {
   justify-content:space-between; 
   padding:1rem 2rem;
 }
-.navbar .logo { 
-  color:#d4af37; 
-  font-weight:bold; 
-  font-size:1.5rem; 
+.navbar .logo {
+  color: #d4af37;
+  font-weight: bold;
+  font-size: 1.8rem; /* slightly bigger for full name */
+  white-space: nowrap; /* ensures the name stays on one line */
+}
+
+@media (max-width: 768px) {
+  .navbar .logo {
+    font-size: 1.4rem; /* smaller on mobile to prevent wrapping */
+  }
 }
 .navbar nav ul { 
   list-style:none; 
