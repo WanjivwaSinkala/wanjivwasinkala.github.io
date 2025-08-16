@@ -106,32 +106,67 @@ h2 {
 .about-section {
   background: #f5f5f5;
   padding: 3rem 2rem;
-  text-align: center;
 }
 .about-section h2 {
   color: #001f3f;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 .about-content {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 3rem;
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  flex-wrap: wrap;
 }
-
 .about-photo img {
   width: 260px;
   height: auto;
-  border-radius: 12px; /* ✅ Rounded rectangle (corporate look) */
+  border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-  border: 3px solid #f0f0f0; /* subtle border for clean framing */
+  border: 3px solid #f0f0f0;
 }
-
 .about-text {
   flex: 1;
   line-height: 1.7;
+}
+.about-text h3 {
+  color: #001f3f;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.about-text ul {
+  list-style: disc inside;
+  margin-bottom: 1rem;
+}
+.about-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.about-actions a {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.btn-download {
+  background: #d4af37;
+  color: #001f3f;
+}
+.btn-download:hover {
+  background: #c49b2f;
+}
+.btn-contact {
+  background: #001f3f;
+  color: #fff;
+}
+.btn-contact:hover {
+  background: #003366;
 }
 
 /* Grids */
@@ -208,4 +243,7 @@ h2 {
   .hero-section{flex-direction:column; text-align:center;}
   .feature-card, .project-card, .experience-card, .article-card{width:100%;}
   .experience-section .experience-card img{width:100px; height:100px;}
+  .about-content {flex-direction: column; align-items: center; text-align: center;}
+  .about-photo img {margin-bottom: 1rem;}
+  .about-actions {justify-content: center;}
 }
