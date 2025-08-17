@@ -5,6 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Me - Wanjivwa Sinkala</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-section {
+      padding: 80px 10%;
+      background: #f9f9f9;
+    }
+    .about-section h2 {
+      text-align: center;
+      color: #002147;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+    }
+    .about-content {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    .about-photo img {
+      max-width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .about-text {
+      flex: 1;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #333;
+    }
+    .about-text h3 {
+      margin-top: 25px;
+      margin-bottom: 12px;
+      color: #002147;
+      font-size: 1.3rem;
+      border-left: 4px solid #d4af37;
+      padding-left: 10px;
+    }
+    .about-text ul {
+      margin-left: 20px;
+      list-style: square;
+    }
+    .about-actions {
+      margin-top: 30px;
+    }
+    .btn-download, .btn-contact {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn-download {
+      background: #d4af37;
+      color: #fff;
+    }
+    .btn-download:hover {
+      background: #b9932e;
+    }
+    .btn-contact {
+      background: #002147;
+      color: #fff;
+    }
+    .btn-contact:hover {
+      background: #00152b;
+    }
+    @media(max-width: 900px) {
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-photo img {
+        margin: 0 auto 25px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
