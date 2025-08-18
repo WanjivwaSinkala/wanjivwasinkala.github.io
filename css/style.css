@@ -323,15 +323,21 @@ h2 {
   transform:translateY(0); 
 }
 
-/* Footer CTA */
+/* Footer CTA - Sticky */
 .footer-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background: #001f3f;
   color: #fff;
   padding: 1.5rem 0;
+  z-index: 1000;
 }
+
 .footer-cta span { 
-  display:block; 
-  text-align:center; 
+  display: block; 
+  text-align: center; 
   font-size: 0.9rem;
 }
 
@@ -344,3 +350,4 @@ h2 {
   .about-photo img {margin-bottom: 1rem;}
   .about-actions {justify-content: center;}
 }
+
