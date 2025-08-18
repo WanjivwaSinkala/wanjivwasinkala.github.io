@@ -3,10 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wanjivwa Sinkala Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="Wanjivwa Sinkala Portfolio - Development Economist, M&E Practitioner, Policy Analyst">
-  <meta name="author" content="Wanjivwa Sinkala">
+  <title>Wanjivwa Sinkala</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #001F3F;
+      color: white;
+      padding: 15px 30px;
+      z-index: 1000;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: gold;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('assets/images/black_pic.jpg') center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #001F3F;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,6 +97,8 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="articles.html">Articles</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -25,70 +107,30 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="hero-section fade-in">
-    <div class="hero-content">
-      <h1>Driving Inclusive Growth & Evidence-Based Policy</h1>
-      <p>Shaping strategies, assessing impact, and strengthening institutions for sustainable outcomes.</p>
-      <a href="contact.html" class="cta-btn">Connect with Me</a>
-    </div>
-    <div class="hero-image">
-      <img src="images/wanji_pic.png" alt="Wanjivwa Sinkala">
-    </div>
-  </section>
-  
-  <!-- Projects Section on Homepage -->
-  <section class="projects-section">
-    <h2 style="color:#d4af37; text-align:center; margin-bottom:1.5em;">
-      Selected Projects
-    </h2>
-
-    <div class="project-list">
-      <!-- Project 1 Preview -->
-      <div class="project-item">
-        <div class="project-category">Monitoring & Evaluation</div>
-        <h3>Project 1 Title</h3>
-        <p>
-          Brief description of the project goes here. 
-          <a href="projects.html#project1">Read more →</a>
-        </p>
-      </div>
-
-      <!-- Project 2 Preview -->
-      <div class="project-item">
-        <div class="project-category">Sustainability</div>
-        <h3>Project 2 Title</h3>
-        <p>
-          Brief description of the project goes here. 
-          <a href="projects.html#project2">Read more →</a>
-        </p>
-      </div>
-    </div>
+  <section class="hero">
+    <h1>Welcome, I'm Wanjivwa Sinkala</h1>
+    <p>A development economist and operations professional committed to advancing institutional integrity, results-based practice, and inclusive growth.</p>
   </section>
 
-  <!-- Articles Section on Homepage -->
-  <section class="articles-section fade-in">
-    <h2>Latest Articles</h2>
-    <div class="articles-grid">
-      <div class="article-card fade-in">
-        <img src="images/article_placeholder.png" alt="Article 1">
-        <h3>Article Title 1</h3>
-        <p>Short excerpt to engage readers. <a href="articles.html#article1">Read more →</a></p>
-      </div>
-      <div class="article-card fade-in">
-        <img src="images/article_placeholder2.png" alt="Article 2">
-        <h3>Article Title 2</h3>
-        <p>Short excerpt to engage readers. <a href="articles.html#article2">Read more →</a></p>
-      </div>
-    </div>
+  <!-- Highlights Section -->
+  <section id="highlights">
+    <h2>Highlights</h2>
+    <p>
+      • 7+ years of experience in administration and risk management across development, banking, legal, and retail sectors. <br>
+      • Strong foundation in compliance, financial documentation, stakeholder coordination, and operational efficiency. <br>
+      • Advanced training in Monitoring & Evaluation Methods, Economic Policy Management, and Development Studies with Economics.
+    </p>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact-section fade-in">
-    <h2>Connect with Me</h2>
-    <p>Explore my work, learn about my story, or get in touch for collaboration.</p>
-    <a href="mailto:your.email@example.com" class="cta-btn">Email Me</a>
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>
+      I have worked with organizations including PAMZ, Jet Supermarket Zambia, Jumbo Wholesale Zambia, 
+      Standard Chartered Bank Zambia, and Access Bank Zambia, gaining experience in administration management, 
+      market research, monitoring & evaluation, financial risk management, and credit assessment.
+    </p>
   </section>
 
-  <script src="js/main.js"></script>
 </body>
 </html>
