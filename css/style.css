@@ -33,13 +33,13 @@ a:hover {
 .navbar .logo {
   color: #d4af37;
   font-weight: bold;
-  font-size: 1.8rem; /* slightly bigger for full name */
-  white-space: nowrap; /* ensures the name stays on one line */
+  font-size: 1.8rem; 
+  white-space: nowrap; 
 }
 
 @media (max-width: 768px) {
   .navbar .logo {
-    font-size: 1.4rem; /* smaller on mobile to prevent wrapping */
+    font-size: 1.4rem;
   }
 }
 
@@ -117,7 +117,7 @@ h2 {
   margin-bottom:2rem; 
 }
 
-/* About Section (Updated for Home Page consistency) */
+/* About Section */
 .about-section {
   background: #f5f5f5;
   padding: 4rem 2rem;
@@ -128,7 +128,7 @@ h2 {
 }
 
 .about-section h2 {
-  color: #001f3f; /* Navy */
+  color: #001f3f; 
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -147,18 +147,18 @@ h2 {
   width: 260px;
   height: auto;
   border-radius: 12px;
-  border: 4px solid #d4af37; /* Gold border */
+  border: 4px solid #d4af37;
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 .about-text {
   flex: 1;
   line-height: 1.7;
-  color: #333; /* Darker text for readability */
+  color: #333;
 }
 
 .about-text h3 {
-  color: #001f3f; /* Navy headings */
+  color: #001f3f;
   margin-top: 20px;
   font-weight: 600;
 }
@@ -186,79 +186,31 @@ h2 {
   transition: all 0.3s ease;
 }
 
-/* Button colors consistent with Home Page */
 .btn-download {
-  background: #001f3f; /* Navy */
-  color: #fff;
-}
-.btn-download:hover {
-  background: #003366;
-}
-
-.btn-contact {
-  background: #d4af37; /* Gold */
-  color: #001f3f;
-}
-.btn-contact:hover {
-  background: #c49b2f;
-}
-
-/* Responsive Adjustments */
-@media(max-width:768px){
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .about-photo img {
-    width: 200px;
-    margin-bottom: 1.5rem;
-  }
-  .about-actions {
-    justify-content: center;
-  }
-}
-
-/* About Action Buttons */
-.about-actions {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.btn-download, .btn-contact {
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-.btn-download {
-  background: #d4af37;
-  color: #001f3f;
-}
-.btn-download:hover {
-  background: #c49b2f;
-}
-.btn-contact {
   background: #001f3f;
   color: #fff;
 }
-.btn-contact:hover {
+.btn-download:hover {
   background: #003366;
 }
 
-/* Responsive for About Section */
-@media(max-width:768px){
-  .about-content{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .about-photo img{
-    width: 200px;
-    margin-bottom: 1.5rem;
-  }
+.btn-contact {
+  background: #d4af37;
+  color: #001f3f;
+}
+.btn-contact:hover {
+  background: #c49b2f;
+}
+
+/* Fade-in */
+.fade-in { 
+  opacity:0; 
+  transform:translateY(20px); 
+  transition:opacity 0.8s ease, transform 0.8s ease; 
+}
+.visible { 
+  opacity:1; 
+  transform:translateY(0); 
 }
 
 /* Grids */
@@ -287,7 +239,7 @@ h2 {
   margin-bottom:0.5rem; 
 }
 
-/* Experience Section Specific */
+/* Experience Section */
 .experience-section { 
   padding:3rem 1rem; 
   max-width:1200px; 
@@ -312,17 +264,6 @@ h2 {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
 }
 
-/* Fade-in */
-.fade-in { 
-  opacity:0; 
-  transform:translateY(20px); 
-  transition:opacity 0.8s ease, transform 0.8s ease; 
-}
-.visible { 
-  opacity:1; 
-  transform:translateY(0); 
-}
-
 /* Footer CTA - Sticky */
 .footer-cta {
   position: fixed;
@@ -334,11 +275,61 @@ h2 {
   padding: 1.5rem 0;
   z-index: 1000;
 }
-
 .footer-cta span { 
   display: block; 
   text-align: center; 
   font-size: 0.9rem;
+}
+
+/* Projects Tabs Section */
+.projects-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.projects-tabs {
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  margin-bottom:2rem;
+  flex-wrap:wrap;
+}
+.tab-btn {
+  padding:0.8rem 1.5rem;
+  background:#001f3f;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.tab-btn.active {
+  background:#d4af37;
+  color:#001f3f;
+}
+.projects-content {
+  display:flex;
+  justify-content:center;
+}
+.project-detail {
+  display:none;
+  background:#f9f9f9;
+  padding:2rem;
+  border-radius:12px;
+  box-shadow:0 6px 16px rgba(0,0,0,0.08);
+  max-width:800px;
+  text-align:center;
+}
+.project-detail.active {
+  display:block;
+}
+.project-detail h3 {
+  color:#001f3f;
+  margin-bottom:0.5rem;
+}
+.project-detail p {
+  color:#333;
 }
 
 /* Responsive */
@@ -349,5 +340,5 @@ h2 {
   .about-content {flex-direction: column; align-items: center; text-align: center;}
   .about-photo img {margin-bottom: 1rem;}
   .about-actions {justify-content: center;}
+  .projects-tabs {flex-direction:column; align-items:center;}
 }
-
