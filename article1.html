@@ -3,77 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Understanding Financial Inclusion in Zambia</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #000;
-      background: #f9f9f9;
-    }
-    a { text-decoration: none; color: #001f3f; font-weight: 600; }
-    a:hover { color: #d4af37; }
-
-    /* Navbar same as before */
-    .navbar { position: sticky; top:0; background:#001f3f; color:#fff; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; z-index:100; }
-    .navbar .logo { color:#d4af37; font-weight:bold; font-size:1.8rem; }
-    .navbar nav ul { list-style:none; display:flex; gap:1.5rem; margin:0; padding:0; }
-    .navbar nav ul li a { color:#fff; }
-    .navbar nav ul li a.active, .navbar nav ul li a:hover { color:#d4af37; }
-    @media (max-width:768px){ .navbar nav ul { flex-direction:column; display:none; position:absolute; top:60px; right:2rem; background:#001f3f; padding:1rem; border-radius:8px; } .navbar nav ul.show{ display:flex; } .navbar .menu-toggle{ display:block; cursor:pointer; font-size:1.8rem; color:#d4af37; } }
-
-    /* Article content */
-    .article-section { max-width: 900px; margin: 3em auto; padding: 0 1.5em; background:#fff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); padding:2em; }
-    .article-section h1 { font-size:2em; color:#002147; margin-bottom:1rem; }
-    .article-section .article-date { font-size:0.9em; color:#666; margin-bottom:1em; }
-    .article-section p { font-size:1.05em; color:#444; margin-bottom:1em; }
-    .back-btn { display:inline-block; padding:0.5em 1em; background:#d4af37; color:#001f3f; border-radius:12px; font-weight:600; margin-top:1em; transition:background 0.3s; }
-    .back-btn:hover { background:#c19c24; }
-
-    .footer-cta { background:#001f3f; color:#fff; text-align:center; padding:2rem 1rem; margin-top:3rem; }
-  </style>
+  <title>Driving Inclusive Growth Through Evidence-Based Policy - Wanjivwa Sinkala</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Wanjivwa Sinkala</div>
-    <div class="menu-toggle">&#9776;</div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="about.html">About Me</a></li>
         <li><a href="articles.html" class="active">Articles</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Article Content -->
-  <section class="article-section">
-    <h1>Understanding Financial Inclusion in Zambia</h1>
-    <div class="article-date">Published: August 10, 2025</div>
-    <p>Financial inclusion is a critical driver of economic growth. This article explores the challenges and opportunities in Zambia, focusing on SMEs and rural communities.</p>
-    <p>Access to financial services remains limited in rural areas. Many small business owners lack collateral or formal banking history, which restricts loan access. Financial literacy programs and microfinance initiatives are essential to improve participation.</p>
-    <p>Innovative digital banking solutions, mobile money platforms, and community-based financial cooperatives can bridge gaps, promoting inclusive growth and economic resilience.</p>
-    <a href="articles.html" class="back-btn">Back to Articles</a>
+  <section class="article-content">
+    <h1>Driving Inclusive Growth Through Evidence-Based Policy</h1>
+    <p>Inclusive economic growth depends on the adoption of evidence-based policies that respond to real-world challenges. Data-driven policy design allows decision-makers to identify priorities, allocate resources efficiently, and monitor outcomes for sustained impact.</p>
+    <h2>Key Insights:</h2>
+    <ul>
+      <li><strong>Data-Informed Decision Making:</strong> Policies must be guided by empirical evidence and local context.</li>
+      <li><strong>Targeted Interventions:</strong> Focus on marginalized groups to promote equity and inclusion.</li>
+      <li><strong>Monitoring & Feedback:</strong> Continuous assessment and evaluation improve policy effectiveness.</li>
+      <li><strong>Stakeholder Engagement:</strong> Collaborative policy design strengthens ownership and implementation.</li>
+    </ul>
+    <p>By implementing evidence-based policies, governments and organizations can create equitable, sustainable growth opportunities that benefit all segments of society.</p>
+
+    <a href="articles.html" class="back-home">← Back to Articles</a>
   </section>
 
-  <!-- Footer -->
   <footer class="footer-cta">
     <span>&copy; 2025 Wanjivwa Sinkala. All Rights Reserved.</span>
   </footer>
-
-  <!-- Mobile Navbar Script -->
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.navbar nav ul');
-    toggle.addEventListener('click', () => menu.classList.toggle('show'));
-  </script>
-
 </body>
 </html>
