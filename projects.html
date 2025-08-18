@@ -4,51 +4,120 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects - Wanjivwa Sinkala</title>
-  <link rel="stylesheet" href="css/style.css">
   <style>
-    /* ===== Projects Grid ===== */
-    .projects-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      max-width: 1000px;
+    body {
+      font-family: Arial, sans-serif;
+      margin:0;
+      color:#000;
+      line-height:1.6;
+      background: #f9f9f9;
+    }
+    a {
+      color:#001f3f; 
+      text-decoration:none;
+      font-weight:600;
+    }
+    a:hover {
+      color:#d4af37;
+    }
+
+    /* Navbar */
+    .navbar {
+      position:sticky; top:0;
+      background:#001f3f;
+      color:#fff;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:1rem 2rem;
+      z-index:100;
+    }
+    .navbar .logo {
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+    .navbar nav ul {
+      list-style:none;
+      display:flex;
+      gap:1rem;
+      margin:0;
+      padding:0;
+    }
+    .navbar nav ul li a {
+      color:#fff;
+    }
+    .navbar nav ul li a:hover,
+    .navbar nav ul li a.active {
+      color:#d4af37;
+    }
+
+    /* Projects Grid */
+    .projects-section {
+      max-width: 1200px;
       margin: 3em auto;
       padding: 0 1.5em;
+      text-align:center;
+    }
+    .projects-section h2 {
+      font-size:2em;
+      color:#d4af37;
+      margin-bottom:2em;
+      border-bottom:2px solid #d4af37;
+      display:inline-block;
+      padding-bottom:0.3em;
+    }
+    .projects-grid {
+      display:flex;
+      flex-wrap:wrap;
+      gap:2rem;
+      justify-content:center;
     }
     .project-card {
-      flex: 1 1 300px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding: 1.5em;
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      padding:1.5em;
+      flex:1 1 300px;
+      max-width:350px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .project-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      box-shadow:0 6px 16px rgba(0,0,0,0.12);
     }
     .project-card h3 {
-      font-size: 1.3em;
-      color: #002147;
-      margin-bottom: 0.5em;
+      color:#002147;
+      margin-bottom:0.5em;
+    }
+    .project-card .project-category {
+      color:#d4af37;
+      font-weight:600;
+      margin-bottom:0.5em;
     }
     .project-card p {
-      line-height: 1.6;
-      color: #444;
+      color:#444;
+      line-height:1.6;
     }
 
-    /* Back to Home Button */
+    /* Back to Home */
     .back-home {
-      display: block;
-      text-align: center;
-      margin: 3em 0 1em;
-      font-weight: 600;
-      color: #001f3f;
-      text-decoration: none;
-      font-size: 1.1em;
+      display:block;
+      margin:3em 0 1em;
+      font-size:1.1em;
+      color:#001f3f;
+      text-decoration:none;
     }
     .back-home:hover {
-      color: #d4af37;
+      color:#d4af37;
+    }
+
+    /* Footer */
+    .footer-cta {
+      background:#001f3f;
+      color:#fff;
+      text-align:center;
+      padding:2rem 1rem;
     }
   </style>
 </head>
@@ -70,7 +139,7 @@
 
   <!-- Projects Section -->
   <section class="projects-section">
-    <h2 style="text-align:center; color:#d4af37; margin-bottom:1.5em;">Projects & Publications</h2>
+    <h2>Projects & Publications</h2>
 
     <div class="projects-grid">
       <!-- Project 1 -->
@@ -78,9 +147,8 @@
         <div class="project-category">Monitoring & Evaluation</div>
         <h3>Project 1 Title</h3>
         <p>
-          Full description of Project 1 goes here. You can expand with context, 
-          objectives, methodology, and impact achieved. Include achievements, 
-          measurable outcomes, and lessons learned.
+          Full description of Project 1 goes here. Expand with context, 
+          objectives, methodology, and measurable outcomes.
         </p>
       </div>
 
@@ -90,18 +158,16 @@
         <h3>Project 2 Title</h3>
         <p>
           Full description of Project 2 goes here with more detail, 
-          outcomes, and supporting evidence. Mention collaborations, 
-          challenges, and sustainability aspects.
+          outcomes, and supporting evidence.
         </p>
       </div>
 
-      <!-- Project 3 (Optional) -->
+      <!-- Project 3 -->
       <div id="project3" class="project-card">
         <div class="project-category">Policy Analysis</div>
         <h3>Project 3 Title</h3>
         <p>
-          Full description of Project 3 goes here with detailed insights, 
-          findings, and results.
+          Full description of Project 3 goes here. Include insights and results.
         </p>
       </div>
     </div>
