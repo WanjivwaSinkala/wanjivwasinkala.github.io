@@ -5,6 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects - Wanjivwa Sinkala</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== Projects Grid ===== */
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 3em auto;
+      padding: 0 1.5em;
+    }
+    .project-card {
+      flex: 1 1 300px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 1.5em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+    .project-card h3 {
+      font-size: 1.3em;
+      color: #002147;
+      margin-bottom: 0.5em;
+    }
+    .project-card p {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    /* Back to Home Button */
+    .back-home {
+      display: block;
+      text-align: center;
+      margin: 3em 0 1em;
+      font-weight: 600;
+      color: #001f3f;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    .back-home:hover {
+      color: #d4af37;
+    }
+  </style>
 </head>
 <body>
 
@@ -24,27 +70,44 @@
 
   <!-- Projects Section -->
   <section class="projects-section">
-    <h2>Projects & Publications</h2>
+    <h2 style="text-align:center; color:#d4af37; margin-bottom:1.5em;">Projects & Publications</h2>
 
-    <!-- Project 1 -->
-    <div id="project1" class="project-card">
-      <h3>Project 1 Title</h3>
-      <p>
-        Full description of Project 1 goes here. You can expand with context, 
-        objectives, methodology, and impact achieved. Include achievements, 
-        measurable outcomes, and lessons learned.
-      </p>
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div id="project1" class="project-card">
+        <div class="project-category">Monitoring & Evaluation</div>
+        <h3>Project 1 Title</h3>
+        <p>
+          Full description of Project 1 goes here. You can expand with context, 
+          objectives, methodology, and impact achieved. Include achievements, 
+          measurable outcomes, and lessons learned.
+        </p>
+      </div>
+
+      <!-- Project 2 -->
+      <div id="project2" class="project-card">
+        <div class="project-category">Sustainability</div>
+        <h3>Project 2 Title</h3>
+        <p>
+          Full description of Project 2 goes here with more detail, 
+          outcomes, and supporting evidence. Mention collaborations, 
+          challenges, and sustainability aspects.
+        </p>
+      </div>
+
+      <!-- Project 3 (Optional) -->
+      <div id="project3" class="project-card">
+        <div class="project-category">Policy Analysis</div>
+        <h3>Project 3 Title</h3>
+        <p>
+          Full description of Project 3 goes here with detailed insights, 
+          findings, and results.
+        </p>
+      </div>
     </div>
 
-    <!-- Project 2 -->
-    <div id="project2" class="project-card">
-      <h3>Project 2 Title</h3>
-      <p>
-        Full description of Project 2 goes here with more detail, 
-        outcomes, and supporting evidence. Mention collaborations, 
-        challenges, and sustainability aspects.
-      </p>
-    </div>
+    <!-- Back to Home -->
+    <a href="index.html" class="back-home">← Back to Home</a>
   </section>
 
   <!-- Footer -->
