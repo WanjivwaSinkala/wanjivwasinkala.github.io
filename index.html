@@ -25,16 +25,167 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="hero-section fade-in">
-    <div class="hero-content">
-      <h1>Driving Inclusive Growth & Evidence-Based Policy</h1>
-      <p>Shaping strategies, assessing impact, and strengthening institutions for sustainable outcomes.</p>
-      <a href="#contact" class="cta-btn">Connect with Me</a>
-    </div>
-    <div class="hero-image">
-      <img src="images/wanji_pic.png" alt="Wanjivwa Sinkala">
-    </div>
-  </section>
+<section id="hero" class="hero-section fade-in">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="videos/hero-bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay Gradient -->
+  <div class="overlay"></div>
+
+  <!-- Hero Content -->
+  <div class="hero-content" id="hero-content">
+    <h1 id="rotating-headline" class="fade-in-text-style1"></h1>
+    <p id="rotating-subtext" class="fade-in-text-style1"></p>
+  </div>
+</section>
+
+<script>
+const content = [
+  {
+    headline: "Building Resilient Economies, Empowering Communities",
+    subtext: "Turning data into action to drive sustainable growth and inclusive development."
+  },
+  {
+    headline: "Shaping Policy. Driving Impact.",
+    subtext: "Advancing evidence-based solutions that strengthen institutions and transform lives."
+  },
+  {
+    headline: "From Insight to Innovation",
+    subtext: "Transforming research into strategies that deliver real-world change across Africa."
+  }
+];
+
+let currentIndex = 0;
+const headlineEl = document.getElementById("rotating-headline");
+const subtextEl = document.getElementById("rotating-subtext");
+const heroContent = document.getElementById("hero-content");
+
+let intervalId;
+
+function changeContent() {
+  // Remove previous animation classes
+  headlineEl.classList.remove("fade-in-text-style1", "fade-in-text-style2", "fade-in-text-style3");
+  subtextEl.classList.remove("fade-in-text-style1", "fade-in-text-style2", "fade-in-text-style3");
+
+  void headlineEl.offsetWidth;
+  void subtextEl.offsetWidth;
+
+  // Update text
+  headlineEl.textContent = content[currentIndex].headline;
+  subtextEl.textContent = content[currentIndex].subtext;
+
+  // Rotate through 3 animation styles
+  const styleClass = `fade-in-text-style${(currentIndex % 3) + 1}`;
+  headlineEl.classList.add(styleClass);
+  subtextEl.classList.add(styleClass);
+
+  currentIndex = (currentIndex + 1) % content.length;
+}
+
+function startRotation() {
+  changeContent(); // initial load
+  intervalId = setInterval(changeContent, 5000);
+}
+
+function pauseRotation() {
+  clearInterval(intervalId);
+}
+
+// Detect if device supports hover (desktop)
+const supportsHover = window.matchMedia("(hover: hover)").matches;
+startRotation();
+if (supportsHover) {
+  heroContent.addEventListener("mouseenter", pauseRotation);
+  heroContent.addEventListener("mouseleave", startRotation);
+}
+</script>
+
+<style>
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+}
+
+/* Background Video with subtle zoom/pan */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  animation: videoZoom 60s linear infinite;
+}
+
+@keyframes videoZoom {
+  0% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.05) translateY(-10px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+/* Gradient Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+  z-index: -1;
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 900px;
+  padding: 20px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  line-height: 1.4;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+/* Animation Style 1: Fade + Up */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in-text-style1 { animation: fadeUp 1s ease-in-out; }
+
+/* Animation Style 2: Slide from Left */
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.fade-in-text-style2 { animation: slideLeft 1s ease-out; }
+
+/* Animation Style 3: Zoom In */
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.fade-in-text-style3 { animation: zoomIn 1s ease-in; }
+</style>
 
   <!-- Features/Highlights -->
   <section class="features-section fade-in">
