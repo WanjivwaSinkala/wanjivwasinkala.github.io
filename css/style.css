@@ -108,7 +108,31 @@ a:hover {
     font-size: 1rem;
     font-weight: 600;
 }
+/* =========================
+   Floating Phone Box
+   ========================= */
+.floating-phone {
+  position: fixed; 
+  top: 30px;
+  right: 30px;
+  z-index: 9999;
+  animation: float 3s ease-in-out infinite;
+}
 
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .floating-phone {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+  }
+}
 /* =========================
    Hero Section
    ========================= */
