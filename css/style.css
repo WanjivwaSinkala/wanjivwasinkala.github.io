@@ -77,6 +77,39 @@ a:hover {
 }
 
 /* =========================
+   Phone Box in Header
+   ========================= */
+.phone-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff; /* white text */
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.phone-box .phone-img {
+    width: 24px;
+    height: 24px;
+}
+
+.phone-box .phone-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.phone-box .call-text {
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.phone-box .phone-number {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* =========================
    Hero Section
    ========================= */
 .hero-section {
