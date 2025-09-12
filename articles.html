@@ -7,30 +7,31 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin:0;
-      color:#000;
-      line-height:1.6;
+      margin: 0;
+      color: #000;
+      line-height: 1.6;
       background: #f9f9f9;
     }
     a {
-      color:#001f3f; 
-      text-decoration:none;
-      font-weight:600;
+      color: #001f3f;
+      text-decoration: none;
+      font-weight: 600;
     }
     a:hover {
-      color:#d4af37;
+      color: #d4af37;
     }
 
     /* Navbar */
     .navbar {
-      position:sticky; top:0;
-      background:#001f3f;
-      color:#fff;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:1rem 2rem;
-      z-index:100;
+      position: sticky;
+      top: 0;
+      background: #001f3f;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
     }
     .navbar .logo {
       color: #d4af37;
@@ -38,81 +39,114 @@
       font-size: 1.8rem;
     }
     .navbar nav ul {
-      list-style:none;
-      display:flex;
-      gap:1rem;
-      margin:0;
-      padding:0;
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
     }
     .navbar nav ul li a {
-      color:#fff;
+      color: #fff;
+      transition: color 0.3s;
     }
     .navbar nav ul li a:hover,
     .navbar nav ul li a.active {
-      color:#d4af37;
+      color: #d4af37;
     }
 
-    /* Articles Grid */
+    /* Responsive Navbar */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-wrap: wrap;
+      }
+      .navbar nav ul {
+        flex-direction: column;
+        background: #001f3f;
+        width: 100%;
+        padding: 1rem 0;
+        display: none;
+      }
+      .navbar nav ul.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+        color: #d4af37;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+    }
+
+    /* Articles Section */
     .articles-section {
       max-width: 1200px;
       margin: 3em auto;
       padding: 0 1.5em;
-      text-align:center;
+      text-align: center;
     }
     .articles-section h2 {
-      font-size:2em;
-      color:#d4af37;
-      margin-bottom:2em;
-      border-bottom:2px solid #d4af37;
-      display:inline-block;
-      padding-bottom:0.3em;
-    }
-    .articles-grid {
-      display:flex;
-      flex-wrap:wrap;
-      gap:2rem;
-      justify-content:center;
-    }
-    .article-card {
-      background:#fff;
-      border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-      padding:1.5em;
-      flex:1 1 300px;
-      max-width:350px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .article-card:hover {
-      transform: translateY(-4px);
-      box-shadow:0 6px 16px rgba(0,0,0,0.12);
-    }
-    .article-card h3 {
-      color:#002147;
-      margin-bottom:0.5em;
-    }
-    .article-card p {
-      color:#444;
-      line-height:1.6;
+      font-size: 2rem;
+      color: #001f3f;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #d4af37;
+      display: inline-block;
+      padding-bottom: 0.3rem;
     }
 
-    /* Back to Home */
+    .articles-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .article-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+      flex: 1 1 300px;
+      max-width: 350px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+    .article-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+    }
+    .article-card h3 {
+      color: #001f3f;
+      margin-bottom: 0.5rem;
+    }
+    .article-card p {
+      color: #444;
+      font-size: 1rem;
+    }
+    .article-card a {
+      color: #d4af37;
+      font-weight: bold;
+    }
+    .article-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Back Link */
     .back-home {
-      display:block;
-      margin:3em 0 1em;
-      font-size:1.1em;
-      color:#001f3f;
-      text-decoration:none;
+      display: inline-block;
+      margin: 3em 0 1em;
+      font-size: 1.1em;
+      color: #001f3f;
     }
     .back-home:hover {
-      color:#d4af37;
+      color: #d4af37;
     }
 
     /* Footer */
     .footer-cta {
-      background:#001f3f;
-      color:#fff;
-      text-align:center;
-      padding:2rem 1rem;
+      background: #001f3f;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -121,8 +155,9 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Wanjivwa Sinkala</div>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
     <nav>
-      <ul>
+      <ul id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About Me</a></li>
@@ -173,6 +208,14 @@
   <footer class="footer-cta">
     <span>&copy; 2025 Wanjivwa Sinkala. All Rights Reserved.</span>
   </footer>
+
+  <!-- Mobile Navbar Script -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
