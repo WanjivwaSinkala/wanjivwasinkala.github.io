@@ -6,206 +6,13 @@
   <title>Articles - Wanjivwa Sinkala</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --primary-color: #001f3f;
-      --accent-color: #d4af37;
-      --text-color: #333;
-      --font-body: 'Open Sans', sans-serif;
-      --font-heading: 'Bellefair', serif;
-    }
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-oQG+wlZfJdGZ+0G5l4bHyXnG2tVzRZxO+0vKw0RIKkx9MKVb7kZj2cI5H/yLd9o5O+EgfPQ0rIp7jHq5x8B1Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: var(--font-body);
-      line-height: 1.7;
-      background-color: #f9f9f9;
-      color: var(--text-color);
-      padding-bottom: 100px;
-    }
-
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a:hover {
-      color: var(--accent-color);
-    }
-
-    h1, h2, h3 {
-      font-family: var(--font-heading);
-      color: var(--primary-color);
-      margin-bottom: 0.75rem;
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-      border-bottom: 2px solid var(--accent-color);
-      display: inline-block;
-      padding-bottom: 0.3rem;
-      margin-bottom: 2rem;
-    }
-
-    p, li {
-      font-size: 1.05rem;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    /* Navbar */
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: var(--primary-color);
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 1000;
-    }
-
-    .navbar .logo {
-      color: var(--accent-color);
-      font-size: 1.8rem;
-      font-family: var(--font-heading);
-    }
-
-    .navbar nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .navbar nav ul li a {
-      color: #fff;
-      transition: color 0.3s;
-    }
-
-    .navbar nav ul li a.active,
-    .navbar nav ul li a:hover {
-      color: var(--accent-color);
-    }
-
-    .menu-toggle {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      .navbar nav ul {
-        flex-direction: column;
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 2rem;
-        background: var(--primary-color);
-        padding: 1rem;
-        border-radius: 8px;
-      }
-
-      .navbar nav ul.show {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 1.8rem;
-        color: var(--accent-color);
-      }
-    }
-
-    /* Articles Section */
-    .articles-section {
-      max-width: 1100px;
-      margin: 4em auto;
-      padding: 0 1.5em;
-    }
-
-    .articles-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
-
-    .article-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      flex: 1 1 300px;
-      max-width: 350px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: left;
-    }
-
-    .article-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-
-    .article-card h3 {
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-      font-family: var(--font-heading);
-    }
-
-    .article-card p {
-      color: var(--text-color);
-      font-size: 1.05rem;
-      margin-bottom: 1rem;
-    }
-
-    .article-card a {
-      color: var(--accent-color);
-      font-weight: 700;
-    }
-
-    .article-card a:hover {
-      text-decoration: underline;
-    }
-
-    /* Back Link */
-    .back-home {
-      display: inline-block;
-      margin: 3em 0 1em;
-      font-size: 1.1rem;
-      color: var(--primary-color);
-    }
-
-    .back-home:hover {
-      color: var(--accent-color);
-    }
-
-    /* Footer */
-    .footer-cta {
-      background: var(--primary-color);
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-    }
-  </style>
+  <!-- Main Stylesheet (shared across all pages) -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -226,20 +33,28 @@
   </header>
 
   <!-- Articles Section -->
-  <section class="articles-section">
+  <section class="articles-section auto-container">
     <h1>Latest Articles</h1>
     <div class="articles-grid">
       <div class="article-card">
         <h3>Driving Inclusive Growth Through Evidence-Based Policy</h3>
-        <p>Inclusive economic growth depends on the adoption of evidence-based policies that respond to real-world challenges. <a href="article1.html">Read more →</a></p>
+        <p>Inclusive economic growth depends on the adoption of evidence-based policies that respond to real-world challenges. 
+          <a href="article1.html">Read more →</a>
+        </p>
       </div>
+
       <div class="article-card">
         <h3>Article Title 2</h3>
-        <p>Short excerpt of Article 2 with key points summarized. Encourage the user to read full content. <a href="article2.html">Read more →</a></p>
+        <p>Short excerpt of Article 2 with key points summarized. Encourage the user to read full content. 
+          <a href="article2.html">Read more →</a>
+        </p>
       </div>
+
       <div class="article-card">
         <h3>Article Title 3</h3>
-        <p>Short excerpt of Article 3. Provide context and highlight value to the reader. <a href="article3.html">Read more →</a></p>
+        <p>Short excerpt of Article 3. Provide context and highlight value to the reader. 
+          <a href="article3.html">Read more →</a>
+        </p>
       </div>
     </div>
     <a href="index.html" class="back-home">← Back to Home</a>
@@ -250,6 +65,7 @@
     <span>&copy; 2025 Wanjivwa Sinkala. All Rights Reserved.</span>
   </footer>
 
+  <!-- JS for menu toggle -->
   <script>
     function toggleMenu() {
       const nav = document.getElementById('navMenu');
