@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact - Wanjivwa Sinkala</title>
   <style>
     body {
@@ -17,8 +17,10 @@
       text-decoration:none;
       font-weight:600;
     }
-    a:hover {
+    a:hover,
+    a:focus {
       color:#d4af37;
+      outline:none;
     }
 
     /* Navbar */
@@ -48,8 +50,10 @@
       color:#fff;
     }
     .navbar nav ul li a:hover,
-    .navbar nav ul li a.active {
+    .navbar nav ul li a.active,
+    .navbar nav ul li a:focus {
       color:#d4af37;
+      outline:none;
     }
 
     /* Contact Section */
@@ -73,21 +77,42 @@
       border-radius:12px;
       box-shadow:0 4px 12px rgba(0,0,0,0.08);
       margin-bottom:2em;
+      text-align:left;
     }
     .contact-info p {
       margin:0.5em 0;
       color:#444;
+      font-size:1.1em;
     }
-    .contact-form input, 
-    .contact-form textarea {
+
+    /* Form Styles */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 0.3em;
+      display: block;
+      color: #001f3f;
+    }
+    input, textarea {
       width:100%;
       padding:0.8em;
-      margin:0.5em 0 1em 0;
       border:1px solid #ccc;
       border-radius:8px;
       font-size:1em;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      resize: vertical;
     }
-    .contact-form button {
+    input:focus, textarea:focus {
+      border-color: #d4af37;
+      box-shadow: 0 0 5px rgba(212,175,55,0.7);
+      outline:none;
+    }
+
+    button {
       background:#001f3f;
       color:#fff;
       border:none;
@@ -96,10 +121,13 @@
       border-radius:8px;
       cursor:pointer;
       transition: background 0.3s ease;
+      align-self: flex-start;
     }
-    .contact-form button:hover {
+    button:hover,
+    button:focus {
       background:#d4af37;
       color:#001f3f;
+      outline:none;
     }
 
     /* Back to Home */
@@ -109,9 +137,12 @@
       font-size:1.1em;
       color:#001f3f;
       text-decoration:none;
+      text-align:center;
     }
-    .back-home:hover {
+    .back-home:hover,
+    .back-home:focus {
       color:#d4af37;
+      outline:none;
     }
 
     /* Footer */
@@ -121,39 +152,63 @@
       text-align:center;
       padding:2rem 1rem;
     }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .contact-section {
+        padding: 0 1em;
+      }
+      .navbar {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .navbar nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      button {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <header class="navbar">
+  <header class="navbar" role="banner">
     <div class="logo">Wanjivwa Sinkala</div>
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="articles.html">Articles</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Contact Section -->
-  <section class="contact-section">
-    <h2>Contact Me</h2>
+  <section class="contact-section" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact Me</h2>
 
     <div class="contact-info">
-      <p><strong>Email:</strong> <a href="mailto:wanjivwa@example.com">sinkalawanjivwa@gmail.com</a></p>
+      <p><strong>Email:</strong> <a href="mailto:sinkalawanjivwa@gmail.com">sinkalawanjivwa@gmail.com</a></p>
       <p><strong>Phone:</strong> +260 966 767 779</p>
       <p><strong>Location:</strong> Lusaka, Zambia</p>
     </div>
 
     <div class="contact-form">
-      <form action="#" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <form action="#" method="POST" novalidate>
+        <label for="name">Your Name</label>
+        <input id="name" type="text" name="name" placeholder="Your Name" required autocomplete="name" />
+
+        <label for="email">Your Email</label>
+        <input id="email" type="email" name="email" placeholder="Your Email" required autocomplete="email" />
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
         <button type="submit">Send Message</button>
       </form>
     </div>
@@ -162,7 +217,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer-cta">
+  <footer class="footer-cta" role="contentinfo">
     <span>&copy; 2025 Wanjivwa Sinkala. All Rights Reserved.</span>
   </footer>
 
