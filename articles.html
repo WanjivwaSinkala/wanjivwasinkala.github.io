@@ -4,28 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Articles - Wanjivwa Sinkala</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      color: #000;
-      line-height: 1.6;
-      background: #f9f9f9;
+    :root {
+      --primary-color: #001f3f;
+      --accent-color: #d4af37;
+      --text-color: #333;
+      --font-body: 'Open Sans', sans-serif;
+      --font-heading: 'Bellefair', serif;
     }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      line-height: 1.7;
+      background-color: #f9f9f9;
+      color: var(--text-color);
+      padding-bottom: 100px;
+    }
+
     a {
-      color: #001f3f;
+      color: var(--primary-color);
       text-decoration: none;
       font-weight: 600;
     }
+
     a:hover {
-      color: #d4af37;
+      color: var(--accent-color);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      color: var(--primary-color);
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+      margin-bottom: 2rem;
+    }
+
+    p, li {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     /* Navbar */
     .navbar {
       position: sticky;
       top: 0;
-      background: #001f3f;
+      background: var(--primary-color);
       color: #fff;
       display: flex;
       justify-content: space-between;
@@ -33,64 +82,62 @@
       padding: 1rem 2rem;
       z-index: 1000;
     }
+
     .navbar .logo {
-      color: #d4af37;
-      font-weight: bold;
+      color: var(--accent-color);
       font-size: 1.8rem;
+      font-family: var(--font-heading);
     }
+
     .navbar nav ul {
       list-style: none;
       display: flex;
       gap: 1.5rem;
-      margin: 0;
-      padding: 0;
     }
+
     .navbar nav ul li a {
       color: #fff;
       transition: color 0.3s;
     }
-    .navbar nav ul li a:hover,
-    .navbar nav ul li a.active {
-      color: #d4af37;
+
+    .navbar nav ul li a.active,
+    .navbar nav ul li a:hover {
+      color: var(--accent-color);
     }
 
-    /* Responsive Navbar */
+    .menu-toggle {
+      display: none;
+    }
+
     @media (max-width: 768px) {
-      .navbar {
-        flex-wrap: wrap;
-      }
       .navbar nav ul {
         flex-direction: column;
-        background: #001f3f;
-        width: 100%;
-        padding: 1rem 0;
         display: none;
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        background: var(--primary-color);
+        padding: 1rem;
+        border-radius: 8px;
       }
+
       .navbar nav ul.show {
         display: flex;
       }
+
       .menu-toggle {
         display: block;
-        color: #d4af37;
-        font-size: 1.8rem;
         cursor: pointer;
+        font-size: 1.8rem;
+        color: var(--accent-color);
       }
     }
 
     /* Articles Section */
     .articles-section {
-      max-width: 1200px;
-      margin: 3em auto;
+      max-width: 1100px;
+      margin: 4em auto;
       padding: 0 1.5em;
-      text-align: center;
-    }
-    .articles-section h2 {
-      font-size: 2rem;
-      color: #001f3f;
-      margin-bottom: 2rem;
-      border-bottom: 2px solid #d4af37;
-      display: inline-block;
-      padding-bottom: 0.3rem;
     }
 
     .articles-grid {
@@ -99,32 +146,40 @@
       gap: 2rem;
       justify-content: center;
     }
+
     .article-card {
       background: #fff;
       border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
       padding: 1.5rem;
       flex: 1 1 300px;
       max-width: 350px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: left;
     }
+
     .article-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
+
     .article-card h3 {
-      color: #001f3f;
+      color: var(--primary-color);
       margin-bottom: 0.5rem;
+      font-family: var(--font-heading);
     }
+
     .article-card p {
-      color: #444;
-      font-size: 1rem;
+      color: var(--text-color);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
     }
+
     .article-card a {
-      color: #d4af37;
-      font-weight: bold;
+      color: var(--accent-color);
+      font-weight: 700;
     }
+
     .article-card a:hover {
       text-decoration: underline;
     }
@@ -133,23 +188,26 @@
     .back-home {
       display: inline-block;
       margin: 3em 0 1em;
-      font-size: 1.1em;
-      color: #001f3f;
+      font-size: 1.1rem;
+      color: var(--primary-color);
     }
+
     .back-home:hover {
-      color: #d4af37;
+      color: var(--accent-color);
     }
 
     /* Footer */
     .footer-cta {
-      background: #001f3f;
+      background: var(--primary-color);
       color: #fff;
       text-align: center;
       padding: 2rem 1rem;
-      margin-top: 3rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -169,38 +227,21 @@
 
   <!-- Articles Section -->
   <section class="articles-section">
-    <h2>Latest Articles</h2>
-
+    <h1>Latest Articles</h1>
     <div class="articles-grid">
-      <!-- Article 1 -->
       <div class="article-card">
-        <h3>Article Title 1</h3>
-        <p>
-          Short excerpt of Article 1 to engage readers. Include a brief overview or key insight. 
-          <a href="article1.html">Read more →</a>
-        </p>
+        <h3>Driving Inclusive Growth Through Evidence-Based Policy</h3>
+        <p>Inclusive economic growth depends on the adoption of evidence-based policies that respond to real-world challenges. <a href="article1.html">Read more →</a></p>
       </div>
-
-      <!-- Article 2 -->
       <div class="article-card">
         <h3>Article Title 2</h3>
-        <p>
-          Short excerpt of Article 2 with key points summarized. Encourage the user to read full content. 
-          <a href="article2.html">Read more →</a>
-        </p>
+        <p>Short excerpt of Article 2 with key points summarized. Encourage the user to read full content. <a href="article2.html">Read more →</a></p>
       </div>
-
-      <!-- Article 3 -->
       <div class="article-card">
         <h3>Article Title 3</h3>
-        <p>
-          Short excerpt of Article 3. Provide context and highlight value to the reader. 
-          <a href="article3.html">Read more →</a>
-        </p>
+        <p>Short excerpt of Article 3. Provide context and highlight value to the reader. <a href="article3.html">Read more →</a></p>
       </div>
     </div>
-
-    <!-- Back to Home -->
     <a href="index.html" class="back-home">← Back to Home</a>
   </section>
 
@@ -209,7 +250,6 @@
     <span>&copy; 2025 Wanjivwa Sinkala. All Rights Reserved.</span>
   </footer>
 
-  <!-- Mobile Navbar Script -->
   <script>
     function toggleMenu() {
       const nav = document.getElementById('navMenu');
