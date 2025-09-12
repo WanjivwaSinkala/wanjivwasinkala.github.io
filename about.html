@@ -6,212 +6,13 @@
   <title>About Me - Wanjivwa Sinkala</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    /* ===== Typography & Global Styles ===== */
-    :root {
-      --primary-color: #001f3f;
-      --accent-color: #d4af37;
-      --text-color: #333;
-      --font-body: 'Open Sans', sans-serif;
-      --font-heading: 'Bellefair', serif;
-    }
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-oQG+wlZfJdGZ+0G5l4bHyXnG2tVzRZxO+0vKw0RIKkx9MKVb7kZj2cI5H/yLd9o5O+EgfPQ0rIp7jHq5x8B1Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: var(--font-body);
-      line-height: 1.7;
-      background-color: #f9f9f9;
-      color: var(--text-color);
-      padding-bottom: 100px;
-    }
-
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a:hover {
-      color: var(--accent-color);
-    }
-
-    h1, h2, h3 {
-      font-family: var(--font-heading);
-      color: var(--primary-color);
-      margin-bottom: 0.75rem;
-    }
-
-    h1 {
-      font-size: 2.2rem;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-      border-bottom: 2px solid var(--accent-color);
-      display: inline-block;
-      padding-bottom: 0.3rem;
-    }
-
-    p, li {
-      font-size: 1.05rem;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    /* ===== Navbar ===== */
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: var(--primary-color);
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 1000;
-    }
-
-    .navbar .logo {
-      color: var(--accent-color);
-      font-size: 1.8rem;
-      font-family: var(--font-heading);
-    }
-
-    .navbar nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .navbar nav ul li a {
-      color: #fff;
-      transition: color 0.3s;
-    }
-
-    .navbar nav ul li a.active,
-    .navbar nav ul li a:hover {
-      color: var(--accent-color);
-    }
-
-    .menu-toggle {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      .navbar nav ul {
-        flex-direction: column;
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 2rem;
-        background: var(--primary-color);
-        padding: 1rem;
-        border-radius: 8px;
-      }
-
-      .navbar nav ul.show {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 1.8rem;
-        color: var(--accent-color);
-      }
-    }
-
-    /* ===== About Section ===== */
-    .hero-section {
-      display: flex;
-      max-width: 1100px;
-      margin: 4em auto;
-      padding: 0 1.5em;
-      gap: 3rem;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .about-text {
-      flex: 1 1 500px;
-    }
-
-    .about-photo {
-      flex: 1 1 300px;
-      text-align: center;
-    }
-
-    .about-photo img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .about-photo img:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Buttons */
-    .about-actions {
-      margin-top: 2rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .cta-btn {
-      background: var(--accent-color);
-      color: var(--primary-color);
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-
-    .cta-btn:hover {
-      background: #c49b2f;
-    }
-
-    /* ===== Footer ===== */
-    .footer-cta {
-      background: var(--primary-color);
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-    }
-
-    /* Responsive Tweaks */
-    @media (max-width: 768px) {
-      .hero-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .about-text, .about-photo {
-        flex: 1 1 100%;
-      }
-
-      .about-actions {
-        justify-content: center;
-      }
-    }
-  </style>
+  <!-- Main Stylesheet (shared across all pages) -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -219,9 +20,9 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Wanjivwa Sinkala</div>
-    <div class="menu-toggle">&#9776;</div>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
     <nav>
-      <ul>
+      <ul id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html" class="active">About Me</a></li>
@@ -232,56 +33,69 @@
   </header>
 
   <!-- About Section -->
-  <section class="hero-section">
-    <div class="about-text">
-      <h1>About Me</h1>
-      <p>
-        I am <strong>Wanjivwa Sinkala</strong>, a Zambian development economist and operations professional 
-        committed to advancing institutional integrity, results-based practice, and inclusive growth.  
-        With over 7 years of experience across development, banking, retail, and legal sectors, 
-        I specialize in administration, procurement, compliance, and risk management.
-      </p>
+  <section class="about-section auto-container">
+    <div class="about-content">
+      <div class="about-text">
+        <h1>About Me</h1>
+        <p>
+          I am <strong>Wanjivwa Sinkala</strong>, a Zambian development economist and operations professional 
+          committed to advancing institutional integrity, results-based practice, and inclusive growth.  
+          With over 7 years of experience across development, banking, retail, and legal sectors, 
+          I specialize in administration, procurement, compliance, and risk management.
+        </p>
 
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Master of Arts</strong> in Economic Policy Management – University of Zambia</li>
-        <li><strong>Postgraduate Diploma</strong> in Monitoring & Evaluation Methods – University of Zambia</li>
-        <li><strong>Bachelor of Arts</strong> in Development Studies with Economics – University of Zambia</li>
-      </ul>
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Master of Arts</strong> in Economic Policy Management – University of Zambia</li>
+          <li><strong>Postgraduate Diploma</strong> in Monitoring & Evaluation Methods – University of Zambia</li>
+          <li><strong>Bachelor of Arts</strong> in Development Studies with Economics – University of Zambia</li>
+        </ul>
 
-      <h2>Skills</h2>
-      <ul>
-        <li>Monitoring & Evaluation (M&E)</li>
-        <li>Risk Management & Compliance</li>
-        <li>Procurement & Operations Management</li>
-        <li>Data Analysis & Reporting</li>
-        <li>Stakeholder Engagement & Coordination</li>
-        <li>Project and Policy Analysis</li>
-      </ul>
+        <h2>Skills</h2>
+        <ul>
+          <li>Monitoring & Evaluation (M&E)</li>
+          <li>Risk Management & Compliance</li>
+          <li>Procurement & Operations Management</li>
+          <li>Data Analysis & Reporting</li>
+          <li>Stakeholder Engagement & Coordination</li>
+          <li>Project and Policy Analysis</li>
+        </ul>
 
-      <h2>Values</h2>
-      <p>
-        Accountability, transparency, and inclusive growth are central to my professional ethos.  
-        My work promotes financial inclusion, sustainable livelihoods, and capacity building for individuals and SMEs.
-      </p>
+        <h2>Values</h2>
+        <p>
+          Accountability, transparency, and inclusive growth are central to my professional ethos.  
+          My work promotes financial inclusion, sustainable livelihoods, and capacity building for individuals and SMEs.
+        </p>
 
-      <h2>Beyond Work</h2>
-      <p>
-        Outside of work, I mentor young professionals, contribute to community projects, and engage in lifelong learning.  
-        I participate in initiatives focused on environmental sustainability and financial literacy.
-      </p>
+        <h2>Beyond Work</h2>
+        <p>
+          Outside of work, I mentor young professionals, contribute to community projects, and engage in lifelong learning.  
+          I participate in initiatives focused on environmental sustainability and financial literacy.
+        </p>
 
-      <!-- Call to Action Buttons -->
-      <div class="about-actions">
-        <a href="assets/Wanjivwa_Sinkala_CV.pdf" class="cta-btn" target="_blank">Download CV</a>
-        <a href="contact.html" class="cta-btn">Contact Me</a>
+        <!-- Call to Action Buttons -->
+        <div class="about-actions">
+          <a href="assets/Wanjivwa_Sinkala_CV.pdf" class="btn-contact" target="_blank">Download CV</a>
+          <a href="contact.html" class="btn-contact">Contact Me</a>
+        </div>
       </div>
-    </div>
 
-    <div class="about-photo">
-      <img src="images/wanji_pic.png" alt="Wanjivwa Sinkala">
+      <div class="about-photo">
+        <img src="images/wanji_pic.png" alt="Wanjivwa Sinkala">
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
- 
+  <footer class="footer-cta">
+    <span>&copy; 2025 Wanjivwa Sinkala. All Rights Reserved.</span>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
