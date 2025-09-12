@@ -172,6 +172,7 @@ img {
   }
 }
 
+
 /* =========================
    Phone Box in Header
    ========================= */
@@ -205,6 +206,7 @@ img {
     font-weight: 600;
 }
 
+
 /* =========================
    Floating Phone Box
    ========================= */
@@ -228,6 +230,7 @@ img {
     right: 20px;
   }
 }
+
 
 /* =========================
    Hero Section
@@ -316,6 +319,7 @@ img {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+
 /* =========================
    Original Hero (for fallback)
    ========================= */
@@ -367,11 +371,13 @@ img {
   gap:2rem; 
 }
 
+
 /* =========================
    Section Headings
    ========================= */
 section { padding:3rem 2rem; }
 h2 { text-align:center; color:#001f3f; margin-bottom:2rem; }
+
 
 /* =========================
    About Section
@@ -451,288 +457,81 @@ h2 { text-align:center; color:#001f3f; margin-bottom:2rem; }
 }
 
 /* =========================
-   Grids & Cards
+   Footer
    ========================= */
-.features-grid, .projects-grid, .experience-grid, .articles-grid { 
-  display:flex; 
-  flex-wrap:wrap; 
-  justify-content:center; 
-  gap:2rem; 
-}
-.feature-card, .project-card, .experience-card, .article-card { 
-  background:#f9f9f9; 
-  padding:1rem; 
-  border-radius:12px; 
-  width:250px; 
-  text-align:center; 
-  box-shadow:0 5px 15px rgba(0,0,0,0.1); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.feature-card img, .project-card img, .experience-card img, .article-card img { 
-  width:100%; 
-  height:150px; 
-  object-fit:cover; 
-  border-radius:12px; 
-  margin-bottom:0.5rem; 
-}
-
-/* =========================
-   Projects Section
-   ========================= */
-.projects-section {
-  padding: 3em 1.5em;
-  background: #f9f9f9;
-}
-.projects-title {
+footer {
+  background-color: #001f3f;
   color: #d4af37;
   text-align: center;
-  margin-bottom: 2em;
-  font-size: 2rem;
-  font-weight: 600;
-}
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5em;
-}
-.project-item {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 1.5em;
-  flex: 1 1 calc(30% - 1em);
-  min-width: 250px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.project-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 18px rgba(0,0,0,0.12);
-}
-.project-category {
-  font-size: 0.85rem;
-  color: #001f3f;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 0.5em;
-}
-.project-item h3 {
-  margin: 0.3em 0;
-  font-size: 1.2rem;
-  color: #333;
-}
-.project-item p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #444;
-}
-.project-item a {
-  color: #d4af37;
-  font-weight: bold;
-  text-decoration: none;
-}
-.project-item a:hover {
-  text-decoration: underline;
-}
-.view-more {
-  text-align: center;
-  margin-top: 2em;
-}
-.view-more a {
-  background: #001f3f;
-  color: #fff;
-  padding: 0.8em 1.5em;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-.view-more a:hover {
-  background: #d4af37;
-  color: #001f3f;
-}
-
-/* =========================
-   Featured Roles Section
-   ========================= */
-.featured-roles-section {
-  padding: 3rem 2rem;
-}
-.featured-roles-section h2 {
-  color: #001f3f;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.featured-roles-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-.featured-role-card {
-  background: #f9f9f9;
-  padding: 1rem;
-  border-radius: 12px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.featured-role-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 0.5rem;
-}
-.featured-role-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
-  color: #001f3f;
-}
-.featured-role-card p {
-  font-size: 1rem;
-  color: #333;
-}
-.featured-role-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* =========================
-   Fade-in
-   ========================= */
-.fade-in { 
-  opacity:0; 
-  transform:translateY(20px); 
-  transition:opacity 0.8s ease, transform 0.8s ease; 
-}
-.visible { 
-  opacity:1; 
-  transform:translateY(0); 
-}
-
-/* =========================
-   Footer CTA - Sticky
-   ========================= */
-.footer-cta {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #001f3f;
-  color: #fff;
-  padding: 1.5rem 0;
-  z-index: 1000;
-}
-.footer-cta span { 
-  display: block; 
-  text-align: center; 
+  padding: 2rem 1rem;
   font-size: 0.9rem;
 }
 
-/* =========================
-   Contact Section
-   ========================= */
-.contact-section {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: #f5f5f5;
+footer a {
+  color: #d4af37;
+  text-decoration: underline;
 }
-.contact-section h2 {
-  color: #001f3f;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.contact-section p {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 1.5rem;
-}
-.contact-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-}
-.contact-buttons .cta-btn {
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.contact-buttons .cta-btn.email-btn {
-  background: #d4af37;
-  color: #001f3f;
-}
-.contact-buttons .cta-btn.email-btn:hover {
-  background: #c49b2f;
-}
-.contact-buttons .cta-btn.linkedin-btn {
-  background: #0077b5;
+
+footer a:hover {
   color: #fff;
 }
-.contact-buttons .cta-btn.linkedin-btn:hover {
-  background: #005983;
-}
-.contact-buttons .cta-btn i {
-  font-size: 1.1rem;
-}
 
 /* =========================
-   Responsive Adjustments
+   Responsive Media Queries
    ========================= */
-@media(max-width:768px){
-  .hero-section{flex-direction:column; text-align:center;}
-  .feature-card, .project-card, .experience-card, .article-card{width:100%;}
-  .experience-section .experience-card img{width:100px; height:100px;}
-  .about-content {flex-direction: column; align-items: center; text-align: center;}
-  .about-photo img {margin-bottom: 1rem;}
-  .about-actions {justify-content: center;}
-  .contact-buttons {flex-direction: column; align-items: center;}
-  .contact-buttons .cta-btn {width: 90%; justify-content: center;}
-  .featured-roles-grid {flex-direction: column; align-items: center;}
-  .featured-role-card {width: 90%;}
+@media (max-width: 1024px) {
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 2.5rem; }
+  .about-section {
+    padding: 2rem 1rem;
+  }
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-photo img {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
-/* =========================
-   Projects Rotating Text
-   ========================= */
-.project-item .rotating-text {
-  display: inline-block;
-  position: relative;
-  width: 220px; 
-  height: 1.2em;
-  overflow: hidden;
-  vertical-align: middle;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #d4af37;
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 2.7rem;
+  }
+  h2 {
+    font-size: 1.9rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-content {
+    gap: 1.5rem;
+  }
+  .about-text {
+    text-align: center;
+  }
+  .btn-download, .btn-contact {
+    width: 100%;
+    text-align: center;
+  }
 }
 
-.project-item .rotating-text span {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 100%;
-  opacity: 0;
-  animation: rotateProjectText 9s infinite;
-}
-
-.project-item .rotating-text span:nth-child(1) { animation-delay: 0s; }
-.project-item .rotating-text span:nth-child(2) { animation-delay: 3s; }
-.project-item .rotating-text span:nth-child(3) { animation-delay: 6s; }
-
-@keyframes rotateProjectText {
-  0%   { top: 100%; opacity: 0; }
-  10%  { top: 0; opacity: 1; }
-  30%  { top: 0; opacity: 1; }
-  40%  { top: -100%; opacity: 0; }
-  100% { top: -100%; opacity: 0; }
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
 }
