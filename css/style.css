@@ -581,3 +581,59 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
   .footer-cta { padding: 1rem 0; }
   .navbar nav ul { flex-direction: column; }
 }
+
+/* ========================= Animations ========================= */
+
+/* Slide in from bottom */
+@keyframes slideInUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.slideInUp {
+  animation: slideInUp 0.8s ease both;
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.slideInLeft {
+  animation: slideInLeft 0.8s ease both;
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.slideInRight {
+  animation: slideInRight 0.8s ease both;
+}
+
+/* Zoom in with slight fade */
+@keyframes zoomFade {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.zoomFade {
+  animation: zoomFade 0.9s ease both;
+}
+
+/* Subtle zoom without fade */
+@keyframes zoomInStable {
+  from { transform: scale(0.95); }
+  to { transform: scale(1); }
+}
+.zoomInStable {
+  animation: zoomInStable 0.6s ease both;
+}
+
+/* Gentle continuous rotation (good for icons) */
+@keyframes rotateMe {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.rotateMe {
+  animation: rotateMe 6s linear infinite;
+}
