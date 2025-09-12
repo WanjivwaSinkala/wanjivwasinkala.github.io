@@ -6,209 +6,22 @@
   <title>Contact - Wanjivwa Sinkala</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --primary-color: #001f3f;
-      --accent-color: #d4af37;
-      --text-color: #333;
-      --font-body: 'Open Sans', sans-serif;
-      --font-heading: 'Bellefair', serif;
-    }
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-    body {
-      font-family: var(--font-body);
-      line-height: 1.7;
-      background-color: #f9f9f9;
-      color: var(--text-color);
-      padding-bottom: 100px;
-    }
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover {
-      color: var(--accent-color);
-    }
-    h1, h2, h3 {
-      font-family: var(--font-heading);
-      color: var(--primary-color);
-      margin-bottom: 0.75rem;
-    }
-    h1 {
-      font-size: 2.2rem;
-    }
-    h2 {
-      font-size: 1.6rem;
-      border-bottom: 2px solid var(--accent-color);
-      display: inline-block;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-    }
-    p, li {
-      font-size: 1.05rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-oQG+wlZfJdGZ+0G5l4bHyXnG2tVzRZxO+0vKw0RIKkx9MKVb7kZj2cI5H/yLd9o5O+EgfPQ0rIp7jHq5x8B1Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    /* Navbar */
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: var(--primary-color);
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 1000;
-    }
-    .navbar .logo {
-      color: var(--accent-color);
-      font-size: 1.8rem;
-      font-family: var(--font-heading);
-    }
-    .navbar nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-    .navbar nav ul li a {
-      color: #fff;
-      transition: color 0.3s;
-    }
-    .navbar nav ul li a.active,
-    .navbar nav ul li a:hover {
-      color: var(--accent-color);
-    }
-    .menu-toggle {
-      display: none;
-    }
-    @media (max-width: 768px) {
-      .navbar nav ul {
-        flex-direction: column;
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 2rem;
-        background: var(--primary-color);
-        padding: 1rem;
-        border-radius: 8px;
-      }
-      .navbar nav ul.show {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 1.8rem;
-        color: var(--accent-color);
-      }
-    }
-
-    /* Contact Section */
-    .contact-section {
-      max-width: 700px;
-      margin: 4em auto;
-      padding: 0 1.5em;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-      padding: 2.5em 3em;
-    }
-    .contact-info p {
-      margin-bottom: 1rem;
-      color: var(--text-color);
-      font-size: 1.1rem;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      margin-top: 2rem;
-    }
-    label {
-      font-weight: 600;
-      color: var(--primary-color);
-    }
-    input, textarea {
-      padding: 0.8em;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      font-family: var(--font-body);
-      transition: border-color 0.3s ease;
-      resize: vertical;
-    }
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: var(--accent-color);
-      box-shadow: 0 0 5px rgba(212,175,55,0.5);
-    }
-    button {
-      background: var(--accent-color);
-      color: var(--primary-color);
-      padding: 0.8em 1.5em;
-      border-radius: 8px;
-      border: none;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      max-width: 160px;
-      align-self: flex-start;
-    }
-    button:hover {
-      background: #c49b2f;
-    }
-
-    /* Back to Home */
-    .back-home {
-      display: block;
-      margin: 2.5em 0 0;
-      font-size: 1.1rem;
-      color: var(--primary-color);
-      text-align: center;
-    }
-    .back-home:hover {
-      color: var(--accent-color);
-    }
-
-    /* Footer */
-    .footer-cta {
-      background: var(--primary-color);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .contact-section {
-        padding: 2em 1.5em;
-      }
-      button {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-  </style>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Wanjivwa Sinkala</div>
-    <div class="menu-toggle">&#9776;</div>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
     <nav>
-      <ul>
+      <ul id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About Me</a></li>
@@ -219,7 +32,7 @@
   </header>
 
   <!-- Contact Section -->
-  <main class="contact-section" role="main">
+  <main class="contact-section auto-container" role="main">
     <h1>Contact Me</h1>
 
     <div class="contact-info">
@@ -238,7 +51,7 @@
       <label for="message">Your Message</label>
       <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
 
-      <button type="submit">Send Message</button>
+      <button type="submit" class="btn-contact">Send Message</button>
     </form>
 
     <a href="index.html" class="back-home">← Back to Home</a>
@@ -250,12 +63,11 @@
   </footer>
 
   <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navUl = document.querySelector('.navbar nav ul');
-
-    menuToggle.addEventListener('click', () => {
-      navUl.classList.toggle('show');
-    });
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('show');
+    }
   </script>
+
 </body>
 </html>
