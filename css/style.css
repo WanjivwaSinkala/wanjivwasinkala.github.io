@@ -49,6 +49,12 @@ a:hover {
   .navbar .logo {
     font-size: 1.4rem;
   }
+  .navbar nav ul li a {
+    font-size: 1.2rem;
+  }
+  .navbar nav ul {
+    gap: 1rem;
+  }
 }
 
 .navbar nav ul {
@@ -170,6 +176,13 @@ a:hover {
   height: 100%;
   object-fit: cover;
   z-index: -2;
+  animation: videoZoom 60s linear infinite;
+}
+
+@keyframes videoZoom {
+  0% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.05) translateY(-10px); }
+  100% { transform: scale(1) translateY(0); }
 }
 
 .hero-section .overlay {
@@ -202,18 +215,19 @@ a:hover {
   text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
 }
 
-.rotating-text {
+/* Hero Rotating Text (Separate from Projects) */
+.hero-rotating-text {
   display: inline-block;
   overflow: hidden;
   height: 2.5rem;
 }
 
-.rotating-text span {
+.hero-rotating-text span {
   display: block;
-  animation: slide 12s infinite;
+  animation: heroSlide 12s infinite;
 }
 
-@keyframes slide {
+@keyframes heroSlide {
   0%, 20%   { transform: translateY(0); }
   25%, 45%  { transform: translateY(-100%); }
   50%, 70%  { transform: translateY(-200%); }
@@ -221,7 +235,18 @@ a:hover {
   100%      { transform: translateY(0); }
 }
 
-/* CTA Button */
+/* Hero Fade-in Animations (for JS-driven headline) */
+@keyframes fadeUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+@keyframes slideLeft { from {opacity:0; transform:translateX(50px);} to {opacity:1; transform:translateX(0);} }
+@keyframes zoomIn { from {opacity:0; transform:scale(0.95);} to {opacity:1; transform:scale(1);} }
+
+.fade-in-text-style1 { animation: fadeUp 1s ease-in-out; }
+.fade-in-text-style2 { animation: slideLeft 1s ease-out; }
+.fade-in-text-style3 { animation: zoomIn 1s ease-in; }
+
+/* =========================
+   CTA Button
+   ========================= */
 .cta-btn {
   display: inline-block;
   background: #d4af37;
@@ -237,6 +262,42 @@ a:hover {
 }
 
 /* =========================
+   Projects Rotating Text
+   ========================= */
+.project-item .project-rotating-text {
+  display: inline-block;
+  position: relative;
+  width: 220px; 
+  height: 1.2em;
+  overflow: hidden;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #d4af37;
+}
+
+.project-item .project-rotating-text span {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  opacity: 0;
+  animation: rotateProjectText 9s infinite;
+}
+
+.project-item .project-rotating-text span:nth-child(1) { animation-delay: 0s; }
+.project-item .project-rotating-text span:nth-child(2) { animation-delay: 3s; }
+.project-item .project-rotating-text span:nth-child(3) { animation-delay: 6s; }
+
+@keyframes rotateProjectText {
+  0%   { top: 100%; opacity: 0; }
+  10%  { top: 0; opacity: 1; }
+  30%  { top: 0; opacity: 1; }
+  40%  { top: -100%; opacity: 0; }
+  100% { top: -100%; opacity: 0; }
+}
+
+/* =========================
    Responsive Adjustments
    ========================= */
 @media(max-width:768px){
@@ -249,40 +310,4 @@ a:hover {
   .contact-buttons .cta-btn {width: 90%; justify-content: center;}
   .featured-roles-grid {flex-direction: column; align-items: center;}
   .featured-role-card {width: 90%;}
-}
-
-/* =========================
-   Projects Rotating Text
-   ========================= */
-.project-item .rotating-text {
-  display: inline-block;
-  position: relative;
-  width: 220px; 
-  height: 1.2em;
-  overflow: hidden;
-  vertical-align: middle;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #d4af37;
-}
-
-.project-item .rotating-text span {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 100%;
-  opacity: 0;
-  animation: rotateProjectText 9s infinite;
-}
-
-.project-item .rotating-text span:nth-child(1) { animation-delay: 0s; }
-.project-item .rotating-text span:nth-child(2) { animation-delay: 3s; }
-.project-item .rotating-text span:nth-child(3) { animation-delay: 6s; }
-
-@keyframes rotateProjectText {
-  0%   { top: 100%; opacity: 0; }
-  10%  { top: 0; opacity: 1; }
-  30%  { top: 0; opacity: 1; }
-  40%  { top: -100%; opacity: 0; }
-  100% { top: -100%; opacity: 0; }
 }
