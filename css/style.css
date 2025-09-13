@@ -165,6 +165,173 @@ img {
   }
 }
 
+/* ========================= Global Styles (Updated + Merged) ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  margin: 0;
+  padding-bottom: 100px; /* Sticky footer space */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #e1a122;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover, a:focus, a:visited {
+  text-decoration: none;
+  outline: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bellefair', serif;
+  font-weight: normal;
+  margin: 0;
+  background: none;
+  line-height: 1.3;
+}
+
+/* Typography hierarchy */
+h1 { font-size: 89px; line-height: 1em; }
+h2 { font-size: 45px; line-height: 1.2em; }
+h3 { font-size: 30px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 18px; }
+
+p {
+  font-size: 16px;
+  line-height: 1.8em;
+  color: #444;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Utility classes */
+.auto-container { max-width: 1200px; padding: 0 15px; margin: 0 auto; }
+.medium-container { max-width: 850px; margin: 0 auto; }
+.centered { text-align: center; }
+.bg-color-light { background-color: #f9f9f9; }
+.theme-btn { cursor: pointer; font-size: 16px; display: inline-block; transition: all 0.3s ease; }
+
+/* ========================= Navbar (Header) with Refined Logo & Gold Tabs ========================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Logo */
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .navbar .logo { font-size: 1.5rem; }
+}
+
+/* Nav links (tabs) */
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #000;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+  color: #d4af37;
+  border-bottom: 2px solid #d4af37;
+}
+
+/* Responsive adjustments for navbar */
+@media (max-width: 768px) {
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .navbar nav ul li a { font-size: 1.1rem; }
+}
+
+/* ========================= Phone Box in Header ========================= */
+.phone-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.phone-box .phone-img { width: 24px; height: 24px; }
+.phone-box .phone-text { display: flex; flex-direction: column; line-height: 1.2; }
+.phone-box .call-text { font-size: 0.85rem; font-weight: 400; }
+.phone-box .phone-number { font-size: 1rem; font-weight: 600; }
+
+/* ========================= Floating Phone Box ========================= */
+.floating-phone {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 9999;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (max-width: 768px) {
+  .floating-phone {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
 /* ========================= Hero Section (Merged) ========================= */
 .hero-section {
   display: flex;
@@ -305,6 +472,516 @@ img {
   .hero-highlights {
     justify-content: center;
   }
+}
+
+/* ========================= Phone Box in Header ========================= */
+.phone-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.phone-box .phone-img { width: 24px; height: 24px; }
+.phone-box .phone-text { display: flex; flex-direction: column; line-height: 1.2; }
+.phone-box .call-text { font-size: 0.85rem; font-weight: 400; }
+.phone-box .phone-number { font-size: 1rem; font-weight: 600; }
+
+/* ========================= Floating Phone Box ========================= */
+.floating-phone {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 9999;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (max-width: 768px) {
+  .floating-phone {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* ========================= Hero Section ========================= */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 900px;
+  padding: 0 1rem;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  line-height: 1.5;
+  margin: 0 auto;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Rotating headline container */
+.rotating-text {
+  display: inline-block;
+  overflow: hidden;
+  height: 2.5rem;
+  vertical-align: middle;
+}
+
+.rotating-text span {
+  display: block;
+  animation: slide 12s infinite;
+}
+
+@keyframes slide {
+  0%, 20% { transform: translateY(0); }
+  25%, 45% { transform: translateY(-100%); }
+  50%, 70% { transform: translateY(-200%); }
+  75%, 95% { transform: translateY(-300%); }
+  100% { transform: translateY(0); }
+}
+
+/* ========================= Original Hero (for fallback) ========================= */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+
+.hero-content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #001f3f;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  background: #d4af37;
+  color: #001f3f;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta-btn:hover { background: #c49b2f; }
+
+.hero-image img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.hero-fallback {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+
+/* ========================= Section Headings ========================= */
+section { padding: 3rem 2rem; }
+h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
+
+/* ========================= About Section ========================= */
+.about-section {
+  background: #f5f5f5;
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.about-section h2 {
+  color: #001f3f;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-photo img {
+  width: 260px;
+  height: auto;
+  border-radius: 12px;
+  border: 4px solid #d4af37;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.about-text {
+  flex: 1;
+  line-height: 1.7;
+  color: #333;
+}
+
+.about-text h3 {
+  color: #001f3f;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.about-text p,
+.about-text li {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.btn-download,
+.btn-contact {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-download { background: #001f3f; color: #fff; }
+.btn-download:hover { background: #003366; }
+
+.btn-contact { background: #d4af37; color: #001f3f; }
+.btn-contact:hover { background: #c49b2f; }
+
+/* ========================= Grids & Cards ========================= */
+.features-grid, .projects-grid, .experience-grid, .articles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.feature-card, .project-card, .experience-card, .article-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card img, .project-card img, .experience-card img, .article-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+/* ========================= Projects Section ========================= */
+.projects-section {
+  padding: 3em 1.5em;
+  background: #f9f9f9;
+}
+
+.projects-title {
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.project-item {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.5em;
+  flex: 1 1 calc(30% - 1em);
+  min-width: 250px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+}
+
+.project-category {
+  font-size: 0.85rem;
+  color: #001f3f;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+.project-item h3 {
+  margin: 0.3em 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.project-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.project-item a {
+  color: #d4af37;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-item a:hover { text-decoration: underline; }
+
+.view-more {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.view-more a {
+  background: #001f3f;
+  color: #fff;
+  padding: 0.8em 1.5em;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.view-more a:hover {
+  background: #d4af37;
+  color: #001f3f;
+}
+
+/* ========================= Featured Roles Section ========================= */
+.featured-roles-section { padding: 3rem 2rem; }
+.featured-roles-section h2 { color: #001f3f; text-align: center; margin-bottom: 2rem; }
+
+.featured-roles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.featured-role-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-role-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.featured-role-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #001f3f;
+}
+
+.featured-role-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.featured-role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================= Fade-in ========================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================= Footer CTA - Sticky ========================= */
+.footer-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #001f3f;
+  color: #fff;
+  padding: 1.5rem 0;
+  z-index: 1000;
+}
+
+.footer-cta span {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ========================= Responsive Design ========================= */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero-content h1 { font-size: 2rem; }
+  .hero-image img { max-width: 100%; }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-item { flex: 1 1 100%; }
+  .featured-role-card { width: 100%; }
+  .footer-cta { padding: 1rem 0; }
+  .navbar nav ul { flex-direction: column; }
+}
+
+/* ========================= Animations ========================= */
+
+/* Slide in from bottom */
+@keyframes slideInUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.slideInUp {
+  animation: slideInUp 0.8s ease both;
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.slideInLeft {
+  animation: slideInLeft 0.8s ease both;
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.slideInRight {
+  animation: slideInRight 0.8s ease both;
+}
+
+/* Zoom in with slight fade */
+@keyframes zoomFade {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.zoomFade {
+  animation: zoomFade 0.9s ease both;
+}
+
+/* Subtle zoom without fade */
+@keyframes zoomInStable {
+  from { transform: scale(0.95); }
+  to { transform: scale(1); }
+}
+.zoomInStable {
+  animation: zoomInStable 0.6s ease both;
+}
+
+/* Gentle continuous rotation (good for icons) */
+@keyframes rotateMe {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.rotateMe {
+  animation: rotateMe 6s linear infinite;
 }
 
 /* ========================= Phone Box in Header ========================= */
