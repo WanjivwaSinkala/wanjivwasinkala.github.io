@@ -332,50 +332,95 @@ img {
   }
 }
 
-/* ========================= Hero Section (Merged) ========================= */
+/* ========================= Hero Section (Full Responsive) ========================= */
 .hero-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 10%;
-  background: #fff;
-}
-
-.hero-left {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image {
-  max-width: 350px;
+  position: relative;
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  padding: 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: #001f3f; /* fallback color */
+  box-sizing: border-box;
 }
 
-.hero-right {
-  flex: 1;
-  padding-left: 50px;
+/* Hero Video */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
 }
 
-.hero-right h1 {
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+/* Hero Content Container */
+.hero-content {
+  flex: 1 1 300px;
+  max-width: 600px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero Headline */
+.hero-content h1 {
   font-family: 'Bellefair', serif;
-  font-size: 2.5rem;
-  color: #0a1a3f;
-  margin-bottom: 20px;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
 }
 
-.hero-right p {
+/* Rotating text inside hero headline */
+.rotating-text {
+  display: inline-block;
+  overflow: hidden;
+  height: 2.5rem;
+  vertical-align: middle;
+}
+
+.rotating-text span {
+  display: block;
+  animation: slide 12s infinite;
+}
+
+@keyframes slide {
+  0%, 20% { transform: translateY(0); }
+  25%, 45% { transform: translateY(-100%); }
+  50%, 70% { transform: translateY(-200%); }
+  75%, 95% { transform: translateY(-300%); }
+  100% { transform: translateY(0); }
+}
+
+/* Hero paragraph */
+.hero-content p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #333;
-  margin-bottom: 30px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
 }
 
-/* ===== Read More Button ===== */
+/* Hero Call-to-Action Button */
 .hero-btn {
   display: inline-block;
   padding: 12px 28px;
@@ -411,28 +456,23 @@ img {
   transform: translate(-50%, -50%) scaleY(1);
 }
 
-.hero-btn:hover {
-  color: #fff;
-}
+.hero-btn:hover { color: #fff; }
+.hero-btn span { position: relative; z-index: 1; }
 
-.hero-btn span {
-  position: relative;
-  z-index: 1;
-}
-
-/* ===== Highlights ===== */
+/* Highlights Section */
 .hero-highlights {
   display: flex;
-  gap: 20px;
-  margin-top: 40px;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 .highlight-box {
-  flex: 1;
-  min-width: 200px;
+  flex: 1 1 200px;
+  max-width: 250px;
   background: #f9f9f9;
-  padding: 20px;
+  padding: 1.5rem;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
@@ -457,21 +497,34 @@ img {
   line-height: 1.5;
 }
 
-/* ===== Responsive Design ===== */
-@media (max-width: 900px) {
+/* Hero Image fallback */
+.hero-image {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  margin-top: 2rem;
+}
+
+/* ========================= Responsive Design ========================= */
+@media (max-width: 1024px) {
+  .hero-section { padding: 3rem 1.5rem; }
+  .hero-content { max-width: 500px; }
+  .hero-image { max-width: 300px; }
+}
+
+@media (max-width: 768px) {
   .hero-section {
     flex-direction: column;
-    text-align: center;
+    padding: 2rem 1rem;
   }
 
-  .hero-right {
-    padding-left: 0;
-    margin-top: 20px;
-  }
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content p { font-size: 1rem; }
 
-  .hero-highlights {
-    justify-content: center;
-  }
+  .highlight-box { flex: 1 1 100%; max-width: 90%; }
+
+  .hero-image { max-width: 90%; margin-top: 1.5rem; }
 }
 
 /* ========================= Phone Box in Header ========================= */
