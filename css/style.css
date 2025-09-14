@@ -677,3 +677,86 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
 .rotateMe {
   animation: rotateMe 6s linear infinite;
 }
+/* ========================= Flipping Highlights ========================= */
+.highlight-box {
+  perspective: 1000px; /* enable 3D space */
+}
+
+.highlight-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.highlight-box:hover .highlight-box-inner {
+  transform: rotateY(180deg);
+}
+
+.highlight-box-front,
+.highlight-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.highlight-box-front {
+  background: #fff;
+  color: #000;
+}
+
+.highlight-box-back {
+  background: #d4af37; /* gold */
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+/* ========================= Clickable Phone Number ========================= */
+.phone-number a {
+  color: #001f3f; /* navy */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.phone-number a:hover {
+  color: #d4af37; /* gold on hover */
+}
+
+/* ========================= Read More Button Animation ========================= */
+.hero-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: #d4af37; /* initial gold */
+  color: #001f3f; /* navy text */
+}
+
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #001f3f; /* dark blue hover */
+  z-index: -1;
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.hero-btn:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.hero-btn:hover {
+  color: #fff; /* text becomes white on hover */
+}
