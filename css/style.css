@@ -201,6 +201,118 @@ img {
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
 }
 
+/* ========================= Hero Section ========================= */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 60px 8%;
+  background: #fff; /* white background */
+  gap: 50px;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-left img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.hero-right {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-right h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-family: 'Bellefair', serif;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #000; /* black text */
+}
+
+.hero-right p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 6px;
+  background: #d4af37; /* gold */
+  color: #001f3f; /* navy */
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+.hero-btn:hover {
+  background: #c49b2f;
+  color: #fff;
+}
+
+/* ========================= Highlights ========================= */
+.hero-highlights {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.highlight-box {
+  flex: 1;
+  min-width: 180px;
+  max-width: 200px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.highlight-box:hover {
+  transform: translateY(-5px);
+}
+
+.highlight-box h2 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.highlight-box p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .hero-left {
+    margin-bottom: 30px;
+  }
+
+  .hero-highlights {
+    justify-content: center;
+  }
+}
+
 /* ========================= Rotating headline ========================= */
 .rotating-text {
   display: inline-block;
