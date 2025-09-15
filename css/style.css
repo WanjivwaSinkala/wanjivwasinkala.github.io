@@ -951,3 +951,29 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
     transform: translateX(-50%);
   }
 }
+
+/* Contact Section Social Icons */
+.contact-social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contact-social-icons .social-icon {
+  width: 40px;
+  height: 40px;
+  background: #001f3f; /* navy */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.contact-social-icons .social-icon:hover {
+  background: #d4af37; /* gold */
+  color: #001f3f; /* navy text */
+}
