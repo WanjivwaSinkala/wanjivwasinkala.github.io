@@ -916,3 +916,38 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
     transform: translateX(-50%);
   }
 }
+
+/* ========================= Social Icons ========================= */
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+  animation: slideInLeft 1s ease forwards;
+}
+
+.social-icon {
+  font-size: 28px;       /* icon size */
+  color: #fff;           /* default white */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #d4af37;        /* gold on hover */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .social-icons {
+    flex-direction: row;
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
