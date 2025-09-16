@@ -1151,3 +1151,38 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
 .contact-link:hover::before {
   width: 200%; /* spreads outward */
 }
+
+/* ====== Contact Tab Special Styling ====== */
+.contact-tab {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #B8860B; /* Dark Gold */
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.contact-tab::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0%;
+  height: 100%;
+  background: #001F54; /* Dark Blue */
+  z-index: -1;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.contact-tab:hover {
+  color: #FFD700; /* Gold text when hovered */
+}
+
+.contact-tab:hover::before {
+  width: 200%; /* Expands outward */
+}
