@@ -1263,3 +1263,25 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
   color: #111;
   transform: translateY(-4px);
 }
+
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #0a1f44; /* navy background */
+  color: #b8860b; /* dark gold arrow */
+  padding: 12px 16px;
+  border-radius: 50%; /* perfectly round */
+  font-size: 26px;
+  text-decoration: none;
+  display: none; /* hidden by default */
+  z-index: 999;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#back-to-top:hover {
+  background-color: #1a2f66; /* slightly lighter navy */
+  transform: translateY(-4px);
+  color: #ffd700; /* bright gold on hover */
+}
