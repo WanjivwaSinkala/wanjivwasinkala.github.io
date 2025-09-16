@@ -38,13 +38,32 @@
     </nav>
   </header>
     
-  <!-- Hero Section -->
+ <!-- Hero Section -->
 <section id="hero" class="hero-section fade-in">
-  <video autoplay muted loop playsinline class="hero-video" poster="images/hero_fallback.jpg">
+  <!-- Video for browsers that support it -->
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    preload="auto" 
+    class="hero-video" 
+    poster="images/hero_fallback.jpg"
+  >
+    <!-- Main video source -->
     <source src="videos/background_video.mp4" type="video/mp4">
+    <!-- Optional WebM for better browser support -->
+    <source src="videos/background_video.webm" type="video/webm">
+    <!-- Fallback text -->
     Your browser does not support the video tag.
   </video>
+
+  <!-- Overlay for text or color tint -->
   <div class="overlay"></div>
+
+  <!-- Fallback image for devices that can't autoplay -->
+  <div class="hero-fallback" style="background-image: url('images/hero_fallback.jpg');"></div>
+</section>
 
  <!-- Social Icons -->
 <div class="social-icons slide-in-left">
