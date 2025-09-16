@@ -1121,3 +1121,33 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
   font-size: 14px;
   color: #aaa;
 }
+
+/* ====== Contact Tab Special Styling ====== */
+.contact-link {
+  color: #FFD700; /* Rich Gold */
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+  overflow: hidden;
+}
+
+.contact-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0%;
+  height: 100%;
+  background: #001F54; /* Dark Blue */
+  z-index: -1;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.contact-link:hover {
+  color: white; /* text turns white when hovered */
+}
+
+.contact-link:hover::before {
+  width: 200%; /* spreads outward */
+}
