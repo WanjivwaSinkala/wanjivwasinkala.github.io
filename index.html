@@ -4,263 +4,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wanjivwa Sinkala Portfolio</title>
-  <meta name="description" content="Wanjivwa Sinkala Portfolio - Development Economist, M&E Practitioner, Policy Analyst">
-  <meta name="author" content="Wanjivwa Sinkala">
-
- <!-- Font Awesome CDN -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Wanjivwa Sinkala Portfolio - Development Economist, M&E Practitioner, Policy Analyst">
+  <meta name="keywords" content="Portfolio, Development Economist, M&E, Economic Policy, Risk Management, Zambia">
+  <meta name="author" content="Wanjivwa Sinkala">
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="logo">Wanjivwa Sinkala</div>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="articles.html">Articles</a></li>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Wanjivwa Sinkala</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact" class="contact-tab">Contact</a></li>
-        <li class="phone-list-item">
-          <div class="phone-box floating-phone">
-            <img src="images/cell-icon-smartphone.png" alt="Phone Icon" class="phone-img rotateMe">
-            <div class="phone-text fadeIn">
-              <span class="call-text">Give Me a Call</span>
-              <strong class="phone-number"><a href="tel:+260966767779">+260 966 767 779</a></strong>
-            </div>
-          </div>
-        </li>
       </ul>
+      <a href="tel:+260966767779" class="phone-number">+260 966 767 779</a>
     </nav>
   </header>
-    
-<!-- Hero Section -->
-<section id="hero" class="hero-section fade-in">
-  <video autoplay muted loop playsinline class="hero-video" poster="images/hero_fallback.jpg">
-    <source src="videos/background_video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="overlay"></div>
 
   <!-- Hero Section -->
-<section id="hero" class="hero-section fade-in">
-  <video autoplay muted loop playsinline class="hero-video" poster="images/hero_fallback.jpg">
-    <source src="videos/background_video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="overlay"></div>
+  <section id="hero" class="hero-section fade-in">
+    <video autoplay muted loop playsinline class="hero-video" poster="images/hero_fallback.jpg">
+      <source src="videos/background_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
 
     <!-- Social Icons -->
     <div class="social-icons">
-      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://youtube.com" target="_blank" class="social-icon" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
     </div>
 
-    <div id="hero-content" class="auto-container hero-left-right">
-      <div class="hero-left">
-        <img src="images/wanji_pic.png" alt="Wanjivwa Sinkala" class="hero-image">
-      </div>
-      <div class="hero-right">
-        <h1 id="rotating-headline">WELCOME TO MY PROFESSIONAL PORTFOLIO</h1>
-        <p id="rotating-subtext">
-          I am <strong>Wanjivwa Sinkala</strong>, a Development Economist, Policy Analyst,
-          and Monitoring & Evaluation Practitioner. My work focuses on delivering 
-          evidence-based strategies, advancing financial inclusion, and promoting 
-          sustainable development across Zambia and beyond.
-        </p>
-        <a href="#about" class="hero-btn">Read More</a>
-
-        <!-- Highlights -->
-        <div class="hero-highlights">
-          <div class="highlight-box">
-            <h2>7+ Years</h2>
-            <p>Experience in Administration & Risk Management</p>
-          </div>
-          <div class="highlight-box">
-            <h2>M&E Expertise</h2>
-            <p>Formal Training & Practical Evaluation Projects</p>
-          </div>
-          <div class="highlight-box">
-            <h2>Economic Policy</h2>
-            <p>Master’s in Economic Policy Management</p>
-          </div>
-        </div>
-      </div>
+    <div class="hero-content" id="hero-content">
+      <h1 id="rotating-headline" class="slideInLeft">Welcome to My Portfolio</h1>
+      <p id="rotating-subtext" class="fadeIn">Development Economist | M&E Specialist | Policy Analyst</p>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="projects-section fade-in">
-    <h2 class="projects-title">Projects & Portfolio</h2>
-    <div class="project-list">
-      <div class="project-item slideInUp">
-        <div class="project-category fadeIn">Monitoring & Evaluation</div>
-        <h3 class="fadeIn">A Process Evaluation of the USAID Alternatives to Charcoal (A2C) Project</h3>
-        <p class="fadeIn">
-          Academic evaluation of the USAID A2C project (2021–2026) in Lusaka, assessing 
-          <span class="rotating-text">
-            <span>implementation processes</span>
-            <span>market barriers</span>
-            <span>social behaviour change communication</span>
-          </span> 
-          for sustainable energy adoption. 
-          <a href="/projects/a2c-evaluation.html">Read more →</a>
-        </p>
-      </div>
-      <div class="project-item slideInUp">
-        <div class="project-category fadeIn">Financial Solutions (Upcoming 2026)</div>
-        <h3 class="fadeIn">Salify Credit Access (SCA)</h3>
-        <p class="fadeIn">
-          An upcoming financial inclusion initiative (launching in 2026) designed to expand access to 
-          <span class="rotating-text">
-            <span>affordable credit</span>
-            <span>digital lending</span>
-            <span>entrepreneurship finance</span>
-          </span>. 
-          <a href="/projects/salify-project.html">Read more →</a>
-        </p>
-      </div>
-      <div class="project-item slideInUp">
-        <div class="project-category fadeIn">Sustainability</div>
-        <h3 class="fadeIn">Sustainability & Climate Resilience Initiative</h3>
-        <p class="fadeIn">
-          A community-based program supporting 
-          <span class="rotating-text">
-            <span>reforestation</span>
-            <span>renewable energy adoption</span>
-            <span>climate-smart agriculture</span>
-          </span> 
-          to build resilience. 
-          <a href="/projects/treeplanting-project.html">Read more →</a>
-        </p>
-      </div>
-    </div>
-    <div class="view-more fadeIn">
-      <a href="/projects/">View All Projects</a>
-    </div>
-  </section>
-
-  <!-- Featured Roles Section -->
-  <section class="featured-roles-section fade-in">
-    <h2>Featured Roles</h2>
-    <div class="featured-roles-grid">
-      <div class="featured-role-card slideInUp">
-        <img src="images/access_bank.png" alt="Access Bank Zambia" loading="lazy" class="zoomIn">
-        <h3 class="fadeIn">Credit Risk Officer</h3>
-        <p class="fadeIn">Access Bank Zambia</p>
-      </div>
-      <div class="featured-role-card slideInUp">
-        <img src="images/edcon_pic.png" alt="Edcon Zambia" loading="lazy" class="zoomIn">
-        <h3 class="fadeIn">Administration Manager</h3>
-        <p class="fadeIn">Edcon Zambia</p>
-      </div>
-      <div class="featured-role-card slideInUp">
-        <img src="images/standard_chartered.png" alt="Standard Chartered Bank" loading="lazy" class="zoomIn">
-        <h3 class="fadeIn">Accounts Services Clerk</h3>
-        <p class="fadeIn">Standard Chartered Bank Zambia</p>
-      </div>
-    </div>
-    <div class="view-more fadeIn">
-      <a href="assets/Wanjivwa_Sinkala_CV.pdf">View full career history in my CV →</a>
-    </div>
-  </section>
-
-  <!-- Articles Section -->
-  <section id="articles" class="articles-section fade-in">
-    <h2>Latest Articles</h2>
-    <div class="articles-grid">
-      <div class="article-card fadeIn slideInUp">
-        <img src="images/article_placeholder.png" alt="Article 1" loading="lazy" class="zoomIn">
-        <h3 class="fadeIn">Article Title 1</h3>
-        <p class="fadeIn">Short excerpt to engage readers. <a href="articles.html#article1">Read more →</a></p>
-      </div>
-      <div class="article-card fadeIn slideInUp">
-        <img src="images/article_placeholder2.png" alt="Article 2" loading="lazy" class="zoomIn">
-        <h3 class="fadeIn">Article Title 2</h3>
-        <p class="fadeIn">Short excerpt to engage readers. <a href="articles.html#article2">Read more →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== Footer Section ====== -->
-  <footer id="contact" class="footer">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="footer-container">
-
-      <!-- Social Media -->
+      <!-- Socials -->
       <div class="footer-column">
-        <h3>CONNECT WITH ME</h3>
+        <h3>Connect with Me</h3>
         <div class="footer-socials">
           <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
           <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
           <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
 
       <!-- Contact Info -->
       <div class="footer-column">
-        <h3>CONTACT INFORMATION</h3>
-        <p><i class="fas fa-envelope"></i> sinkaladickson@gmail.com</p>
-        <p><i class="fas fa-phone"></i> <a href="tel:+260966767779">+260966767779</a></p>
+        <h3>Contact Information</h3>
+        <p>Email: <a href="mailto:sinkaladickson@gmail.com">sinkaladickson@gmail.com</a></p>
+        <p>Phone: <a href="tel:+260966767779">+260 966 767 779</a></p>
       </div>
 
       <!-- Useful Links -->
       <div class="footer-column">
-        <h3>USEFUL LINKS</h3>
-        <ul class="footer-links">
-          <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
-          <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
-    <p class="footer-bottom">© 2025 Wanjivwa Sinkala. All Rights Reserved.</p>
+    <p class="footer-bottom">&copy; 2025 Wanjivwa Sinkala. All rights reserved.</p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/main.js"></script>
-  <script>
-    // Hero Rotating Headline
-    const content = [
-      { headline: "BUILDING RESILIENT ECONOMIES, EMPOWERING COMMUNITIES", subtext: "Turning data into action to drive sustainable growth and inclusive development." },
-      { headline: "SHAPING POLICY. DRIVING IMPACT.", subtext: "Advancing evidence-based solutions that strengthen institutions and transform lives." },
-      { headline: "FROM INSIGHT TO INNOVATION", subtext: "Transforming research into strategies that deliver real-world change across Africa." }
-    ];
-
-    let currentIndex = 0;
-    const headlineEl = document.getElementById("rotating-headline");
-    const subtextEl = document.getElementById("rotating-subtext");
-    const heroContent = document.getElementById("hero-content");
-    let intervalId;
-
-    function changeContent() {
-      headlineEl.classList.remove("fadeIn","slideInLeft","slideInUp");
-      subtextEl.classList.remove("fadeIn","slideInLeft","slideInUp");
-      void headlineEl.offsetWidth;
-      void subtextEl.offsetWidth;
-      headlineEl.textContent = content[currentIndex].headline;
-      subtextEl.textContent = content[currentIndex].subtext;
-      headlineEl.classList.add("slideInLeft");
-      subtextEl.classList.add("fadeIn");
-      currentIndex = (currentIndex + 1) % content.length;
-    }
-
-    function startRotation() { changeContent(); intervalId = setInterval(changeContent,5000); }
-    function pauseRotation() { clearInterval(intervalId); }
-    const supportsHover = window.matchMedia("(hover: hover)").matches;
-    startRotation();
-    if (supportsHover) {
-      heroContent.addEventListener("mouseenter", pauseRotation);
-      heroContent.addEventListener("mouseleave", startRotation);
-    }
-  </script>
 </body>
 </html>
