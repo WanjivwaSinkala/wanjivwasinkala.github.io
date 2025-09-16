@@ -1281,17 +1281,3 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
   color: #b8860b;   /* dark goldenrod */
   background: #222; /* darker background on hover */
 }
-/* Social Icons Hover Effect */
-.social-icon {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 1.5rem;
-  color: #fff; /* Default color */
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: translateY(-10px) scale(1.2); /* Float up and slightly enlarge */
-  color: #FFD700; /* Change color on hover (dark gold example) */
-}
-
