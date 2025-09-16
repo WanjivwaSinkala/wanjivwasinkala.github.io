@@ -728,7 +728,7 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
 }
 
 .phone-number a:hover {
-  color: #d4af37; /* gold on hover */
+  color: #B8860B; /* Dark gold hover */
 }
 
 /* ========================= Read More Button Animation ========================= */
@@ -834,7 +834,7 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
 }
 
 .social-icon:hover {
-  color: #d4af37; /* gold on hover */
+  color: #B8860B; /* Dark gold hover */
 }
 
 /* Mobile adjustments */
