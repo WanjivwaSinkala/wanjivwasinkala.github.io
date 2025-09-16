@@ -1291,3 +1291,21 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
   color: darkgoldenrod;
   background: #222;
 }
+/* Make hero socials behave like footer socials */
+.hero-section .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #111;
+  color: #ccc;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.hero-section .social-icons a:hover {
+  color: darkgoldenrod;
+  background: #222;
+}
