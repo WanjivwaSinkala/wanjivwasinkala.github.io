@@ -1052,3 +1052,72 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
 .useful-links ul li a:hover {
   color: #d4af37;
 }
+
+/* ===== Footer Section ===== */
+.footer-section {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container h3 {
+  margin-bottom: 15px;
+  color: gold;
+}
+
+.footer-social,
+.footer-links {
+  flex: 1;
+  min-width: 250px;
+  margin: 15px;
+}
+
+.footer-icons {
+  margin-bottom: 15px;
+}
+
+.footer-icons a {
+  margin: 0 10px;
+  font-size: 20px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: gold;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: gold;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
