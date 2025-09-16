@@ -1018,7 +1018,7 @@ h2 { text-align: center; color: #001f3f; margin-bottom: 2rem; }
 }
 
 .contact-social-icons .social-icon:hover {
-  background: #d4af37; /* gold */
+  background: 2px solid #B8860B; /* Dark Gold border */
   color: #001f3f;
 }
 
