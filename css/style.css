@@ -1,4 +1,4 @@
-/* ========================= Cleaned Stylesheet (replace css/style.css) ========================= */
+/* ========================= Cleaned Stylesheet ========================= */
 :root{
   --dark-gold: #B8860B;
   --navy: #001f3f;
@@ -68,8 +68,7 @@ h2{font-size:2rem; color:var(--navy)}
 .phone-box .phone-number a{ color:#001f3f; text-decoration:none; font-weight:700; transition:color .25s }
 .phone-box .phone-number a:hover{ color:var(--dark-gold) }
 
-/* ========================= Hero (top) ========================= */
-/* Note: Keep only one <section id="hero"> in your HTML (see snippet below) */
+/* ========================= Hero ========================= */
 .hero-section{
   position:relative; width:100%; min-height:72vh; display:flex; align-items:center; justify-content:center;
   padding:48px 6%; background:#fff; overflow:hidden;
@@ -102,36 +101,39 @@ h2{font-size:2rem; color:var(--navy)}
 .highlight-box:hover{ transform:translateY(-6px) }
 .highlight-box h2{ color: #000; font-size:1.25rem; margin-bottom:8px }
 
-/* Flipping highlight (optional) - keep if you want flip effect (we kept original fallback simple). */
-/* .highlight-box-inner / front/back omitted here for simplicity since you wanted simple flipping previously */
-
-/* ========================= Social Icons (single, unified) ========================= */
-/* Use .social-icons container with .social-icon links (fontawesome inside) */
-/* These match footer look and behavior (dark gold border, black bg, gold hover) */
+/* ========================= Shared Social Icons ========================= */
+.social-icons, .footer-socials {
+  display:flex;
+  gap:14px;
+}
 .social-icons{
-  position:absolute; left:24px; top:50%; transform:translateY(-50%); z-index:40;
-  display:flex; flex-direction:column; gap:14px;
+  position:absolute; left:24px; top:50%; transform:translateY(-50%);
+  flex-direction:column; z-index:40;
 }
-.social-icons a.social-icon{
-  width:40px; height:40px; display:flex; align-items:center; justify-content:center; border-radius:50%;
-  background:var(--black); color:var(--white); text-decoration:none; border:2px solid var(--dark-gold);
-  transition: all .22s ease; font-size:18px;
+.footer-socials{ justify-content:flex-start; }
+
+.social-icons a,
+.footer-socials a{
+  width:40px; height:40px; display:flex; align-items:center; justify-content:center;
+  border-radius:50%; border:2px solid var(--dark-gold);
+  background:var(--black); color:var(--white); font-size:18px;
+  transition:all .22s ease;
 }
-.social-icons a.social-icon i{ font-size:16px; }
-.social-icons a.social-icon:hover{
+.social-icons a:hover,
+.footer-socials a:hover{
   background:var(--dark-gold); color:var(--black); transform:translateY(-4px);
 }
+.social-icons a i, .footer-socials a i{ font-size:16px; }
 
-/* Mobile: move socials to bottom center */
+/* Mobile socials */
 @media (max-width:768px){
-  .hero-section{ padding:28px 4% }
-  .social-icons{ position:static; transform:none; flex-direction:row; justify-content:center; gap:12px; margin-top:12px }
+  .social-icons{ position:static; transform:none; flex-direction:row; justify-content:center; margin-top:12px }
+  .hero-section{ flex-direction:column; text-align:center; padding:28px 4% }
   .hero-left img{ max-width:300px }
   .hero-right{ padding-left:0 }
-  .hero-section{ flex-direction:column; text-align:center }
 }
 
-/* ========================= Footer (3-column compact grid) ========================= */
+/* ========================= Footer ========================= */
 .footer{
   background:#111; color:#fff; padding:40px 18px; border-top:3px solid var(--dark-gold);
 }
@@ -145,50 +147,10 @@ h2{font-size:2rem; color:var(--navy)}
 .footer-links a{ color:#fff; text-decoration:none }
 .footer-links a:hover{ color:var(--dark-gold) }
 
-/* footer social icon style (same as hero) */
-.footer-socials{ display:flex; gap:10px; align-items:center }
-.footer-socials a.social-icon{
-  width:38px; height:38px; display:flex; align-items:center; justify-content:center; border-radius:50%;
-  border:2px solid var(--dark-gold); background:var(--black); color:var(--white); transition:all .22s;
-  font-size:16px;
-}
-.footer-socials a.social-icon:hover{ background:var(--dark-gold); color:var(--black); transform:translateY(-4px); }
-
-/* Footer bottom small text */
 .footer-bottom{ margin-top:18px; color:#aaa; font-size:13px; text-align:center; grid-column:1/-1 }
 
-/* ========================= Misc responsive helpers ========================= */
+/* Responsive footer */
 @media (max-width:840px){
   .footer-container{ grid-template-columns:1fr; text-align:center }
   .hero-left img{ max-width:320px }
-}
-/* Hero Section Socials (match footer socials) */
-.social-icons {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 3;
-}
-
-.social-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: 2px solid darkgoldenrod;
-  background: #111;
-  color: darkgoldenrod;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-  background: darkgoldenrod;
-  color: #111;
 }
