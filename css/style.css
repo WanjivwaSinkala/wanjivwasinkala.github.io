@@ -162,3 +162,33 @@ h2{font-size:2rem; color:var(--navy)}
   .footer-container{ grid-template-columns:1fr; text-align:center }
   .hero-left img{ max-width:320px }
 }
+/* Hero Section Socials (match footer socials) */
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 3;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid darkgoldenrod;
+  background: #111;
+  color: darkgoldenrod;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: darkgoldenrod;
+  color: #111;
+}
