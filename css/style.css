@@ -158,11 +158,6 @@ img { display: inline-block; max-width: 100%; }
 }
 .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
 .hero-section .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: -1; }
-.hero-left { flex: 1; display: flex; justify-content: center; align-items: center; min-width: 260px; }
-.hero-left img { width: 100%; max-width: 380px; border-radius: 12px; box-shadow: 0 8px 26px rgba(0,0,0,.12); }
-.hero-right { flex: 1; max-width: 640px; padding-left: 30px; }
-.hero-right h1 { color: #000; margin-bottom: .6rem; font-size: clamp(1.8rem,4.5vw,3rem); }
-.hero-right p { color: #333; font-size: 1.05rem; line-height: 1.75; margin-bottom: 1rem; }
 
 /* Hero button */
 .hero-btn {
