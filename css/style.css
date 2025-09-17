@@ -263,17 +263,6 @@ img { display: inline-block; max-width: 100%; }
   .hero-left img { max-width: 300px; }
   .hero-right { padding-left: 0; }
 }
-/* Fade-in animation for the hero section */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* Picture outside the hero section */
 .profile-picture-container {
