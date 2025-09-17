@@ -274,3 +274,16 @@ img { display: inline-block; max-width: 100%; }
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Picture outside the hero section */
+.profile-picture-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.profile-picture {
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.15);
+}
+
