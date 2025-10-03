@@ -1,313 +1,264 @@
-/* ========================= Global Styles (Merged & Cleaned) ========================= */
-:root {
-  --dark-gold: #B8860B;
-  --navy: #001f3f;
-  --black: #111;
-  --white: #fff;
-  --light-gray: #f9f9f9;
-  --muted: #777;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanjivwa Sinkala Portfolio</title>
+  <meta name="description" content="Wanjivwa Sinkala Portfolio - Development Economist, M&E Practitioner, Policy Analyst">
+  <meta name="author" content="Wanjivwa Sinkala">
 
-@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap');
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
-* { box-sizing: border-box; }
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-html { scroll-behavior: smooth; }
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">Wanjivwa Sinkala</div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="#contact" class="contact-tab">Contact</a></li>
+        <li class="phone-list-item">
+          <div class="phone-box floating-phone">
+            <img src="images/cell-icon-smartphone.png" alt="Phone Icon" class="phone-img rotateMe">
+            <div class="phone-text fadeIn">
+              <span class="call-text">Give Me a Call</span>
+              <strong class="phone-number"><a href="tel:+260966767779">+260 966 767 779</a></strong>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+    
+  <!-- Hero Section -->
+    <video autoplay muted loop playsinline class="hero-video" poster="images/hero_fallback.jpg">
+      <source src="videos/background_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.7em;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  margin: 0;
-  padding-bottom: 100px; /* Sticky footer space */
-}
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+ 
+  
+    <div class="auto-container hero-content">
+  <div class="hero-columns">
 
-/* Links */
-a {
-  color: var(--dark-gold);
-  text-decoration: none;
-  cursor: pointer;
-}
-a:hover, a:focus, a:visited {
-  text-decoration: none;
-  outline: none !important;
-}
+    <!-- ✅ Left: Profile Image -->
+    <div class="hero-left">
+      <img src="images/wanji_pic.png" alt="Wanjivwa Sinkala" class="hero-image">
+    </div>
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bellefair', serif;
-  font-weight: normal;
-  margin: 0;
-  line-height: 1.3;
-}
+    <!-- ✅ Right: Text + Highlights -->
+    <div class="hero-right hero-text">
+      <h1 id="rotating-headline">WELCOME TO MY PROFESSIONAL PORTFOLIO</h1>
+      <p id="rotating-subtext">
+        I am <strong>Wanjivwa Sinkala</strong>, a Development Economist, Policy Analyst,
+        and Monitoring & Evaluation Practitioner. My work focuses on delivering 
+        evidence-based strategies, advancing financial inclusion, and promoting 
+        sustainable development across Zambia and beyond.
+      </p>
+      <a href="#about" class="hero-btn">Read More</a>
 
-h1 { font-size: clamp(1.8rem, 4.5vw, 3.5rem); color: var(--navy); line-height: 1em; }
-h2 { font-size: 2rem; color: var(--navy); line-height: 1.2em; }
-h3 { font-size: 1.25rem; color: #000; }
-h4 { font-size: 24px; }
-h5 { font-size: 20px; }
-h6 { font-size: 18px; }
+      <!-- Highlights -->
+      <div class="hero-highlights">
+        <div class="highlight-box">
+          <h2>7+ Years</h2>
+          <p>Experience in Administration & Risk Management</p>
+        </div>
+        <div class="highlight-box">
+          <h2>M&E Expertise</h2>
+          <p>Formal Training & Practical Evaluation Projects</p>
+        </div>
+        <div class="highlight-box">
+          <h2>Economic Policy</h2>
+          <p>Master’s in Economic Policy Management</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
 
-p { font-size: 1rem; line-height: 1.75; color: #333; }
+  <!-- Projects Section -->
+  <section class="projects-section fade-in">
+    <h2 class="projects-title">Projects & Portfolio</h2>
+    <div class="project-list">
+      <div class="project-item slideInUp">
+        <div class="project-category fadeIn">Monitoring & Evaluation</div>
+        <h3 class="fadeIn">A Process Evaluation of the USAID Alternatives to Charcoal (A2C) Project</h3>
+        <p class="fadeIn">
+          Academic evaluation of the USAID A2C project (2021–2026) in Lusaka, assessing 
+          <span class="rotating-text">
+            <span>implementation processes</span>
+            <span>market barriers</span>
+            <span>social behaviour change communication</span>
+          </span> 
+          for sustainable energy adoption. 
+          <a href="/projects/a2c-evaluation.html">Read more →</a>
+        </p>
+      </div>
+      <div class="project-item slideInUp">
+        <div class="project-category fadeIn">Financial Solutions (Upcoming 2026)</div>
+        <h3 class="fadeIn">Salify Credit Access (SCA)</h3>
+        <p class="fadeIn">
+          An upcoming financial inclusion initiative (launching in 2026) designed to expand access to 
+          <span class="rotating-text">
+            <span>affordable credit</span>
+            <span>digital lending</span>
+            <span>entrepreneurship finance</span>
+          </span>. 
+          <a href="/projects/salify-project.html">Read more →</a>
+        </p>
+      </div>
+      <div class="project-item slideInUp">
+        <div class="project-category fadeIn">Sustainability</div>
+        <h3 class="fadeIn">Sustainability & Climate Resilience Initiative</h3>
+        <p class="fadeIn">
+          A community-based program supporting 
+          <span class="rotating-text">
+            <span>reforestation</span>
+            <span>renewable energy adoption</span>
+            <span>climate-smart agriculture</span>
+          </span> 
+          to build resilience. 
+          <a href="/projects/treeplanting-project.html">Read more →</a>
+        </p>
+      </div>
+    </div>
+    <div class="view-more fadeIn">
+      <a href="/projects/">View All Projects</a>
+    </div>
+  </section>
 
-/* Lists & Images */
-ul, li { list-style: none; padding: 0; margin: 0; }
-img { display: inline-block; max-width: 100%; }
+  <!-- Featured Roles Section -->
+  <section class="featured-roles-section fade-in">
+    <h2>Featured Roles</h2>
+    <div class="featured-roles-grid">
+      <div class="featured-role-card slideInUp">
+        <img src="images/access_bank.png" alt="Access Bank Zambia" loading="lazy" class="zoomIn">
+        <h3 class="fadeIn">Credit Risk Officer</h3>
+        <p class="fadeIn">Access Bank Zambia</p>
+      </div>
+      <div class="featured-role-card slideInUp">
+        <img src="images/edcon_pic.png" alt="Edcon Zambia" loading="lazy" class="zoomIn">
+        <h3 class="fadeIn">Administration Manager</h3>
+        <p class="fadeIn">Edcon Zambia</p>
+      </div>
+      <div class="featured-role-card slideInUp">
+        <img src="images/standard_chartered.png" alt="Standard Chartered Bank" loading="lazy" class="zoomIn">
+        <h3 class="fadeIn">Accounts Services Clerk</h3>
+        <p class="fadeIn">Standard Chartered Bank Zambia</p>
+      </div>
+    </div>
+    <div class="view-more fadeIn">
+      <a href="assets/Wanjivwa_Sinkala_CV.pdf">View full career history in my CV →</a>
+    </div>
+  </section>
 
-/* Utility classes */
-.auto-container { max-width: 1200px; padding: 0 15px; margin: 0 auto; }
-.medium-container { max-width: 850px; margin: 0 auto; }
-.centered { text-align: center; }
-.bg-color-light { background-color: var(--light-gray); }
-.theme-btn { cursor: pointer; font-size: 16px; display: inline-block; transition: all 0.3s ease; }
+  <!-- Articles Section -->
+  <section id="articles" class="articles-section fade-in">
+    <h2>Latest Articles</h2>
+    <div class="articles-grid">
+      <div class="article-card fadeIn slideInUp">
+        <img src="images/article_placeholder.png" alt="Article 1" loading="lazy" class="zoomIn">
+        <h3 class="fadeIn">Article Title 1</h3>
+        <p class="fadeIn">Short excerpt to engage readers. <a href="articles.html#article1">Read more →</a></p>
+      </div>
+      <div class="article-card fadeIn slideInUp">
+        <img src="images/article_placeholder2.png" alt="Article 2" loading="lazy" class="zoomIn">
+        <h3 class="fadeIn">Article Title 2</h3>
+        <p class="fadeIn">Short excerpt to engage readers. <a href="articles.html#article2">Read more →</a></p>
+      </div>
+    </div>
+  </section>
 
-/* ========================= Navbar ========================= */
-.navbar {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #fff;
-  border-bottom: 1px solid #e6e6e6;
-  z-index: 1100;
-}
-.navbar .logo { font-size: 1.8rem; font-weight: 700; color: #000; }
-.navbar nav ul {
-  display: flex;
-  gap: 1.25rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  align-items: center;
-}
-.navbar nav ul li a {
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: #000;
-  padding: 6px 4px;
-  border-bottom: 2px solid transparent;
-  transition: all 0.25s ease;
-}
-.navbar nav ul li a:hover,
-.navbar nav ul li a.active {
-  color: var(--dark-gold);
-  border-bottom-color: var(--dark-gold);
-}
+  <!-- ====== Footer Section ====== -->
+  <footer id="contact" class="footer">
+    <div class="footer-container">
 
-/* ========================= Contact Tab ========================= */
-.contact-tab {
-  display: inline-block;
-  padding: 8px 18px;
-  border-radius: 6px;
-  background: var(--dark-gold);
-  color: #fff;
-  font-weight: 700;
-  position: relative;
-  overflow: hidden;
-}
-.contact-tab::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 0; height: 100%;
-  background: var(--navy);
-  z-index: 0;
-  transition: width 0.35s ease;
-}
-.contact-tab span { position: relative; z-index: 1; }
-.contact-tab:hover::before { width: 220%; }
-.contact-tab:hover { color: var(--dark-gold); }
+      <!-- Social Media -->
+      <div class="footer-column">
+        <h3>CONNECT WITH ME</h3>
+        <div class="footer-socials">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
 
-/* ========================= Phone Box ========================= */
-.phone-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #000;
-  font-weight: 500;
-  font-size: .95rem;
-}
-.phone-box .phone-img { width: 28px; height: 28px; }
-.phone-box .phone-number a {
-  color: var(--navy);
-  text-decoration: none;
-  font-weight: 700;
-  transition: color 0.25s;
-}
-.phone-box .phone-number a:hover { color: var(--dark-gold); }
+      <!-- Contact Info -->
+      <div class="footer-column">
+        <h3>CONTACT INFORMATION</h3>
+        <p><i class="fas fa-envelope"></i> sinkaladickson@gmail.com</p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+260966767779">+260966767779</a></p>
+      </div>
 
-/* ========================= Hero Section ========================= */
-.hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 72vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 6%;
-  background: #fff;
-  overflow: hidden;
-}
-.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
-.hero-section .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: -1; }
+      <!-- Useful Links -->
+      <div class="footer-column">
+        <h3>USEFUL LINKS</h3>
+        <ul class="footer-links">
+          <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="about.html"><i class="fas fa-user"></i> About Me</a></li>
+          <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 Wanjivwa Sinkala. All Rights Reserved.</p>
+  </footer>
 
-.hero-columns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    // Hero Rotating Headline
+    const content = [
+      { headline: "BUILDING RESILIENT ECONOMIES, EMPOWERING COMMUNITIES", subtext: "Turning data into action to drive sustainable growth and inclusive development." },
+      { headline: "SHAPING POLICY. DRIVING IMPACT.", subtext: "Advancing evidence-based solutions that strengthen institutions and transform lives." },
+      { headline: "FROM INSIGHT TO INNOVATION", subtext: "Transforming research into strategies that deliver real-world change across Africa." }
+    ];
 
-.hero-left {
-  flex: 1 1 300px;
-  text-align: center;
-}
-.hero-left img.hero-image {
-  max-width: 100%;
-  width: 280px;
-  border-radius: 12px;
-  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.15);
-}
+    let currentIndex = 0;
+    const headlineEl = document.getElementById("rotating-headline");
+    const subtextEl = document.getElementById("rotating-subtext");
+    const heroContent = document.getElementById("hero-content");
+    let intervalId;
 
-.hero-right {
-  flex: 2 1 500px;
-}
-.hero-right h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  color: #fff;
-  margin-bottom: 16px;
-}
-.hero-right p {
-  color: #eee;
-  font-size: 1.1rem;
-  margin-bottom: 24px;
-}
+    function changeContent() {
+      headlineEl.classList.remove("fadeIn","slideInLeft","slideInUp");
+      subtextEl.classList.remove("fadeIn","slideInLeft","slideInUp");
+      void headlineEl.offsetWidth;
+      void subtextEl.offsetWidth;
+      headlineEl.textContent = content[currentIndex].headline;
+      subtextEl.textContent = content[currentIndex].subtext;
+      headlineEl.classList.add("slideInLeft");
+      subtextEl.classList.add("fadeIn");
+      currentIndex = (currentIndex + 1) % content.length;
+    }
 
-.hero-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 18px;
-}
-
-.highlight-box {
-  flex: 1 1 180px;
-  max-width: 220px;
-  background: var(--light-gray);
-  padding: 18px;
-  border-radius: 12px;
-  text-align: center;
-  border: 1px solid #eee;
-  transition: transform .25s;
-}
-.highlight-box:hover { transform: translateY(-6px); }
-.highlight-box h2 { font-size: 1.25rem; margin-bottom: 8px; }
-
-/* Hero Button */
-.hero-btn {
-  position: relative;
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 6px;
-  overflow: hidden;
-  background: var(--dark-gold);
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  z-index: 1;
-}
-.hero-btn::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 0; height: 100%;
-  background: var(--navy);
-  z-index: -1;
-  transition: width .38s ease;
-}
-.hero-btn:hover::before { width: 220%; }
-.hero-btn:hover { color: #fff; }
-
-/* ========================= Social Icons ========================= */
-.social-icons, .footer-socials { display: flex; gap: 14px; }
-.social-icons {
-  position: absolute;
-  left: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  flex-direction: column;
-  z-index: 40;
-}
-.footer-socials { justify-content: flex-start; }
-.social-icons a, .footer-socials a {
-  width: 40px; height: 40px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 50%; border: 2px solid var(--dark-gold);
-  background: var(--black); color: var(--white); font-size: 18px;
-  transition: all .22s ease;
-}
-.social-icons a:hover, .footer-socials a:hover {
-  background: var(--dark-gold); color: var(--black); transform: translateY(-4px);
-}
-.social-icons a i, .footer-socials a i { font-size: 16px; }
-
-/* ========================= Footer ========================= */
-.footer {
-  background: var(--black);
-  color: #fff;
-  padding: 40px 18px;
-  border-top: 3px solid var(--dark-gold);
-}
-.footer-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 12px;
-  text-align: left;
-}
-.footer-column h3 { color: var(--dark-gold); font-size: 18px; margin-bottom: 10px; }
-.footer-column p { color: #ddd; font-size: 15px; margin: 6px 0; }
-.footer-links { list-style: none; padding: 0; margin: 0; }
-.footer-links li { margin: 6px 0; }
-.footer-links a { color: #fff; text-decoration: none; }
-.footer-links a:hover { color: var(--dark-gold); }
-.footer-bottom {
-  margin-top: 18px;
-  color: #aaa;
-  font-size: 13px;
-  text-align: center;
-  grid-column: 1/-1;
-}
-
-/* ========================= Responsive ========================= */
-@media (max-width: 840px) {
-  .footer-container { grid-template-columns: 1fr; text-align: center; }
-  .hero-left img { max-width: 320px; }
-}
-
-@media (max-width: 768px) {
-  .social-icons {
-    position: static;
-    transform: none;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 12px;
-  }
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 28px 4%;
-  }
-  .hero-left img { max-width: 300px; }
-  .hero-right { padding-left: 0; }
-}
+    function startRotation() { changeContent(); intervalId = setInterval(changeContent,5000); }
+    function pauseRotation() { clearInterval(intervalId); }
+    const supportsHover = window.matchMedia("(hover: hover)").matches;
+    startRotation();
+    if (supportsHover) {
+      heroContent.addEventListener("mouseenter", pauseRotation);
+      heroContent.addEventListener("mouseleave", startRotation);
+    }
+  </script>
+</body>
+</html>
