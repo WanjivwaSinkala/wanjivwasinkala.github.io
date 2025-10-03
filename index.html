@@ -1,107 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wanjivwa Sinkala Portfolio</title>
-  <meta name="description" content="Wanjivwa Sinkala Portfolio - Development Economist, M&E Practitioner, Policy Analyst">
-  <meta name="author" content="Wanjivwa Sinkala">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanjivwa Sinkala | Development Economist & Policy Analyst</title>
+  <meta name="description" content="Development Economist, M&E Practitioner and Policy Analyst delivering evidence‑based strategies for sustainable development in Africa." />
+  <meta name="author" content="Wanjivwa Sinkala" />
+  <meta name="keywords" content="Wanjivwa Sinkala, Development Economist, M&E, Policy Analyst, Zambia, Africa Development" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Wanjivwa Sinkala | Portfolio" />
+  <meta property="og:description" content="Delivering evidence‑based strategies for sustainable development." />
+  <meta property="og:image" content="images/wanji_pic.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/" />
 
-  <!-- ================= CSS ================= -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wanjivwa Sinkala | Portfolio" />
+  <meta name="twitter:description" content="Development Economist, M&E & Policy Expert" />
+  <meta name="twitter:image" content="images/wanji_pic.png" />
+
+  <!-- Schema.org Breadcrumb JSON‑LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://yourdomain.com/#hero"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://yourdomain.com/#projects"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Contact",
+        "item": "https://yourdomain.com/#contact"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Bellefair&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
   <style>
-    /* Global Reset */
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;font-size:16px}
-    body{font-family:'Open Sans',sans-serif;color:#333;line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased;margin:0;padding-bottom:100px;background:#fff}
-
-    :root{
-      --dark-gold:#B8860B;
-      --navy:#001f3f;
-      --black:#111;
-      --white:#fff;
-      --light-gray:#f9f9f9;
-      --muted:#777;
+    /* Reset & Globals */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      line-height: 1.7;
+      background: #fff;
+      transition: opacity ease-in 0.3s;
+      margin: 0;
+      padding-bottom: 100px;
+    }
+    body[unresolved] {
+      opacity: 0;
+      overflow: hidden;
+      position: relative;
+    }
+    a {
+      color: #B8860B;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #001f3f;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Bellefair', serif;
+      color: #001f3f;
+      line-height: 1.3;
+      margin-bottom: 0.6em;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
 
-    a{color:var(--dark-gold);text-decoration:none;transition:color .3s}
-    a:hover{color:var(--navy)}
-
-    h1,h2,h3,h4,h5,h6{font-family:'Bellefair',serif;font-weight:normal;line-height:1.3;margin-bottom:.6em}
-    h1{font-size:clamp(1.8rem,4.5vw,3.5rem);color:var(--navy)}
-    h2{font-size:2rem;color:var(--navy)}
-    h3{font-size:1.25rem;color:#000}
-    p{font-size:1rem;line-height:1.75;margin-bottom:1rem}
-
-    .auto-container{max-width:1200px;padding:0 15px;margin:0 auto}
-    .centered{text-align:center}
+    .auto-container {
+      max-width: 1200px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+    .centered {
+      text-align: center;
+    }
 
     /* Navbar */
-    .navbar{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:#fff;border-bottom:1px solid #e6e6e6;z-index:1100}
-    .navbar .logo{font-size:1.8rem;font-weight:700;color:var(--navy)}
-    .navbar nav ul{display:flex;gap:1.25rem;list-style:none;align-items:center}
-    .navbar nav ul li a{font-weight:600;font-size:1.05rem;color:#000;padding:6px 4px;border-bottom:2px solid transparent;transition:.25s}
-    .navbar nav ul li a:hover,.navbar nav ul li a.active{color:var(--dark-gold);border-bottom-color:var(--dark-gold)}
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #fff;
+      border-bottom: 1px solid #e6e6e6;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #001f3f;
+    }
+    .navbar nav ul {
+      display: flex;
+      gap: 1.25rem;
+      list-style: none;
+      align-items: center;
+    }
+    .navbar nav ul li a {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #000;
+      padding: 6px 4px;
+      border-bottom: 2px solid transparent;
+      transition: .25s;
+    }
+    .navbar nav ul li a:hover,
+    .navbar nav ul li a.active {
+      color: #B8860B;
+      border-bottom-color: #B8860B;
+    }
 
-    /* Contact Tab */
-    .contact-tab{padding:8px 18px;border-radius:6px;background:var(--dark-gold);color:#fff;font-weight:700;position:relative;overflow:hidden}
-    .contact-tab::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:0;height:100%;background:var(--navy);z-index:0;transition:width .35s}
-    .contact-tab:hover::before{width:220%}
-    .contact-tab:hover{color:var(--dark-gold)}
+    /* Contact Tab in Navbar */
+    .contact-tab {
+      padding: 8px 18px;
+      border-radius: 6px;
+      background: #B8860B;
+      color: #fff;
+      font-weight: 700;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .contact-tab::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 100%;
+      background: #001f3f;
+      z-index: 0;
+      transition: width 0.35s;
+    }
+    .contact-tab:hover::before {
+      width: 220%;
+    }
+    .contact-tab:hover {
+      color: #B8860B;
+    }
 
-    /* Phone Box */
-    .phone-box{display:flex;align-items:center;gap:10px;font-weight:500;font-size:.95rem}
-    .phone-img{width:28px;height:28px}
-    .phone-number a{color:var(--navy);font-weight:700}
-    .phone-number a:hover{color:var(--dark-gold)}
+    .phone-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .phone-img {
+      width: 28px;
+      height: 28px;
+    }
+    .phone-number a {
+      color: #001f3f;
+      font-weight: 700;
+    }
+    .phone-number a:hover {
+      color: #B8860B;
+    }
 
-    /* Hero */
-    .hero-section{position:relative;width:100%;min-height:72vh;display:flex;align-items:center;justify-content:center;padding:48px 6%;background:#fff;overflow:hidden}
-    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-    .overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:-1}
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 6%;
+      overflow: hidden;
+      background: #000;
+    }
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: -1;
+    }
+    .hero-columns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .hero-left {
+      text-align: center;
+      flex: 1 1 300px;
+    }
+    .hero-image {
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.15);
+    }
+    .hero-right {
+      flex: 2 1 500px;
+    }
+    .hero-right h1 {
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .hero-right p {
+      color: #eee;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+    }
+    .hero-btn {
+      padding: 12px 28px;
+      border-radius: 6px;
+      background: #B8860B;
+      color: #fff;
+      font-weight: 700;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: color 0.3s;
+    }
+    .hero-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 100%;
+      background: #001f3f;
+      z-index: -1;
+      transition: width 0.38s;
+    }
+    .hero-btn:hover::before {
+      width: 220%;
+    }
+    .hero-btn:hover {
+      color: #B8860B;
+    }
 
-    .hero-columns{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:40px}
-    .hero-left{text-align:center;flex:1 1 300px}
-    .hero-image{width:280px;border-radius:12px;box-shadow:0 8px 26px rgba(0,0,0,.15)}
-    .hero-right{flex:2 1 500px}
-    .hero-right h1{color:#fff;margin-bottom:16px}
-    .hero-right p{color:#eee;font-size:1.1rem;margin-bottom:24px}
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .highlight-box {
+      flex: 1 1 180px;
+      max-width: 220px;
+      background: #f9f9f9;
+      padding: 18px;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #eee;
+      transition: transform 0.25s;
+    }
+    .highlight-box:hover {
+      transform: translateY(-6px);
+    }
 
-    .hero-btn{padding:12px 28px;border-radius:6px;background:var(--dark-gold);color:#fff;font-weight:700;position:relative;z-index:1;overflow:hidden}
-    .hero-btn::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:0;height:100%;background:var(--navy);z-index:-1;transition:.38s}
-    .hero-btn:hover::before{width:220%}
-
-    .hero-highlights{display:flex;flex-wrap:wrap;gap:18px;margin-top:18px}
-    .highlight-box{flex:1 1 180px;max-width:220px;background:var(--light-gray);padding:18px;border-radius:12px;text-align:center;border:1px solid #eee;transition:.25s}
-    .highlight-box:hover{transform:translateY(-6px)}
-
-    /* Socials */
-    .social-icons{position:absolute;left:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:14px;z-index:40}
-    .social-icons a{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:2px solid var(--dark-gold);background:var(--black);color:#fff;transition:.22s}
-    .social-icons a:hover{background:var(--dark-gold);color:var(--black);transform:translateY(-4px)}
-
-    /* Sections */
-    section{padding:60px 0}
+    /* Projects / Sections */
+    section {
+      padding: 60px 0;
+    }
 
     /* Footer */
-    .footer{background:var(--black);color:#fff;padding:40px 18px;border-top:3px solid var(--dark-gold)}
-    .footer-container{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .footer-column h3{color:var(--dark-gold);font-size:18px;margin-bottom:10px}
-    .footer-column p{color:#ddd;font-size:15px;margin:6px 0}
-    .footer-links li{margin:6px 0}
-    .footer-links a{color:#fff}
-    .footer-links a:hover{color:var(--dark-gold)}
-    .footer-bottom{margin-top:18px;color:#aaa;font-size:13px;text-align:center;grid-column:1/-1}
+    .footer {
+      background: #111;
+      color: #fff;
+      padding: 40px 18px;
+      border-top: 3px solid #B8860B;
+    }
+    .footer-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .footer-column h3 {
+      color: #B8860B;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .footer-column p {
+      color: #ddd;
+      font-size: 15px;
+      margin: 6px 0;
+    }
+    .footer-links li {
+      margin: 6px 0;
+    }
+    .footer-links a {
+      color: #fff;
+    }
+    .footer-links a:hover {
+      color: #B8860B;
+    }
+    .footer-bottom {
+      margin-top: 18px;
+      color: #aaa;
+      font-size: 13px;
+      text-align: center;
+      grid-column: 1 / -1;
+    }
 
     /* Responsive */
-    @media(max-width:768px){
-      .hero-section{flex-direction:column;text-align:center;padding:28px 4%}
-      .social-icons{position:static;transform:none;flex-direction:row;justify-content:center;margin-top:12px}
-      .hero-image{max-width:300px}
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 4%;
+      }
+      .social-icons {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 12px;
+      }
+      .hero-image {
+        max-width: 300px;
+      }
     }
-    @media(max-width:840px){.footer-container{grid-template-columns:1fr;text-align:center}}
+    @media (max-width: 840px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -118,10 +394,12 @@
         <li><a href="#contact" class="contact-tab">Contact</a></li>
         <li>
           <div class="phone-box">
-            <img src="images/cell-icon-smartphone.png" alt="Phone Icon" class="phone-img">
+            <img src="images/cell-icon-smartphone.png" alt="Phone Icon" class="phone-img"/>
             <div>
               <span>Give Me a Call</span><br>
-              <strong class="phone-number"><a href="tel:+260966767779">+260 966 767 779</a></strong>
+              <strong class="phone-number">
+                <a href="tel:+260966767779">+260 966 767 779</a>
+              </strong>
             </div>
           </div>
         </li>
@@ -129,40 +407,57 @@
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section id="hero" class="hero-section">
-    <video autoplay muted loop playsinline class="hero-video" poster="images/hero_fallback.jpg">
-      <source src="videos/background_video.mp4" type="video/mp4">
-    </video>
-    <div class="overlay"></div>
+ <!-- Hero -->
+<section id="hero" class="hero-section">
+  <video autoplay muted loop playsinline class="hero-video" poster="images/hero_fallback.jpg">
+    <source src="videos/background_video.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
 
-    <!-- Social Icons -->
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+
+  <div class="auto-container hero-content">
+    <div class="hero-columns">
+      <div class="hero-left">
+        <img src="images/wanji_pic.png" alt="Wanjivwa Sinkala" class="hero-image">
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="auto-container hero-content">
-      <div class="hero-columns">
-        <div class="hero-left">
-          <img src="images/wanji_pic.png" alt="Wanjivwa Sinkala" class="hero-image">
+<!-- Highlights -->
+<section id="highlights" class="highlights-section">
+  <div class="auto-container">
+    <div class="hero-right centered">
+      <h1 id="rotating-headline">WELCOME TO MY PROFESSIONAL PORTFOLIO</h1>
+      <p id="rotating-subtext">
+        I am <strong>Wanjivwa Sinkala</strong>, a Development Economist, Policy Analyst, and M&E Practitioner delivering evidence‑based strategies for sustainable development.
+      </p>
+      <a href="#about" class="hero-btn">Read More</a>
+
+      <div class="hero-highlights">
+        <div class="highlight-box">
+          <h2>7+ Years</h2>
+          <p>Experience in Admin & Risk Management</p>
         </div>
-        <div class="hero-right">
-          <h1 id="rotating-headline">WELCOME TO MY PROFESSIONAL PORTFOLIO</h1>
-          <p id="rotating-subtext">I am <strong>Wanjivwa Sinkala</strong>, a Development Economist, Policy Analyst,
-            and M&E Practitioner delivering evidence-based strategies for sustainable development.</p>
-          <a href="#about" class="hero-btn">Read More</a>
-          <div class="hero-highlights">
-            <div class="highlight-box"><h2>7+ Years</h2><p>Experience in Admin & Risk Management</p></div>
-            <div class="highlight-box"><h2>M&E Expertise</h2><p>Formal Training & Evaluations</p></div>
-            <div class="highlight-box"><h2>Economic Policy</h2><p>Master’s in Economic Policy Management</p></div>
-          </div>
+        <div class="highlight-box">
+          <h2>M&E Expertise</h2>
+          <p>Formal Training & Evaluations</p>
+        </div>
+        <div class="highlight-box">
+          <h2>Economic Policy</h2>
+          <p>Master’s in Economic Policy Management</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Projects -->
   <section id="projects" class="projects-section">
@@ -170,12 +465,15 @@
     <div class="auto-container">
       <div class="project-item">
         <h3>A Process Evaluation of the USAID Alternatives to Charcoal (A2C) Project</h3>
-        <p>Evaluation of USAID’s A2C project (2021–2026) in Lusaka, assessing implementation processes, barriers, and behaviour change communication. <a href="#">Read more →</a></p>
+        <p>
+          Evaluation of USAID’s A2C project (2021–2026) in Lusaka, assessing implementation processes, barriers, and behaviour change communication.
+          <a href="#">Read more →</a>
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Contact / Footer -->
   <footer id="contact" class="footer">
     <div class="footer-container">
       <div class="footer-column">
@@ -190,7 +488,7 @@
       <div class="footer-column">
         <h3>CONTACT INFORMATION</h3>
         <p><i class="fas fa-envelope"></i> sinkaladickson@gmail.com</p>
-        <p><i class="fas fa-phone"></i> <a href="tel:+260966767779">+260966767779</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+260966767779">+260 966 767 779</a></p>
       </div>
       <div class="footer-column">
         <h3>USEFUL LINKS</h3>
@@ -204,20 +502,30 @@
     <p class="footer-bottom">© 2025 Wanjivwa Sinkala. All Rights Reserved.</p>
   </footer>
 
-  <!-- ================= JS ================= -->
+  <!-- Scripts -->
   <script>
     const content = [
-      { headline: "BUILDING RESILIENT ECONOMIES, EMPOWERING COMMUNITIES", subtext: "Turning data into action to drive sustainable growth and inclusive development." },
-      { headline: "SHAPING POLICY. DRIVING IMPACT.", subtext: "Advancing evidence-based solutions that strengthen institutions and transform lives." },
-      { headline: "FROM INSIGHT TO INNOVATION", subtext: "Transforming research into strategies that deliver real-world change across Africa." }
+      {
+        headline: "BUILDING RESILIENT ECONOMIES, EMPOWERING COMMUNITIES",
+        subtext: "Turning data into action to drive sustainable growth and inclusive development."
+      },
+      {
+        headline: "SHAPING POLICY. DRIVING IMPACT.",
+        subtext: "Advancing evidence-based solutions that strengthen institutions and transform lives."
+      },
+      {
+        headline: "FROM INSIGHT TO INNOVATION",
+        subtext: "Transforming research into strategies that deliver real‑world change across Africa."
+      }
     ];
-    let i=0;
-    function changeContent(){
-      document.getElementById("rotating-headline").textContent=content[i].headline;
-      document.getElementById("rotating-subtext").textContent=content[i].subtext;
-      i=(i+1)%content.length;
+    let i = 0;
+    function changeContent() {
+      document.getElementById("rotating-headline").textContent = content[i].headline;
+      document.getElementById("rotating-subtext").textContent = content[i].subtext;
+      i = (i + 1) % content.length;
     }
-    setInterval(changeContent,5000);
+    setInterval(changeContent, 5000);
   </script>
+
 </body>
 </html>
