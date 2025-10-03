@@ -7,29 +7,120 @@
   <meta name="description" content="Wanjivwa Sinkala Portfolio - Development Economist, M&E Practitioner, Policy Analyst">
   <meta name="author" content="Wanjivwa Sinkala">
 
-  <!-- Font Awesome CDN -->
+  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
-  <!-- Master Stylesheet (Merged navy + gold theme) -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- ================= CSS ================= -->
+  <style>
+    /* Global Reset */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Open Sans',sans-serif;color:#333;line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased;margin:0;padding-bottom:100px;background:#fff}
+
+    :root{
+      --dark-gold:#B8860B;
+      --navy:#001f3f;
+      --black:#111;
+      --white:#fff;
+      --light-gray:#f9f9f9;
+      --muted:#777;
+    }
+
+    a{color:var(--dark-gold);text-decoration:none;transition:color .3s}
+    a:hover{color:var(--navy)}
+
+    h1,h2,h3,h4,h5,h6{font-family:'Bellefair',serif;font-weight:normal;line-height:1.3;margin-bottom:.6em}
+    h1{font-size:clamp(1.8rem,4.5vw,3.5rem);color:var(--navy)}
+    h2{font-size:2rem;color:var(--navy)}
+    h3{font-size:1.25rem;color:#000}
+    p{font-size:1rem;line-height:1.75;margin-bottom:1rem}
+
+    .auto-container{max-width:1200px;padding:0 15px;margin:0 auto}
+    .centered{text-align:center}
+
+    /* Navbar */
+    .navbar{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:#fff;border-bottom:1px solid #e6e6e6;z-index:1100}
+    .navbar .logo{font-size:1.8rem;font-weight:700;color:var(--navy)}
+    .navbar nav ul{display:flex;gap:1.25rem;list-style:none;align-items:center}
+    .navbar nav ul li a{font-weight:600;font-size:1.05rem;color:#000;padding:6px 4px;border-bottom:2px solid transparent;transition:.25s}
+    .navbar nav ul li a:hover,.navbar nav ul li a.active{color:var(--dark-gold);border-bottom-color:var(--dark-gold)}
+
+    /* Contact Tab */
+    .contact-tab{padding:8px 18px;border-radius:6px;background:var(--dark-gold);color:#fff;font-weight:700;position:relative;overflow:hidden}
+    .contact-tab::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:0;height:100%;background:var(--navy);z-index:0;transition:width .35s}
+    .contact-tab:hover::before{width:220%}
+    .contact-tab:hover{color:var(--dark-gold)}
+
+    /* Phone Box */
+    .phone-box{display:flex;align-items:center;gap:10px;font-weight:500;font-size:.95rem}
+    .phone-img{width:28px;height:28px}
+    .phone-number a{color:var(--navy);font-weight:700}
+    .phone-number a:hover{color:var(--dark-gold)}
+
+    /* Hero */
+    .hero-section{position:relative;width:100%;min-height:72vh;display:flex;align-items:center;justify-content:center;padding:48px 6%;background:#fff;overflow:hidden}
+    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+    .overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:-1}
+
+    .hero-columns{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:40px}
+    .hero-left{text-align:center;flex:1 1 300px}
+    .hero-image{width:280px;border-radius:12px;box-shadow:0 8px 26px rgba(0,0,0,.15)}
+    .hero-right{flex:2 1 500px}
+    .hero-right h1{color:#fff;margin-bottom:16px}
+    .hero-right p{color:#eee;font-size:1.1rem;margin-bottom:24px}
+
+    .hero-btn{padding:12px 28px;border-radius:6px;background:var(--dark-gold);color:#fff;font-weight:700;position:relative;z-index:1;overflow:hidden}
+    .hero-btn::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:0;height:100%;background:var(--navy);z-index:-1;transition:.38s}
+    .hero-btn:hover::before{width:220%}
+
+    .hero-highlights{display:flex;flex-wrap:wrap;gap:18px;margin-top:18px}
+    .highlight-box{flex:1 1 180px;max-width:220px;background:var(--light-gray);padding:18px;border-radius:12px;text-align:center;border:1px solid #eee;transition:.25s}
+    .highlight-box:hover{transform:translateY(-6px)}
+
+    /* Socials */
+    .social-icons{position:absolute;left:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:14px;z-index:40}
+    .social-icons a{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:2px solid var(--dark-gold);background:var(--black);color:#fff;transition:.22s}
+    .social-icons a:hover{background:var(--dark-gold);color:var(--black);transform:translateY(-4px)}
+
+    /* Sections */
+    section{padding:60px 0}
+
+    /* Footer */
+    .footer{background:var(--black);color:#fff;padding:40px 18px;border-top:3px solid var(--dark-gold)}
+    .footer-container{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .footer-column h3{color:var(--dark-gold);font-size:18px;margin-bottom:10px}
+    .footer-column p{color:#ddd;font-size:15px;margin:6px 0}
+    .footer-links li{margin:6px 0}
+    .footer-links a{color:#fff}
+    .footer-links a:hover{color:var(--dark-gold)}
+    .footer-bottom{margin-top:18px;color:#aaa;font-size:13px;text-align:center;grid-column:1/-1}
+
+    /* Responsive */
+    @media(max-width:768px){
+      .hero-section{flex-direction:column;text-align:center;padding:28px 4%}
+      .social-icons{position:static;transform:none;flex-direction:row;justify-content:center;margin-top:12px}
+      .hero-image{max-width:300px}
+    }
+    @media(max-width:840px){.footer-container{grid-template-columns:1fr;text-align:center}}
+  </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Wanjivwa Sinkala</div>
     <nav>
       <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="about_us.html">About Me</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="articles.html">Articles</a></li>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#articles">Articles</a></li>
         <li><a href="#contact" class="contact-tab">Contact</a></li>
-        <li class="phone-list-item">
-          <div class="phone-box floating-phone">
-            <img src="images/cell-icon-smartphone.png" alt="Phone Icon" class="phone-img rotateMe">
-            <div class="phone-text fadeIn">
-              <span class="call-text">Give Me a Call</span>
+        <li>
+          <div class="phone-box">
+            <img src="images/cell-icon-smartphone.png" alt="Phone Icon" class="phone-img">
+            <div>
+              <span>Give Me a Call</span><br>
               <strong class="phone-number"><a href="tel:+260966767779">+260 966 767 779</a></strong>
             </div>
           </div>
@@ -38,120 +129,48 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="hero" class="hero-section">
     <video autoplay muted loop playsinline class="hero-video" poster="images/hero_fallback.jpg">
       <source src="videos/background_video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
     </video>
     <div class="overlay"></div>
 
     <!-- Social Icons -->
     <div class="social-icons">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
 
     <div class="auto-container hero-content">
       <div class="hero-columns">
-        <!-- Left: Profile Image -->
         <div class="hero-left">
           <img src="images/wanji_pic.png" alt="Wanjivwa Sinkala" class="hero-image">
         </div>
-        <!-- Right: Text + Highlights -->
-        <div class="hero-right hero-text">
+        <div class="hero-right">
           <h1 id="rotating-headline">WELCOME TO MY PROFESSIONAL PORTFOLIO</h1>
-          <p id="rotating-subtext">
-            I am <strong>Wanjivwa Sinkala</strong>, a Development Economist, Policy Analyst,
-            and Monitoring & Evaluation Practitioner. My work focuses on delivering 
-            evidence-based strategies, advancing financial inclusion, and promoting 
-            sustainable development across Zambia and beyond.
-          </p>
-          <a href="about_us.html" class="hero-btn">Read More</a>
-
-          <!-- Highlights -->
+          <p id="rotating-subtext">I am <strong>Wanjivwa Sinkala</strong>, a Development Economist, Policy Analyst,
+            and M&E Practitioner delivering evidence-based strategies for sustainable development.</p>
+          <a href="#about" class="hero-btn">Read More</a>
           <div class="hero-highlights">
-            <div class="highlight-box">
-              <h2>7+ Years</h2>
-              <p>Experience in Administration & Risk Management</p>
-            </div>
-            <div class="highlight-box">
-              <h2>M&E Expertise</h2>
-              <p>Formal Training & Practical Evaluation Projects</p>
-            </div>
-            <div class="highlight-box">
-              <h2>Economic Policy</h2>
-              <p>Master’s in Economic Policy Management</p>
-            </div>
+            <div class="highlight-box"><h2>7+ Years</h2><p>Experience in Admin & Risk Management</p></div>
+            <div class="highlight-box"><h2>M&E Expertise</h2><p>Formal Training & Evaluations</p></div>
+            <div class="highlight-box"><h2>Economic Policy</h2><p>Master’s in Economic Policy Management</p></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="projects-section fade-in">
-    <h2 class="projects-title">Projects & Portfolio</h2>
-    <div class="project-list">
-      <!-- Project Example -->
-      <div class="project-item slideInUp">
-        <div class="project-category">Monitoring & Evaluation</div>
+  <!-- Projects -->
+  <section id="projects" class="projects-section">
+    <h2 class="centered">Projects & Portfolio</h2>
+    <div class="auto-container">
+      <div class="project-item">
         <h3>A Process Evaluation of the USAID Alternatives to Charcoal (A2C) Project</h3>
-        <p>
-          Academic evaluation of the USAID A2C project (2021–2026) in Lusaka, assessing 
-          implementation processes, market barriers, and social behaviour change communication 
-          for sustainable energy adoption. 
-          <a href="/projects/a2c-evaluation.html">Read more →</a>
-        </p>
-      </div>
-      <!-- Add more projects the same way -->
-    </div>
-    <div class="view-more">
-      <a href="/projects/">View All Projects</a>
-    </div>
-  </section>
-
-  <!-- Featured Roles Section -->
-  <section class="featured-roles-section fade-in">
-    <h2>Featured Roles</h2>
-    <div class="featured-roles-grid">
-      <div class="featured-role-card">
-        <img src="images/access_bank.png" alt="Access Bank Zambia">
-        <h3>Credit Risk Officer</h3>
-        <p>Access Bank Zambia</p>
-      </div>
-      <div class="featured-role-card">
-        <img src="images/edcon_pic.png" alt="Edcon Zambia">
-        <h3>Administration Manager</h3>
-        <p>Edcon Zambia</p>
-      </div>
-      <div class="featured-role-card">
-        <img src="images/standard_chartered.png" alt="Standard Chartered Bank">
-        <h3>Accounts Services Clerk</h3>
-        <p>Standard Chartered Bank Zambia</p>
-      </div>
-    </div>
-    <div class="view-more">
-      <a href="assets/Wanjivwa_Sinkala_CV.pdf">View full career history in my CV →</a>
-    </div>
-  </section>
-
-  <!-- Articles Section -->
-  <section id="articles" class="articles-section fade-in">
-    <h2>Latest Articles</h2>
-    <div class="articles-grid">
-      <div class="article-card">
-        <img src="images/article_placeholder.png" alt="Article 1">
-        <h3>Article Title 1</h3>
-        <p>Short excerpt to engage readers. <a href="articles.html#article1">Read more →</a></p>
-      </div>
-      <div class="article-card">
-        <img src="images/article_placeholder2.png" alt="Article 2">
-        <h3>Article Title 2</h3>
-        <p>Short excerpt to engage readers. <a href="articles.html#article2">Read more →</a></p>
+        <p>Evaluation of USAID’s A2C project (2021–2026) in Lusaka, assessing implementation processes, barriers, and behaviour change communication. <a href="#">Read more →</a></p>
       </div>
     </div>
   </section>
@@ -162,11 +181,10 @@
       <div class="footer-column">
         <h3>CONNECT WITH ME</h3>
         <div class="footer-socials">
-          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
       <div class="footer-column">
@@ -178,31 +196,28 @@
         <h3>USEFUL LINKS</h3>
         <ul class="footer-links">
           <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="about_us.html"><i class="fas fa-user"></i> About Me</a></li>
-          <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
+          <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+          <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
         </ul>
       </div>
     </div>
     <p class="footer-bottom">© 2025 Wanjivwa Sinkala. All Rights Reserved.</p>
   </footer>
 
-  <!-- JS -->
-  <script src="js/main.js"></script>
+  <!-- ================= JS ================= -->
   <script>
     const content = [
       { headline: "BUILDING RESILIENT ECONOMIES, EMPOWERING COMMUNITIES", subtext: "Turning data into action to drive sustainable growth and inclusive development." },
       { headline: "SHAPING POLICY. DRIVING IMPACT.", subtext: "Advancing evidence-based solutions that strengthen institutions and transform lives." },
       { headline: "FROM INSIGHT TO INNOVATION", subtext: "Transforming research into strategies that deliver real-world change across Africa." }
     ];
-    let currentIndex = 0;
-    const headlineEl = document.getElementById("rotating-headline");
-    const subtextEl = document.getElementById("rotating-subtext");
-    function changeContent() {
-      headlineEl.textContent = content[currentIndex].headline;
-      subtextEl.textContent = content[currentIndex].subtext;
-      currentIndex = (currentIndex + 1) % content.length;
+    let i=0;
+    function changeContent(){
+      document.getElementById("rotating-headline").textContent=content[i].headline;
+      document.getElementById("rotating-subtext").textContent=content[i].subtext;
+      i=(i+1)%content.length;
     }
-    setInterval(changeContent, 5000);
+    setInterval(changeContent,5000);
   </script>
 </body>
 </html>
