@@ -218,6 +218,17 @@ nav ul li a.active {
 .project-item a {
   font-weight: 700;
 }
+.highlights-section {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.highlights-section h2 {
+  font-size: 2rem;
+  color: var(--navy);
+  margin-bottom: 40px;
+}
 
 /* ===== FOOTER ===== */
 .footer {
