@@ -522,3 +522,33 @@ nav ul li a.active {
 .back-home:hover {
   color: #d4af37;
 }
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background: var(--gold);
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  background: var(--navy);
+  transform: translateY(-4px);
+}
+
+/* Show the button when scrolling */
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
