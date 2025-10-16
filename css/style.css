@@ -84,6 +84,16 @@ nav ul li a.active {
 .contact-tab:hover {
   background: var(--navy);
 }
+.phone-box {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+}
+
+.phone-img {
+  width: 28px; /* adjust size if needed */
+  height: auto;
+}
 
 /* ===== HERO SECTION ===== */
 .hero-section {
