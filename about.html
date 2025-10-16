@@ -4,119 +4,253 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Me - Wanjivwa Sinkala</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: #000;
+      background: #f9f9f9;
+      line-height: 1.6;
+    }
+    a {
+      color: #001f3f;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      color: #d4af37;
+    }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: #001f3f;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 100;
+    }
+    .navbar .logo {
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+    .navbar nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar nav ul li a {
+      color: #fff;
+      transition: color 0.3s;
+    }
+    .navbar nav ul li a:hover,
+    .navbar nav ul li a.active {
+      color: #d4af37;
+    }
 
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-oQG+wlZfJdGZ+0G5l4bHyXnG2tVzRZxO+0vKw0RIKkx9MKVb7kZj2cI5H/yLd9o5O+EgfPQ0rIp7jHq5x8B1Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    /* Video Section */
+    .video-section {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+      background: #000;
+    }
+    .video-section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+    }
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+    }
+    .video-overlay h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #d4af37;
+    }
+    .video-overlay p {
+      font-size: 1.1rem;
+      max-width: 700px;
+    }
 
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+    /* About Content */
+    .about-content {
+      max-width: 800px;
+      margin: 3em auto;
+      padding: 0 1.5em;
+    }
+    .about-content h1 {
+      font-size: 2em;
+      color: #001f3f;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #d4af37;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .about-content h2 {
+      color: #001f3f;
+      margin-top: 2rem;
+      font-size: 1.4rem;
+    }
+    .about-content p {
+      font-size: 1.05em;
+      color: #444;
+      margin-bottom: 1.2rem;
+    }
+    .about-content ul {
+      padding-left: 1.5rem;
+      color: #444;
+    }
+    .about-content ul li {
+      margin-bottom: 0.8rem;
+    }
+    .about-content strong {
+      color: #001f3f;
+    }
+
+    /* Call to Action */
+    .about-actions {
+      margin-top: 2rem;
+    }
+    .btn-contact {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: #001f3f;
+      color: #fff;
+      border-radius: 4px;
+      margin-right: 1rem;
+      transition: background 0.3s;
+    }
+    .btn-contact:hover {
+      background: #d4af37;
+      color: #001f3f;
+    }
+
+    /* Footer */
+    .footer-cta {
+      background: #001f3f;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-wrap: wrap;
+      }
+      .navbar nav ul {
+        flex-direction: column;
+        background: #001f3f;
+        width: 100%;
+        padding: 1rem 0;
+        display: none;
+      }
+      .navbar nav ul.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+        font-size: 1.8rem;
+        color: #d4af37;
+        cursor: pointer;
+      }
+      .video-overlay h2 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Wanjivwa Sinkala</div>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
     <nav>
       <ul id="navMenu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html" class="active">About Me</a></li>
-        <li><a href="articles.html">Articles</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../about.html" class="active">About Me</a></li>
+        <li><a href="../articles.html">Articles</a></li>
+        <li><a href="../contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- About Section -->
-  <section class="about-section auto-container">
-    <div class="about-content">
-
-      <!-- VIDEO SECTION -->
-<section class="about-video-section">
-  <div class="video-container">
-    <video autoplay muted loop playsinline class="about-video" poster="images/video-fallback.jpg">
-      <source src="videos/about-video.mp4" type="video/mp4" />
+  <!-- Video Section -->
+  <section class="video-section">
+    <video autoplay muted loop playsinline poster="../images/video-fallback.jpg">
+      <source src="../videos/about-video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <div class="video-overlay">
-      <div class="video-content">
+      <div>
         <h2>Shaping Impact Through Policy & Practice</h2>
-        <p>A glimpse into my professional values, journey, and vision for sustainable development in Zambia and beyond.</p>
+        <p>Watch a glimpse into my journey as a development economist committed to inclusive growth and sustainable transformation.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-      
+  <!-- About Content -->
+  <section class="about-content">
+    <h1>About Me</h1>
+    <p>
+      I am <strong>Wanjivwa Sinkala</strong>, a Zambian development economist and operations professional passionate about creating impactful solutions in both public and private sectors.
+      With over 7 years of experience, I have cultivated expertise in administration, procurement, compliance, risk management, and program evaluation.
+    </p>
 
-      <!-- Text Content -->
-      <div class="about-text">
-        <h1>About Me</h1>
-        <p>
-          I am <strong>Wanjivwa Sinkala</strong>, a Zambian development economist and operations professional passionate about creating impactful solutions in both public and private sectors.  
-          Over the past 7 years, I have cultivated expertise in administration, procurement, compliance, risk management, and program evaluation across development, banking, retail, and legal sectors.  
-          My work focuses on promoting institutional integrity, results-oriented strategies, and inclusive growth.
-        </p>
+    <h2>Education</h2>
+    <p><strong>Bachelor of Arts in Development Studies with Economics</strong> – University of Zambia.</p>
+    <p><strong>Postgraduate Diploma in Monitoring & Evaluation Methods</strong> – University of Zambia.</p>
+    <p><strong>Master of Arts in Economic Policy Management</strong> – University of Zambia.</p>
 
-        <h2>Education</h2>
-        <p>
-          I hold a <strong>Bachelor of Arts in Development Studies with Economics</strong> from the University of Zambia, where I gained a strong foundation in economic theory, development policy, and project planning.  
-          This program provided me with the tools to analyze social and economic challenges, understand governance and policy issues, and propose practical development solutions.
-        </p>
-        <p>
-          I further specialized with a <strong>Postgraduate Diploma in Monitoring & Evaluation Methods</strong>, also from the University of Zambia.  
-          This program equipped me with practical skills to design monitoring frameworks, evaluate project outcomes, analyze data, and provide evidence-based recommendations for improving program effectiveness and sustainability.
-        </p>
-        <p>
-          To enhance my strategic and policy-making expertise, I completed a <strong>Master of Arts in Economic Policy Management</strong> at the University of Zambia.  
-          Here, I developed advanced skills in economic policy analysis, fiscal and monetary policy, public sector management, and designing strategies to drive inclusive growth and sustainable development.
-        </p>
+    <h2>Professional Skills</h2>
+    <ul>
+      <li><strong>Monitoring & Evaluation (M&E):</strong> Implementing frameworks for program effectiveness.</li>
+      <li><strong>Risk Management & Compliance:</strong> Strengthening internal controls and reducing operational risks.</li>
+      <li><strong>Procurement & Operations Management:</strong> Managing vendors, logistics, and processes efficiently.</li>
+      <li><strong>Data Analysis & Reporting:</strong> Turning data into actionable development insights.</li>
+      <li><strong>Stakeholder Coordination:</strong> Engaging with public, private, and civil society actors.</li>
+    </ul>
 
-        <h2>Professional Skills</h2>
-        <ul>
-          <li><strong>Monitoring & Evaluation (M&E):</strong> Designing and implementing evaluation frameworks for programs and projects, including USAID-funded initiatives.</li>
-          <li><strong>Risk Management & Compliance:</strong> Ensuring adherence to policies, mitigating operational risks, and strengthening internal controls.</li>
-          <li><strong>Procurement & Operations Management:</strong> Managing supply chains, vendor relationships, and process optimization.</li>
-          <li><strong>Data Analysis & Reporting:</strong> Transforming data into actionable insights for strategic decision-making.</li>
-          <li><strong>Stakeholder Engagement & Coordination:</strong> Collaborating effectively with government agencies, NGOs, SMEs, and community groups.</li>
-          <li><strong>Project & Policy Analysis:</strong> Evaluating initiatives, recommending improvements, and supporting evidence-based policy development.</li>
-        </ul>
+    <h2>Key Projects & Impact</h2>
+    <ul>
+      <li><strong>USAID A2C Evaluation:</strong> Led process evaluation for clean energy alternatives.</li>
+      <li><strong>Financial Inclusion:</strong> Expanded SME credit access and financial empowerment.</li>
+      <li><strong>Reforestation Initiatives:</strong> Worked with PAMZ, FNB, Standard Chartered on sustainability projects.</li>
+      <li><strong>Retail Operations:</strong> Optimized internal compliance at Jumbo Wholesale and Jet Supermarket.</li>
+    </ul>
 
-        <h2>Key Projects & Impact</h2>
-        <ul>
-          <li><strong>USAID Alternatives to Charcoal (A2C) Evaluation:</strong> Led a process evaluation assessing the effectiveness of clean energy alternatives, providing actionable recommendations to improve program implementation and sustainability.</li>
-          <li><strong>Financial Inclusion Initiatives:</strong> Supported SMEs and individuals through risk assessment and credit access programs, enhancing economic empowerment and growth.</li>
-          <li><strong>Reforestation & Environmental Projects:</strong> Participated in tree-planting initiatives with PAMZ, Standard Chartered Bank Zambia, Care International Zambia, and FNB Zambia, promoting environmental sustainability.</li>
-          <li><strong>Retail & Operations Optimization:</strong> Managed administrative and operational processes at Jumbo Wholesale and Jet Supermarket Zambia, improving efficiency and compliance.</li>
-        </ul>
+    <h2>Professional Values</h2>
+    <p>Accountability, transparency, and inclusive growth define my approach. I strive to promote institutional integrity and empower local communities.</p>
 
-        <h2>Professional Values</h2>
-        <p>
-          My professional ethos is grounded in accountability, transparency, and inclusive growth.  
-          I am committed to advancing financial inclusion, sustainable livelihoods, and the empowerment of individuals and small businesses.
-        </p>
+    <h2>Beyond Work</h2>
+    <p>I actively contribute to thought leadership in economic policy, evaluation, and development strategy through writing, forums, and advocacy.</p>
 
-        <h2>Beyond Work</h2>
-        <p>
-          Beyond professional commitments, I engage in thought leadership by sharing insights on economic policy, program evaluation, and sustainable development.  
-          I participate in forums and discussions that shape best practices and innovative approaches for development, financial inclusion, and environmental sustainability.
-        </p>
-
-        <!-- Call to Action Buttons -->
-        <div class="about-actions">
-          <a href="assets/Wanjivwa_Sinkala_CV.pdf" class="btn-contact" target="_blank">Download CV</a>
-          <a href="contact.html" class="btn-contact">Contact Me</a>
-        </div>
-      </div>
-
-      <!-- Photo -->
-      <div class="about-photo">
-        <img src="images/wanji_pic.png" alt="Wanjivwa Sinkala">
-      </div>
+    <div class="about-actions">
+      <a href="../assets/Wanjivwa_Sinkala_CV.pdf" class="btn-contact" target="_blank">Download CV</a>
+      <a href="../contact.html" class="btn-contact">Contact Me</a>
     </div>
   </section>
 
