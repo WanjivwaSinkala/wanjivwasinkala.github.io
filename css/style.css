@@ -182,6 +182,39 @@ a {
 }
 
 /* ========================== FEATURED PROJECTS / CAROUSEL ========================== */
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.projects-header h2 {
+  font-family: 'Bellefair', serif;
+  font-size: 2.5rem;
+  color: #001f3f;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.projects-header h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #d4af37; /* gold accent line under the heading */
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.projects-header .projects-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
 .featured-section {
   display: flex;
   justify-content: center;
