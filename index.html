@@ -109,7 +109,17 @@
   </div>
 </section>
 
- <!-- Featured Projects Section -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Featured Projects - Wanjivwa Sinkala</title>
+  <link rel="stylesheet" href="css/featured-projects.css" />
+</head>
+<body>
+
+  <!-- Featured Projects Section -->
   <section class="featured-section">
     <div class="carousel" id="carousel">
       
@@ -164,6 +174,55 @@
       </div>
 
     </div>
+
+    <!-- Carousel Navigation -->
+    <div class="nav-buttons">
+      <button onclick="prevSlide()">&#8249;</button>
+      <button onclick="nextSlide()">&#8250;</button>
+    </div>
+  </section>
+
+  <!-- Pagination Dots -->
+  <div class="carousel-controls">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.carousel-item');
+    const dots = document.querySelectorAll('.dot');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      slides[i].classList.add('active');
+      dots[i].classList.add('active');
+    }
+
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }
+
+    function prevSlide() {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        index = i;
+        showSlide(index);
+      });
+    });
+  </script>
+</body>
+</html>
+
 
     <!-- Carousel Navigation -->
     <div class="nav-buttons">
