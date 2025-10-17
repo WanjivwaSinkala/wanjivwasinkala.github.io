@@ -109,48 +109,109 @@
   </div>
 </section>
 
-  <!-- PROJECTS -->
-<section id="projects" class="projects-section">
-  <h2>Featured Projects</h2>
-  <div class="projects-grid">
+ <!-- Featured Projects Section -->
+  <section class="featured-section">
+    <div class="carousel" id="carousel">
+      
+      <!-- Project 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-content">
+          <h2>USAID Alternatives to Charcoal (A2C) Project</h2>
+          <p>Process evaluation of USAID’s A2C initiative (2021–2026), assessing implementation outcomes and behavioral change impacts in Lusaka.</p>
+          <a href="projects/usaid-a2c-project.html">Read More →</a>
+        </div>
+        <div class="carousel-image" style="background-image: url('../images/project-a2c.jpg');"></div>
+      </div>
 
-    <!-- Project 1 -->
-    <div class="project-item">
-      <h3>USAID Alternatives to Charcoal (A2C) Project</h3>
-      <p>Process evaluation of USAID’s A2C initiative (2021–2026), assessing implementation outcomes and behavioral change impacts in Lusaka.</p>
-      <a href="projects/usaid-a2c-project.html">Read More →</a>
+      <!-- Project 2 -->
+      <div class="carousel-item">
+        <div class="carousel-content">
+          <h2>Financial Risk Management — Salify Credit Access</h2>
+          <p>Established loan assessment frameworks and credit risk models for individual and SME lending operations in Zambia.</p>
+          <a href="projects/salify-credit-risk.html">Read More →</a>
+        </div>
+        <div class="carousel-image" style="background-image: url('../images/project-salify.jpg');"></div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="carousel-item">
+        <div class="carousel-content">
+          <h2>Retail Operations Optimization — Jumbo Wholesale</h2>
+          <p>Improved procurement and stock management efficiency through data-driven process redesign and vendor audits.</p>
+          <a href="projects/jumbo-retail-optimization.html">Read More →</a>
+        </div>
+        <div class="carousel-image" style="background-image: url('../images/project-jumbo.jpg');"></div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="carousel-item">
+        <div class="carousel-content">
+          <h2>Tree Planting Initiative — PAMZ & Standard Chartered</h2>
+          <p>Participated in sustainable reforestation drives across Lusaka promoting environmental conservation and awareness.</p>
+          <a href="projects/tree-planting-pamz.html">Read More →</a>
+        </div>
+        <div class="carousel-image" style="background-image: url('../images/project-tree.jpg');"></div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="carousel-item">
+        <div class="carousel-content">
+          <h2>Policy & Development Research</h2>
+          <p>Conducted economic policy analyses focused on financial inclusion, SME support, and M&E integration across donor-funded projects.</p>
+          <a href="projects/policy-development-research.html">Read More →</a>
+        </div>
+        <div class="carousel-image" style="background-image: url('../images/project-policy.jpg');"></div>
+      </div>
+
     </div>
 
-    <!-- Project 2 -->
-    <div class="project-item">
-      <h3>Financial Risk Management — Salify Credit Access</h3>
-      <p>Established loan assessment frameworks and credit risk models for individual and SME lending operations in Zambia.</p>
-      <a href="projects/salify-credit-risk.html">Read More →</a>
+    <!-- Carousel Navigation -->
+    <div class="nav-buttons">
+      <button onclick="prevSlide()">&#8249;</button>
+      <button onclick="nextSlide()">&#8250;</button>
     </div>
+  </section>
 
-    <!-- Project 3 -->
-    <div class="project-item">
-      <h3>Retail Operations Optimization — Jumbo Wholesale</h3>
-      <p>Improved procurement and stock management efficiency through data-driven process redesign and vendor audits.</p>
-      <a href="projects/jumbo-retail-optimization.html">Read More →</a>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="project-item">
-      <h3>Tree Planting Initiative — PAMZ & Standard Chartered</h3>
-      <p>Participated in sustainable reforestation drives across Lusaka promoting environmental conservation and awareness.</p>
-      <a href="projects/tree-planting-pamz.html">Read More →</a>
-    </div>
-
-    <!-- Project 5 -->
-    <div class="project-item">
-      <h3>Policy & Development Research</h3>
-      <p>Conducted economic policy analyses focused on financial inclusion, SME support, and M&E integration across donor-funded projects.</p>
-      <a href="projects/policy-development-research.html">Read More →</a>
-    </div>
-
+  <!-- Pagination Dots -->
+  <div class="carousel-controls">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
   </div>
-</section>
+
+  <script>
+    const slides = document.querySelectorAll('.carousel-item');
+    const dots = document.querySelectorAll('.dot');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      slides[i].classList.add('active');
+      dots[i].classList.add('active');
+    }
+
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }
+
+    function prevSlide() {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        index = i;
+        showSlide(index);
+      });
+    });
+  </script>
+</body>
+</html>
 
   <!-- FOOTER -->
   <footer id="contact" class="footer">
