@@ -232,6 +232,51 @@ a {
     width: 90%;
   }
 }
+/* ========================= Strategic Expertise Section ========================= */
+.highlights-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh; /* makes it vertically centered in viewport */
+  background: var(--light-gray);
+  padding: 4rem 2rem;
+}
+
+.highlights-section h2 {
+  font-size: 2.3rem;
+  color: var(--navy);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.highlights-section h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: var(--dark-gold);
+  display: block;
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+}
+
+.highlights-subtitle {
+  max-width: 800px;
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+  margin-top: 0.5rem;
+}
+
+/* Optional subtle hover animation on the title */
+.highlights-section h2:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
 
 /* ========================== FEATURED PROJECTS / CAROUSEL ========================== */
 .projects-header {
