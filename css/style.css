@@ -277,6 +277,17 @@ a {
   transform: scale(1.02);
   transition: transform 0.3s ease;
 }
+/* ========================= Scroll Animation ========================= */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ========================== FEATURED PROJECTS / CAROUSEL ========================== */
 .projects-header {
