@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects - Wanjivwa Sinkala</title>
 
-  <!-- Fonts from Google -->
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-oQG+wlZfJdGZ+0G5l4bHyXnG2tVzRZxO+0vKw0RIKkx9MKVb7kZj2cI5H/yLd9o5O+EgfPQ0rIp7jHq5x8B1Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="css/projects.css" />
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -33,12 +32,15 @@
   <!-- Projects Section -->
   <section class="projects-section auto-container">
     <h2>My Projects</h2>
+    <p>Explore my key initiatives and evaluations focused on economic development, financial inclusion, and environmental sustainability.</p>
 
     <div class="projects-grid">
+
       <article class="project-card" tabindex="0">
         <h3>Salify Credit Access (SCA)</h3>
         <p>
-          My initiative planned for 2026 to provide financial solutions to individuals, SMEs, and communities. 
+          Founder of a financial inclusion initiative designed to provide tailored lending solutions to individuals, SMEs, and communities, promoting equitable access to credit.
+          <br><br>
           <a href="projects/salify_initiative.html" aria-label="View details for Salify Credit Access project">View project →</a>
         </p>
       </article>
@@ -46,7 +48,8 @@
       <article class="project-card" tabindex="0">
         <h3>Academic Evaluation (USAID A2C Project)</h3>
         <p>
-          A process evaluation of the Alternatives to Charcoal project, focusing on adoption of clean energy interventions in Zambia. 
+          Conducted a process evaluation of the USAID Alternatives to Charcoal (A2C) Project, analyzing adoption barriers and community responses to clean energy alternatives in Zambia.
+          <br><br>
           <a href="projects/a2c_evaluation.html" aria-label="View details for USAID A2C evaluation project">View project →</a>
         </p>
       </article>
@@ -54,26 +57,65 @@
       <article class="project-card" tabindex="0">
         <h3>Reforestation & Conservation</h3>
         <p>
-          Participation in tree planting initiatives with PAMZ, Standard Chartered Bank Zambia, Care International, and FNB Zambia. 
-          <a href="projects/treeplanting-project.html" aria-label="View details for Reforestation and Conservation project">View project →</a>
+          Participated in tree-planting and environmental sustainability programs with PAMZ, Standard Chartered Bank Zambia, Care International, and FNB Zambia, contributing to reforestation efforts.
+          <br><br>
+          <a href="projects/treeplanting_project.html" aria-label="View details for Reforestation and Conservation project">View project →</a>
         </p>
       </article>
+
+      <article class="project-card" tabindex="0">
+        <h3>Economic Policy Research</h3>
+        <p>
+          Engaged in academic and applied research exploring fiscal reform and policy interventions supporting inclusive economic growth in Zambia and Sub-Saharan Africa.
+          <br><br>
+          <a href="projects/economic_policy_research.html" aria-label="View details for Economic Policy Research project">View project →</a>
+        </p>
+      </article>
+
     </div>
 
     <a href="index.html" class="back-home" aria-label="Back to Home Page">← Back to Home</a>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer-cta">
-    <span>&copy; 2025 Wanjivwa Sinkala. All Rights Reserved.</span>
+  <!-- FOOTER -->
+  <footer id="contact" class="footer">
+    <div class="footer-container">
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="projects.html">Projects</a></p>
+        <p><a href="articles.html">Articles</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:sinkalawanjivwa@gmail.com">sinkalawanjivwa@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+260966767779">+260 966 767 779</a></p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Socials</h3>
+        <div class="social-icons">
+          <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/wanjivwa-sinkala/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          <a href="mailto:sinkaladickson@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <p class="footer-bottom">© 2025 Wanjivwa Sinkala. All Rights Reserved.</p>
   </footer>
 
-  <!-- Mobile Menu Toggle Script (optional, if used) -->
+  <!-- Optional Script (Mobile Menu) -->
   <script>
     function toggleMenu() {
       const nav = document.getElementById('navMenu');
       nav.classList.toggle('show');
     }
   </script>
+
 </body>
 </html>
