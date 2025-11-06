@@ -1,12 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Driving Inclusive Growth Through Evidence-Based Policy - Wanjivwa Sinkala</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    :root {
+      --navy: #0a1a2a;
+      --gold: #b8860b;
+      --light-gold: #d4af37;
+      --white: #ffffff;
+      --gray: #f4f4f4;
+      --dark-bg: #0a0f18;
+      --dark-card: #121b29;
+      --text-light: #e6e6e6;
+    }
+
+    html {
+      transition: background-color 0.6s ease, color 0.6s ease;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--gray);
+      color: var(--navy);
+      line-height: 1.7;
+      transition: background-color 0.6s ease, color 0.6s ease;
+    }
+
+    html[data-theme='dark'] body {
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background-color: var(--white);
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all 0.6s ease;
+    }
+
+    .navbar .logo {
+      font-family: 'Bellefair', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    html[data-theme='dark'] .navbar {
+      background-color: var(--dark-card);
+      color: var(--text-light);
+      box-shadow: 0 2px 10px rgba(255, 215, 0, 0.1);
+    }
+
+    html[data-theme='dark'] .navbar .logo {
+      color: var(--light-gold);
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      color: var(--gold);
+    }
+
+    /* THEME TOGGLE */
+    .theme-toggle {
+      cursor: pointer;
+      background: none;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: all 0.4s ease;
+      margin-left: 1rem;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--gold);
+      color: var(--navy);
+      box-shadow: 0 0 10px var(--gold);
+      transform: rotate(25deg);
+    }
+
+    /* ARTICLE CONTENT */
+    .article-content {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: var(--white);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: all 0.6s ease;
+    }
+
+    html[data-theme='dark'] .article-content {
+      background-color: var(--dark-card);
+      box-shadow: 0 0 20px rgba(184, 134, 11, 0.15);
+    }
+
+    .article-content h1 {
+      font-family: 'Bellefair', serif;
+      font-size: 2.2rem;
+      text-align: center;
+      border-bottom: 3px solid var(--gold);
+      display: inline-block;
+      margin: 1.5rem auto;
+      padding-bottom: 0.5rem;
+      color: var(--navy);
+    }
+
+    html[data-theme='dark'] .article-content h1 {
+      color: var(--light-gold);
+      border-color: var(--light-gold);
+    }
+
+    .article-content h2 {
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin-top: 2rem;
+    }
+
+    .article-content p {
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-content ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.8rem;
+    }
+
+    .article-content li strong {
+      color: var(--gold);
+    }
+
+    html[data-theme='dark'] .article-content li strong {
+      color: var(--light-gold);
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--gold);
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .back-home:hover {
+      color: var(--navy);
+      transform: translateX(-5px);
+      text-shadow: 0 0 8px var(--light-gold);
+    }
+
+    html[data-theme='dark'] .back-home:hover {
+      color: var(--light-gold);
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: var(--navy);
+      color: var(--white);
+      padding: 3rem 2rem 1rem;
+      text-align: center;
+      margin-top: 4rem;
+      transition: all 0.6s ease;
+    }
+
+    html[data-theme='dark'] .footer {
+      background-color: #050b13;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-column h3 {
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .footer-column a,
+    .footer-column p {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: var(--light-gold);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      color: var(--gold);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease;
+      font-size: 1.1rem;
+    }
+
+    .social-icons a:hover {
+      background-color: var(--gold);
+      color: var(--navy);
+      transform: scale(1.1);
+      box-shadow: 0 0 15px var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Wanjivwa Sinkala</div>
     <nav>
@@ -17,11 +288,17 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
   </header>
 
+  <!-- Article Content -->
   <section class="article-content">
     <h1>Driving Inclusive Growth Through Evidence-Based Policy</h1>
+
     <p>Inclusive economic growth depends on the adoption of evidence-based policies that respond to real-world challenges. Data-driven policy design allows decision-makers to identify priorities, allocate resources efficiently, and monitor outcomes for sustained impact.</p>
+
     <h2>Key Insights:</h2>
     <ul>
       <li><strong>Data-Informed Decision Making:</strong> Policies must be guided by empirical evidence and local context.</li>
@@ -29,13 +306,65 @@
       <li><strong>Monitoring & Feedback:</strong> Continuous assessment and evaluation improve policy effectiveness.</li>
       <li><strong>Stakeholder Engagement:</strong> Collaborative policy design strengthens ownership and implementation.</li>
     </ul>
+
     <p>By implementing evidence-based policies, governments and organizations can create equitable, sustainable growth opportunities that benefit all segments of society.</p>
 
     <a href="articles.html" class="back-home">← Back to Articles</a>
   </section>
 
-  <footer class="footer-cta">
-    <span>&copy; 2025 Wanjivwa Sinkala. All Rights Reserved.</span>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="projects.html">Projects</a></p>
+        <p><a href="articles.html">Articles</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:sinkalawanjivwa@gmail.com">sinkalawanjivwa@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+260966767779">+260 966 767 779</a></p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Socials</h3>
+        <div class="social-icons">
+          <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/wanjivwa-sinkala/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          <a href="mailto:sinkaladickson@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">© 2025 Wanjivwa Sinkala. All Rights Reserved.</div>
   </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+    const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      htmlElement.setAttribute('data-theme', savedTheme);
+      themeToggle.innerHTML = savedTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    } else {
+      htmlElement.setAttribute('data-theme', userPrefersDark ? 'dark' : 'light');
+      themeToggle.innerHTML = userPrefersDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    });
+  </script>
 </body>
 </html>
