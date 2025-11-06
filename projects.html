@@ -9,43 +9,79 @@
   <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-  <!-- Main Styles -->
   <style>
     :root {
       --navy: #0a1a2a;
-      --gold: #b8860b;
+      --dark-gold: #a67c00;
       --light-gold: #d4af37;
       --white: #ffffff;
       --gray: #f4f4f4;
+      --text-color: #0a1a2a;
+      --bg-color: #f4f4f4;
+      --card-bg: #ffffff;
+    }
+
+    /* Dark mode variables */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --navy: #0a1a2a;
+        --text-color: #f0f0f0;
+        --bg-color: #0a1a2a;
+        --card-bg: #142b45;
+        --gray: #0a1a2a;
+      }
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+      }
+      .navbar {
+        background-color: #0f243b;
+      }
+      .navbar ul li a {
+        color: var(--text-color);
+      }
+      .navbar ul li a:hover,
+      .navbar ul li a.active {
+        color: var(--dark-gold);
+      }
+      .project-card {
+        box-shadow: 0 6px 20px rgba(255,255,255,0.1);
+      }
+      .footer {
+        background-color: #081420;
+      }
     }
 
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background-color: var(--gray);
-      color: var(--navy);
+      background-color: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
+      scroll-behavior: smooth;
+      transition: background-color 0.4s ease, color 0.4s ease;
     }
 
     /* NAVBAR */
     .navbar {
       background-color: var(--white);
-      color: var(--navy);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 5%;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
       z-index: 999;
+      transition: background-color 0.4s ease;
     }
 
     .navbar .logo {
       font-family: 'Bellefair', serif;
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--text-color);
+      letter-spacing: 1px;
     }
 
     .navbar ul {
@@ -53,40 +89,43 @@
       display: flex;
       gap: 1.5rem;
       margin: 0;
+      padding: 0;
     }
 
     .navbar ul li a {
       text-decoration: none;
-      color: var(--navy);
+      color: var(--text-color);
       font-weight: 600;
-      transition: color 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .navbar ul li a:hover,
     .navbar ul li a.active {
-      color: var(--gold);
+      color: var(--dark-gold);
     }
 
-    /* SECTION TITLE */
+    /* PROJECTS SECTION */
     .projects-section {
       max-width: 1200px;
       margin: 4rem auto;
       padding: 0 2rem;
       text-align: center;
+      animation: fadeIn 1s ease-in;
     }
 
     .projects-section h2 {
       font-family: 'Bellefair', serif;
-      font-size: 2.4rem;
-      color: var(--navy);
-      border-bottom: 3px solid var(--gold);
+      font-size: 2.6rem;
+      color: var(--text-color);
+      border-bottom: 3px solid var(--dark-gold);
       display: inline-block;
       padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
     }
 
     .projects-section p {
-      color: #333;
+      color: var(--text-color);
       font-size: 1.05rem;
       max-width: 700px;
       margin: 0 auto 2.5rem;
@@ -100,58 +139,70 @@
     }
 
     .project-card {
-      background-color: var(--white);
+      background-color: var(--card-bg);
       border-radius: 15px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       transition: all 0.4s ease;
       overflow: hidden;
+      animation: fadeUp 0.9s ease forwards;
+      opacity: 0;
     }
+
+    .project-card:nth-child(1) { animation-delay: 0.1s; }
+    .project-card:nth-child(2) { animation-delay: 0.3s; }
+    .project-card:nth-child(3) { animation-delay: 0.5s; }
+    .project-card:nth-child(4) { animation-delay: 0.7s; }
 
     .project-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
     .project-card img {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.05);
     }
 
     .project-card h3 {
-      color: var(--gold);
+      color: var(--dark-gold);
       margin: 1rem 0 0.5rem;
       font-size: 1.3rem;
+      font-weight: 700;
     }
 
     .project-card p {
       padding: 0 1rem 1.5rem;
-      color: #444;
       font-size: 0.95rem;
     }
 
     .project-card a {
-      color: var(--gold);
+      color: var(--dark-gold);
       font-weight: 600;
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     .project-card a:hover {
-      color: var(--navy);
+      color: var(--light-gold);
     }
 
     .back-home {
       display: inline-block;
       margin-top: 3rem;
-      color: var(--gold);
+      color: var(--dark-gold);
       font-weight: 700;
       text-decoration: none;
       transition: all 0.3s ease;
     }
 
     .back-home:hover {
-      color: var(--navy);
+      color: var(--text-color);
       transform: translateX(-5px);
     }
 
@@ -161,6 +212,9 @@
       color: var(--white);
       padding: 3rem 2rem 1rem;
       text-align: center;
+      position: relative;
+      z-index: 10;
+      transition: background-color 0.4s ease;
     }
 
     .footer-container {
@@ -172,8 +226,10 @@
     }
 
     .footer-column h3 {
-      color: var(--gold);
+      color: var(--dark-gold);
       margin-bottom: 1rem;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
     }
 
     .footer-column p,
@@ -197,22 +253,23 @@
     }
 
     .social-icons a {
-      color: var(--gold);
-      border: 2px solid var(--gold);
+      color: var(--dark-gold);
+      border: 2px solid var(--dark-gold);
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 0.4s ease;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
     .social-icons a:hover {
-      background-color: var(--gold);
+      background-color: var(--dark-gold);
       color: var(--navy);
-      transform: scale(1.1);
+      box-shadow: 0 0 12px var(--dark-gold);
+      transform: scale(1.15);
     }
 
     .footer-bottom {
@@ -226,7 +283,18 @@
       .footer-container {
         flex-direction: column;
         align-items: center;
+        text-align: center;
       }
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -253,7 +321,6 @@
     <p>Explore my initiatives across economic development, policy reform, and environmental sustainability.</p>
 
     <div class="projects-grid">
-
       <article class="project-card">
         <img src="images/salify_project.jpg" alt="Salify Credit Access">
         <h3>Salify Credit Access (SCA)</h3>
@@ -285,7 +352,6 @@
           <a href="projects/economic_policy_research.html">View project →</a>
         </p>
       </article>
-
     </div>
 
     <a href="index.html" class="back-home">← Back to Home</a>
