@@ -119,6 +119,7 @@ a {
   font-weight: 600;
 }
 
+/* ===================== HERO SOCIAL ICONS ===================== */
 .hero-socials {
   position: absolute;
   left: 2rem;
@@ -131,13 +132,23 @@ a {
 }
 
 .hero-socials a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--dark-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
 .hero-socials a:hover {
-  color: #d4af37;
+  background-color: var(--navy);
+  color: var(--dark-gold);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 /* ========================== HIGHLIGHTS SECTION ========================== */
