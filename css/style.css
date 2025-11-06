@@ -1,4 +1,11 @@
 /* ========================== Global Styles ========================== */
+:root {
+  --navy: #001f3f;          /* deep navy blue */
+  --dark-gold: #b8860b;     /* rich dark gold */
+  --light-gray: #f9f9f9;
+  --muted: #555;
+}
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
