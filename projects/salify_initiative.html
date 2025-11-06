@@ -1,43 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Salify Credit Access Project - Wanjivwa Sinkala</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      color: #000;
-      background: #f9f9f9;
-      line-height: 1.6;
-    }
-    a {
-      color: #001f3f;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover {
-      color: #d4af37;
+    :root {
+      --navy: #001f3f;
+      --gold: #d4af37;
+      --light-gold: #ffcc66;
+      --white: #ffffff;
+      --gray: #f9f9f9;
+      --dark-bg: #0a0f18;
+      --dark-card: #121b29;
+      --text-light: #e6e6e6;
     }
 
-    /* Navbar */
+    html {
+      transition: background-color 0.6s ease, color 0.6s ease;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--gray);
+      color: var(--navy);
+      line-height: 1.7;
+      transition: background-color 0.6s ease, color 0.6s ease;
+    }
+
+    /* ========== DARK MODE ========== */
+    html[data-theme='dark'] body {
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+    }
+
+    html[data-theme='dark'] .navbar {
+      background-color: var(--dark-card);
+      box-shadow: 0 2px 10px rgba(255, 215, 0, 0.15);
+    }
+
+    html[data-theme='dark'] .project-detail {
+      background-color: var(--dark-card);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+    }
+
+    html[data-theme='dark'] h1 {
+      color: var(--light-gold);
+      border-color: var(--light-gold);
+    }
+
+    html[data-theme='dark'] .footer-cta {
+      background-color: #050b13;
+      color: var(--light-gold);
+    }
+
+    /* ========== NAVBAR ========== */
     .navbar {
       position: sticky;
       top: 0;
-      background: #001f3f;
-      color: #fff;
+      background: var(--navy);
+      color: var(--white);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
       z-index: 100;
+      transition: all 0.6s ease;
     }
+
     .navbar .logo {
-      color: #d4af37;
+      color: var(--gold);
       font-weight: bold;
       font-size: 1.8rem;
     }
+
     .navbar nav ul {
       list-style: none;
       display: flex;
@@ -45,70 +87,116 @@
       margin: 0;
       padding: 0;
     }
+
     .navbar nav ul li a {
-      color: #fff;
-      transition: color 0.3s;
-    }
-    .navbar nav ul li a:hover,
-    .navbar nav ul li a.active {
-      color: #d4af37;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
 
-    /* Project Detail Section */
+    .navbar nav ul li a:hover,
+    .navbar nav ul li a.active {
+      color: var(--gold);
+      text-shadow: 0 0 8px var(--gold);
+    }
+
+    /* ========== THEME TOGGLE ========== */
+    .theme-toggle {
+      cursor: pointer;
+      background: none;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: all 0.4s ease;
+      margin-left: 1rem;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--gold);
+      color: var(--navy);
+      box-shadow: 0 0 10px var(--gold);
+      transform: rotate(25deg);
+    }
+
+    /* ========== PROJECT DETAIL ========== */
     .project-detail {
       max-width: 800px;
       margin: 3em auto;
-      padding: 0 1.5em;
+      padding: 2rem;
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: all 0.6s ease;
     }
+
     .project-detail h1 {
-      font-size: 2em;
-      color: #001f3f;
+      font-family: 'Bellefair', serif;
+      font-size: 2.2em;
       margin-bottom: 1rem;
-      border-bottom: 2px solid #d4af37;
+      color: var(--navy);
+      border-bottom: 3px solid var(--gold);
       display: inline-block;
       padding-bottom: 0.3rem;
     }
+
     .project-detail p {
       font-size: 1.05em;
-      color: #444;
+      color: inherit;
       margin-bottom: 1.2rem;
     }
 
     .project-detail strong {
-      color: #001f3f;
-    }
-    .project-detail em {
-      font-style: italic;
+      color: var(--gold);
     }
 
-    /* Back Link */
     .back-home {
       display: inline-block;
       margin-top: 2rem;
       font-size: 1.1em;
-      color: #001f3f;
-    }
-    .back-home:hover {
-      color: #d4af37;
+      color: var(--navy);
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
 
-    /* Footer */
+    .back-home:hover {
+      color: var(--gold);
+      text-shadow: 0 0 8px var(--light-gold);
+      transform: translateX(-4px);
+    }
+
+    html[data-theme='dark'] .back-home:hover {
+      color: var(--light-gold);
+    }
+
+    /* ========== FOOTER ========== */
     .footer-cta {
-      background: #001f3f;
-      color: #fff;
+      background: var(--navy);
+      color: var(--white);
       text-align: center;
       padding: 2rem 1rem;
       margin-top: 3rem;
+      transition: all 0.6s ease;
     }
 
-    /* Responsive Nav Toggle (Optional) */
+    .footer-cta span {
+      font-size: 0.95em;
+    }
+
+    /* Responsive Nav */
     @media (max-width: 768px) {
       .navbar {
         flex-wrap: wrap;
       }
       .navbar nav ul {
         flex-direction: column;
-        background: #001f3f;
+        background: var(--navy);
         width: 100%;
         padding: 1rem 0;
         display: none;
@@ -119,14 +207,14 @@
       .menu-toggle {
         display: block;
         font-size: 1.8rem;
-        color: #d4af37;
+        color: var(--gold);
         cursor: pointer;
       }
     }
   </style>
 </head>
-<body>
 
+<body>
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Wanjivwa Sinkala</div>
@@ -139,28 +227,31 @@
         <li><a href="../contact.html">Contact</a></li>
       </ul>
     </nav>
+    <button id="themeToggle" class="theme-toggle" title="Toggle Theme">
+      <i class="fas fa-moon"></i>
+    </button>
   </header>
 
-  <!-- Project Detail Section -->
+  <!-- Project Detail -->
   <section class="project-detail">
     <h1>Salify Credit Access (Upcoming Initiative – 2026)</h1>
 
     <p>
-      <strong>Salify Credit Access (SCA)</strong> is an upcoming financial inclusion initiative planned for <strong>2026</strong>. 
-      Its mission is to provide individuals, SMEs, and underserved communities in Zambia with access to affordable, 
+      <strong>Salify Credit Access (SCA)</strong> is an upcoming financial inclusion initiative planned for <strong>2026</strong>.
+      Its mission is to provide individuals, SMEs, and underserved communities in Zambia with access to affordable,
       transparent, and flexible financial solutions.
     </p>
 
     <p>
-      The initiative focuses on developing <em>customer-centered loan assessment procedures</em>, implementing effective 
-      risk management frameworks, and ensuring compliance with national financial regulations. By leveraging digital 
-      platforms and innovative service delivery, SCA aims to streamline lending operations and strengthen financial 
+      The initiative focuses on developing <em>customer-centered loan assessment procedures</em>, implementing effective
+      risk management frameworks, and ensuring compliance with national financial regulations. By leveraging digital
+      platforms and innovative service delivery, SCA aims to streamline lending operations and strengthen financial
       literacy among clients.
     </p>
 
     <p>
-      Expected outcomes include expanded financial inclusion, enhanced operational efficiency, and increased opportunities 
-      for entrepreneurship and income generation. Salify Credit Access is designed to combine <strong>technology-driven innovation</strong> 
+      Expected outcomes include expanded financial inclusion, enhanced operational efficiency, and increased opportunities
+      for entrepreneurship and income generation. Salify Credit Access is designed to combine <strong>technology-driven innovation</strong>
       with <strong>responsible lending practices</strong> to contribute to Zambia’s economic growth.
     </p>
 
@@ -172,13 +263,36 @@
     <span>&copy; 2025 Wanjivwa Sinkala. All Rights Reserved.</span>
   </footer>
 
-  <!-- Mobile Toggle Script -->
+  <!-- Scripts -->
   <script>
     function toggleMenu() {
       const nav = document.getElementById('navMenu');
       nav.classList.toggle('show');
     }
-  </script>
 
+    // Theme toggle logic
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+    const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Load stored or system preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      htmlElement.setAttribute('data-theme', savedTheme);
+      themeToggle.innerHTML = savedTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    } else {
+      htmlElement.setAttribute('data-theme', userPrefersDark ? 'dark' : 'light');
+      themeToggle.innerHTML = userPrefersDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    }
+
+    // Toggle manually
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    });
+  </script>
 </body>
 </html>
