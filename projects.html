@@ -7,10 +7,228 @@
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-oQG+wlZfJdGZ+0G5l4bHyXnG2tVzRZxO+0vKw0RIKkx9MKVb7kZj2cI5H/yLd9o5O+EgfPQ0rIp7jHq5x8B1Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
   <!-- Main Styles -->
-  <link rel="stylesheet" href="css/projects.css" />
+  <style>
+    :root {
+      --navy: #0a1a2a;
+      --gold: #b8860b;
+      --light-gold: #d4af37;
+      --white: #ffffff;
+      --gray: #f4f4f4;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--gray);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background-color: var(--white);
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar .logo {
+      font-family: 'Bellefair', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: var(--navy);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      color: var(--gold);
+    }
+
+    /* SECTION TITLE */
+    .projects-section {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .projects-section h2 {
+      font-family: 'Bellefair', serif;
+      font-size: 2.4rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--gold);
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .projects-section p {
+      color: #333;
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* PROJECT CARDS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background-color: var(--white);
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-card h3 {
+      color: var(--gold);
+      margin: 1rem 0 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .project-card p {
+      padding: 0 1rem 1.5rem;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .project-card a {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .project-card a:hover {
+      color: var(--navy);
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: 3rem;
+      color: var(--gold);
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .back-home:hover {
+      color: var(--navy);
+      transform: translateX(-5px);
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: var(--navy);
+      color: var(--white);
+      padding: 3rem 2rem 1rem;
+      text-align: center;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-column h3 {
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: var(--light-gold);
+    }
+
+    /* SOCIAL ICONS */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      color: var(--gold);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease;
+      font-size: 1.1rem;
+    }
+
+    .social-icons a:hover {
+      background-color: var(--gold);
+      color: var(--navy);
+      transform: scale(1.1);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -30,51 +248,47 @@
   </header>
 
   <!-- Projects Section -->
-  <section class="projects-section auto-container">
+  <section class="projects-section">
     <h2>My Projects</h2>
-    <p>Explore my key initiatives and evaluations focused on economic development, financial inclusion, and environmental sustainability.</p>
+    <p>Explore my initiatives across economic development, policy reform, and environmental sustainability.</p>
 
     <div class="projects-grid">
 
-      <article class="project-card" tabindex="0">
+      <article class="project-card">
+        <img src="images/salify_project.jpg" alt="Salify Credit Access">
         <h3>Salify Credit Access (SCA)</h3>
-        <p>
-          Founder of a financial inclusion initiative designed to provide tailored lending solutions to individuals, SMEs, and communities, promoting equitable access to credit.
-          <br><br>
-          <a href="projects/salify_initiative.html" aria-label="View details for Salify Credit Access project">View project →</a>
+        <p>Founder of a financial inclusion initiative offering tailored lending solutions to individuals and SMEs for equitable credit access.<br><br>
+          <a href="projects/salify_initiative.html">View project →</a>
         </p>
       </article>
 
-      <article class="project-card" tabindex="0">
-        <h3>Academic Evaluation (USAID A2C Project)</h3>
-        <p>
-          Conducted a process evaluation of the USAID Alternatives to Charcoal (A2C) Project, analyzing adoption barriers and community responses to clean energy alternatives in Zambia.
-          <br><br>
-          <a href="projects/a2c_evaluation.html" aria-label="View details for USAID A2C evaluation project">View project →</a>
+      <article class="project-card">
+        <img src="images/a2c_project.jpg" alt="USAID A2C Project Evaluation">
+        <h3>USAID A2C Evaluation</h3>
+        <p>Process evaluation of the Alternatives to Charcoal (A2C) Project, analyzing adoption barriers to clean energy in Zambia.<br><br>
+          <a href="projects/a2c_evaluation.html">View project →</a>
         </p>
       </article>
 
-      <article class="project-card" tabindex="0">
+      <article class="project-card">
+        <img src="images/reforestation_project.jpg" alt="Reforestation and Conservation">
         <h3>Reforestation & Conservation</h3>
-        <p>
-          Participated in tree-planting and environmental sustainability programs with PAMZ, Standard Chartered Bank Zambia, Care International, and FNB Zambia, contributing to reforestation efforts.
-          <br><br>
-          <a href="projects/treeplanting_project.html" aria-label="View details for Reforestation and Conservation project">View project →</a>
+        <p>Participated in sustainability programs with PAMZ, Care International, and FNB Zambia, promoting reforestation and awareness.<br><br>
+          <a href="projects/treeplanting_project.html">View project →</a>
         </p>
       </article>
 
-      <article class="project-card" tabindex="0">
+      <article class="project-card">
+        <img src="images/econ_policy.jpg" alt="Economic Policy Research">
         <h3>Economic Policy Research</h3>
-        <p>
-          Engaged in academic and applied research exploring fiscal reform and policy interventions supporting inclusive economic growth in Zambia and Sub-Saharan Africa.
-          <br><br>
-          <a href="projects/economic_policy_research.html" aria-label="View details for Economic Policy Research project">View project →</a>
+        <p>Research on fiscal reforms and policy interventions supporting inclusive growth in Zambia and Sub-Saharan Africa.<br><br>
+          <a href="projects/economic_policy_research.html">View project →</a>
         </p>
       </article>
 
     </div>
 
-    <a href="index.html" class="back-home" aria-label="Back to Home Page">← Back to Home</a>
+    <a href="index.html" class="back-home">← Back to Home</a>
   </section>
 
   <!-- FOOTER -->
@@ -108,14 +322,6 @@
     </div>
     <p class="footer-bottom">© 2025 Wanjivwa Sinkala. All Rights Reserved.</p>
   </footer>
-
-  <!-- Optional Script (Mobile Menu) -->
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navMenu');
-      nav.classList.toggle('show');
-    }
-  </script>
 
 </body>
 </html>
