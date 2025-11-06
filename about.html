@@ -1,50 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Me - Wanjivwa Sinkala</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
   <style>
+    :root {
+      --navy: #0a1a2a;
+      --gold: #b8860b;
+      --light-gold: #d4af37;
+      --white: #ffffff;
+      --gray: #f4f4f4;
+      --dark-bg: #0a0f18;
+      --dark-card: #121b29;
+      --text-light: #e6e6e6;
+    }
+
+    html {
+      transition: background-color 0.6s ease, color 0.6s ease;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      color: #000;
-      background: #f9f9f9;
-      line-height: 1.6;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--gray);
+      color: var(--navy);
+      line-height: 1.7;
+      transition: background-color 0.6s ease, color 0.6s ease;
     }
 
-    a {
-      color: #001f3f;
-      text-decoration: none;
-      font-weight: 600;
+    html[data-theme='dark'] body {
+      background-color: var(--dark-bg);
+      color: var(--text-light);
     }
 
-    a:hover {
-      color: #d4af37;
-    }
-
-    /* Navbar */
+    /* NAVBAR */
     .navbar {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      color: #001f3f;
+      background-color: var(--white);
+      color: var(--navy);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #ddd;
-      z-index: 100;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      padding: 1rem 5%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all 0.6s ease;
+    }
+
+    html[data-theme='dark'] .navbar {
+      background-color: var(--dark-card);
+      color: var(--text-light);
+      box-shadow: 0 2px 10px rgba(255, 215, 0, 0.1);
     }
 
     .navbar .logo {
-      color: #001f3f;
-      font-weight: bold;
-      font-size: 1.8rem;
+      font-family: 'Bellefair', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
     }
 
-    .navbar nav ul {
+    html[data-theme='dark'] .navbar .logo {
+      color: var(--light-gold);
+    }
+
+    .navbar ul {
       list-style: none;
       display: flex;
       gap: 1.5rem;
@@ -52,17 +79,43 @@
       padding: 0;
     }
 
-    .navbar nav ul li a {
-      color: #001f3f;
-      transition: color 0.3s;
+    .navbar ul li a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
 
-    .navbar nav ul li a:hover,
-    .navbar nav ul li a.active {
-      color: #d4af37;
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      color: var(--gold);
     }
 
-    /* Video Section */
+    /* THEME TOGGLE */
+    .theme-toggle {
+      cursor: pointer;
+      background: none;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: all 0.4s ease;
+      margin-left: 1rem;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--gold);
+      color: var(--navy);
+      box-shadow: 0 0 10px var(--gold);
+      transform: rotate(25deg);
+    }
+
+    /* VIDEO SECTION */
     .video-section {
       position: relative;
       width: 100%;
@@ -88,7 +141,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #fff;
+      color: var(--white);
       background: rgba(0, 0, 0, 0.4);
       padding: 2rem;
     }
@@ -96,7 +149,8 @@
     .video-overlay h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: #d4af37;
+      color: var(--light-gold);
+      font-family: 'Bellefair', serif;
     }
 
     .video-overlay p {
@@ -104,103 +158,128 @@
       max-width: 700px;
     }
 
-    /* About Content */
+    /* ABOUT CONTENT */
     .about-content {
-      max-width: 800px;
-      margin: 3em auto;
-      padding: 0 1.5em;
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: var(--white);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: all 0.6s ease;
+    }
+
+    html[data-theme='dark'] .about-content {
+      background: var(--dark-card);
+      box-shadow: 0 0 20px rgba(184, 134, 11, 0.15);
     }
 
     .about-content h1 {
+      font-family: 'Bellefair', serif;
       font-size: 2em;
-      color: #001f3f;
+      color: var(--navy);
       margin-bottom: 1rem;
-      border-bottom: 2px solid #d4af37;
+      border-bottom: 3px solid var(--gold);
       display: inline-block;
       padding-bottom: 0.3rem;
     }
 
+    html[data-theme='dark'] .about-content h1 {
+      color: var(--light-gold);
+      border-color: var(--light-gold);
+    }
+
     .about-content h2 {
-      color: #001f3f;
+      color: var(--navy);
       margin-top: 2rem;
       font-size: 1.4rem;
     }
 
-    .about-content p {
+    html[data-theme='dark'] .about-content h2 {
+      color: var(--light-gold);
+    }
+
+    .about-content p, .about-content ul {
       font-size: 1.05em;
       color: #444;
-      margin-bottom: 1.2rem;
     }
 
-    .about-content ul {
-      padding-left: 1.5rem;
-      color: #444;
-    }
-
-    .about-content ul li {
-      margin-bottom: 0.8rem;
-    }
-
-    .about-content strong {
-      color: #001f3f;
-    }
-
-    /* Call to Action */
-    .about-actions {
-      margin-top: 2rem;
+    html[data-theme='dark'] .about-content p,
+    html[data-theme='dark'] .about-content ul {
+      color: var(--text-light);
     }
 
     .btn-contact {
       display: inline-block;
       padding: 0.6rem 1.2rem;
-      background: #001f3f;
-      color: #fff;
-      border-radius: 4px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 6px;
+      margin-top: 1.5rem;
       margin-right: 1rem;
-      transition: background 0.3s;
+      transition: all 0.4s ease;
+      font-weight: 600;
     }
 
     .btn-contact:hover {
-      background: #d4af37;
-      color: #001f3f;
+      background: var(--gold);
+      color: var(--navy);
+      box-shadow: 0 0 15px var(--gold);
     }
 
-    /* Footer */
-    .footer-cta {
-      background: #fff;
-      color: #001f3f;
+    /* FOOTER */
+    .footer {
+      background-color: var(--navy);
+      color: var(--white);
+      padding: 3rem 2rem 1rem;
       text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-      border-top: 1px solid #ddd;
-      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+      margin-top: 4rem;
+      transition: all 0.6s ease;
     }
 
-    /* Responsive */
+    .footer h3 {
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      color: var(--gold);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease;
+      font-size: 1.1rem;
+    }
+
+    .social-icons a:hover {
+      background-color: var(--gold);
+      color: var(--navy);
+      transform: scale(1.1);
+      box-shadow: 0 0 15px var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+
     @media (max-width: 768px) {
-      .navbar {
-        flex-wrap: wrap;
+      .about-content {
+        margin: 2rem 1rem;
       }
-
-      .navbar nav ul {
-        flex-direction: column;
-        background: #fff;
-        width: 100%;
-        padding: 1rem 0;
-        display: none;
-      }
-
-      .navbar nav ul.show {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-        font-size: 1.8rem;
-        color: #001f3f;
-        cursor: pointer;
-      }
-
       .video-overlay h2 {
         font-size: 1.7rem;
       }
@@ -209,13 +288,11 @@
 </head>
 
 <body>
-
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Wanjivwa Sinkala</div>
-    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
     <nav>
-      <ul id="navMenu">
+      <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../projects.html">Projects</a></li>
         <li><a href="../about.html" class="active">About Me</a></li>
@@ -223,6 +300,9 @@
         <li><a href="../contact.html">Contact</a></li>
       </ul>
     </nav>
+    <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
   </header>
 
   <!-- Video Section -->
@@ -239,7 +319,7 @@
     </div>
   </section>
 
-  <!-- About Content -->
+  <!-- About Section -->
   <section class="about-content">
     <h1>About Me</h1>
     <p>
@@ -254,26 +334,23 @@
 
     <h2>Professional Skills</h2>
     <ul>
-      <li><strong>Monitoring & Evaluation (M&E):</strong> Implementing frameworks for program effectiveness.</li>
+      <li><strong>Monitoring & Evaluation:</strong> Implementing frameworks for program effectiveness.</li>
       <li><strong>Risk Management & Compliance:</strong> Strengthening internal controls and reducing operational risks.</li>
-      <li><strong>Procurement & Operations Management:</strong> Managing vendors, logistics, and processes efficiently.</li>
-      <li><strong>Data Analysis & Reporting:</strong> Turning data into actionable development insights.</li>
+      <li><strong>Procurement & Operations:</strong> Managing vendors, logistics, and processes efficiently.</li>
+      <li><strong>Data Analysis:</strong> Turning data into actionable development insights.</li>
       <li><strong>Stakeholder Coordination:</strong> Engaging with public, private, and civil society actors.</li>
     </ul>
 
     <h2>Key Projects & Impact</h2>
     <ul>
       <li><strong>USAID A2C Evaluation:</strong> Led process evaluation for clean energy alternatives.</li>
-      <li><strong>Financial Inclusion:</strong> Expanded SME credit access and financial empowerment.</li>
-      <li><strong>Reforestation Initiatives:</strong> Worked with PAMZ, FNB, Standard Chartered on sustainability projects.</li>
-      <li><strong>Retail Operations:</strong> Optimized internal compliance at Jumbo Wholesale and Jet Supermarket.</li>
+      <li><strong>Financial Inclusion:</strong> Expanded SME credit access and empowerment.</li>
+      <li><strong>Reforestation:</strong> Worked with PAMZ, FNB, Standard Chartered on sustainability projects.</li>
+      <li><strong>Retail Operations:</strong> Enhanced compliance at Jumbo Wholesale and Jet Supermarket.</li>
     </ul>
 
     <h2>Professional Values</h2>
     <p>Accountability, transparency, and inclusive growth define my approach. I strive to promote institutional integrity and empower local communities.</p>
-
-    <h2>Beyond Work</h2>
-    <p>I actively contribute to thought leadership in economic policy, evaluation, and development strategy through writing, forums, and advocacy.</p>
 
     <div class="about-actions">
       <a href="../assets/Wanjivwa_Sinkala_CV.pdf" class="btn-contact" target="_blank">Download CV</a>
@@ -282,15 +359,41 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer-cta">
-    <span>&copy; 2025 Wanjivwa Sinkala. All Rights Reserved.</span>
+  <footer class="footer">
+    <h3>Connect with Me</h3>
+    <div class="social-icons">
+      <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.linkedin.com/in/wanjivwa-sinkala/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://x.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="mailto:sinkaladickson@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Wanjivwa Sinkala. All Rights Reserved.
+    </div>
   </footer>
 
+  <!-- Theme Script -->
   <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navMenu');
-      nav.classList.toggle('show');
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+    const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      htmlElement.setAttribute('data-theme', savedTheme);
+      themeToggle.innerHTML = savedTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    } else {
+      htmlElement.setAttribute('data-theme', userPrefersDark ? 'dark' : 'light');
+      themeToggle.innerHTML = userPrefersDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
     }
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    });
   </script>
 </body>
 </html>
