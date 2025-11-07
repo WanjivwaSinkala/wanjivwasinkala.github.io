@@ -1,12 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sustainable Development & Institutional Strengthening - Wanjivwa Sinkala</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    :root {
+      --navy: #0a1a2a;
+      --gold: #b8860b;
+      --light-gold: #d4af37;
+      --white: #ffffff;
+      --gray: #f4f4f4;
+      --dark-bg: #0a0f18;
+      --dark-card: #121b29;
+      --text-light: #e6e6e6;
+    }
+
+    html[data-theme='dark'] {
+      --navy: #0a1a2a;
+      --gold: #d4af37;
+      --light-gold: #f0c14b;
+      --white: #ffffff;
+      --gray: #0a1a2a;
+      --dark-bg: #0a0f18;
+      --dark-card: #121b29;
+      --text-light: #e6e6e6;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--gray);
+      color: var(--navy);
+      line-height: 1.7;
+      transition: background-color 0.6s ease, color 0.6s ease;
+      padding-bottom: 4rem;
+    }
+
+    html[data-theme='dark'] body {
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background-color: var(--white);
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all 0.6s ease;
+    }
+
+    html[data-theme='dark'] .navbar {
+      background-color: var(--dark-card);
+      box-shadow: 0 2px 10px rgba(255, 215, 0, 0.1);
+    }
+
+    .logo {
+      font-family: 'Bellefair', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    html[data-theme='dark'] .logo {
+      color: var(--light-gold);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: var(--gold);
+    }
+
+    /* THEME TOGGLE */
+    .theme-toggle {
+      cursor: pointer;
+      background: none;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: all 0.4s ease;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1200;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--gold);
+      color: var(--navy);
+      box-shadow: 0 0 12px var(--light-gold);
+      transform: rotate(20deg);
+    }
+
+    /* ARTICLE CONTENT */
+    .article-content {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1.5em;
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: all 0.6s ease;
+    }
+
+    html[data-theme='dark'] .article-content {
+      background: var(--dark-card);
+      box-shadow: 0 0 20px rgba(184, 134, 11, 0.15);
+    }
+
+    .article-content h1 {
+      font-family: 'Bellefair', serif;
+      font-size: 2rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--gold);
+      display: inline-block;
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.3rem;
+    }
+
+    html[data-theme='dark'] .article-content h1 {
+      color: var(--light-gold);
+      border-color: var(--light-gold);
+    }
+
+    .article-content h2 { font-size: 1.4rem; margin-top: 2rem; color: var(--navy); }
+    html[data-theme='dark'] .article-content h2 { color: var(--light-gold); }
+
+    .article-content p, .article-content li { font-size: 1.05rem; color: #444; }
+    html[data-theme='dark'] .article-content p,
+    html[data-theme='dark'] .article-content li { color: var(--text-light); }
+
+    .article-content ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+    .back-home {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .back-home:hover {
+      background: var(--gold);
+      color: var(--navy);
+      box-shadow: 0 0 10px var(--light-gold);
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: var(--navy);
+      color: var(--white);
+      padding: 3rem 2rem 1rem;
+      text-align: center;
+      margin-top: 4rem;
+      transition: all 0.6s ease;
+    }
+
+    html[data-theme='dark'] .footer { background-color: #050b13; }
+
+    .footer-bottom { font-size: 0.9rem; color: rgba(255,255,255,0.7); }
+  </style>
 </head>
 <body>
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Wanjivwa Sinkala</div>
     <nav>
@@ -19,9 +209,16 @@
     </nav>
   </header>
 
+  <!-- Theme Toggle -->
+  <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Article Content -->
   <section class="article-content">
     <h1>Sustainable Development & Institutional Strengthening</h1>
     <p>Institutional capacity is a critical driver of sustainable development. Strong institutions can implement policies effectively, manage resources responsibly, and ensure long-term social and economic impact.</p>
+
     <h2>Key Focus Areas:</h2>
     <ul>
       <li><strong>Organizational Capacity:</strong> Strengthening internal systems, processes, and human resource capabilities.</li>
@@ -29,13 +226,46 @@
       <li><strong>Partnerships & Collaboration:</strong> Leveraging partnerships to improve sustainability outcomes and resource efficiency.</li>
       <li><strong>Impact Measurement:</strong> Using monitoring and evaluation to assess performance and adjust strategies for continuous improvement.</li>
     </ul>
+
     <p>By focusing on these areas, organizations can deliver effective services, foster innovation, and drive sustainable growth in both the public and private sectors.</p>
 
     <a href="articles.html" class="back-home">← Back to Articles</a>
   </section>
 
-  <footer class="footer-cta">
-    <span>&copy; 2025 Wanjivwa Sinkala. All Rights Reserved.</span>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bottom">&copy; 2025 Wanjivwa Sinkala. All Rights Reserved.</div>
   </footer>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function applyTheme(theme) {
+      htmlElement.setAttribute('data-theme', theme);
+      themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme) {
+      applyTheme(savedTheme);
+    } else {
+      applyTheme(prefersDark.matches ? 'dark' : 'light');
+    }
+
+    prefersDark.addEventListener('change', e => {
+      if(!localStorage.getItem('theme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+
+    themeToggle.addEventListener('click', () => {
+      const current = htmlElement.getAttribute('data-theme');
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', newTheme);
+      applyTheme(newTheme);
+    });
+  </script>
 </body>
 </html>
