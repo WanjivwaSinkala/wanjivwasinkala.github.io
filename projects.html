@@ -22,34 +22,11 @@
     }
 
     /* Dark mode variables */
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --navy: #0a1a2a;
-        --text-color: #f0f0f0;
-        --bg-color: #0a1a2a;
-        --card-bg: #142b45;
-        --gray: #0a1a2a;
-      }
-      body {
-        background-color: var(--bg-color);
-        color: var(--text-color);
-      }
-      .navbar {
-        background-color: #0f243b;
-      }
-      .navbar ul li a {
-        color: var(--text-color);
-      }
-      .navbar ul li a:hover,
-      .navbar ul li a.active {
-        color: var(--dark-gold);
-      }
-      .project-card {
-        box-shadow: 0 6px 20px rgba(255,255,255,0.1);
-      }
-      .footer {
-        background-color: #081420;
-      }
+    html[data-theme='dark'] {
+      --text-color: #f0f0f0;
+      --bg-color: #0a1a2a;
+      --card-bg: #142b45;
+      --gray: #0a1a2a;
     }
 
     body {
@@ -102,6 +79,32 @@
     .navbar ul li a:hover,
     .navbar ul li a.active {
       color: var(--dark-gold);
+    }
+
+    /* THEME TOGGLE BUTTON */
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 2px solid var(--dark-gold);
+      background: none;
+      color: var(--dark-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: all 0.4s ease;
+      z-index: 1000;
+    }
+    .theme-toggle:hover {
+      background-color: var(--dark-gold);
+      color: var(--navy);
+      transform: rotate(15deg);
+      box-shadow: 0 0 12px var(--light-gold);
     }
 
     /* PROJECTS SECTION */
@@ -169,7 +172,8 @@
       transform: scale(1.05);
     }
 
-    .project-card h3 {
+    .project-card h3,
+    .project-card h2 {
       color: var(--dark-gold);
       margin: 1rem 0 0.5rem;
       font-size: 1.3rem;
@@ -212,17 +216,20 @@
       color: var(--white);
       padding: 3rem 2rem 1rem;
       text-align: center;
-      position: relative;
-      z-index: 10;
-      transition: background-color 0.4s ease;
+      transition: background-color 0.5s ease, color 0.5s ease;
     }
 
     .footer-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 3rem;
+      justify-content: space-around;
+      gap: 2rem;
       margin-bottom: 2rem;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+      min-width: 180px;
     }
 
     .footer-column h3 {
@@ -235,8 +242,10 @@
     .footer-column p,
     .footer-column a {
       color: var(--white);
-      text-decoration: none;
       font-size: 0.95rem;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.5rem;
       transition: color 0.3s ease;
     }
 
@@ -244,12 +253,11 @@
       color: var(--light-gold);
     }
 
-    /* SOCIAL ICONS */
     .social-icons {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 1rem;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
 
     .social-icons a {
@@ -261,15 +269,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.4s ease;
       font-size: 1.2rem;
+      transition: all 0.4s ease;
     }
 
     .social-icons a:hover {
       background-color: var(--dark-gold);
       color: var(--navy);
-      box-shadow: 0 0 12px var(--dark-gold);
       transform: scale(1.15);
+      box-shadow: 0 0 12px var(--dark-gold);
     }
 
     .footer-bottom {
@@ -284,6 +292,9 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+      }
+      .social-icons {
+        justify-content: center;
       }
     }
 
@@ -314,6 +325,11 @@
       </ul>
     </nav>
   </header>
+
+  <!-- Theme toggle -->
+  <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
 
   <!-- Projects Section -->
   <section class="projects-section">
@@ -360,7 +376,6 @@
   <!-- FOOTER -->
   <footer id="contact" class="footer">
     <div class="footer-container">
-
       <div class="footer-column">
         <h3>Quick Links</h3>
         <p><a href="index.html">Home</a></p>
@@ -384,10 +399,45 @@
           <a href="mailto:sinkaladickson@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
-
     </div>
-    <p class="footer-bottom">© 2025 Wanjivwa Sinkala. All Rights Reserved.</p>
+    <div class="footer-bottom">
+      <p>© 2025 Wanjivwa Sinkala. All Rights Reserved.</p>
+    </div>
   </footer>
 
+  <!-- THEME TOGGLE SCRIPT -->
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    // Set initial theme
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    function applyTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    }
+
+    if(savedTheme) {
+      applyTheme(savedTheme);
+    } else {
+      applyTheme(prefersDark.matches ? 'dark' : 'light');
+    }
+
+    // Listen for system theme changes
+    prefersDark.addEventListener('change', e => {
+      if(!localStorage.getItem('theme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+
+    // Manual toggle
+    themeToggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', newTheme);
+      applyTheme(newTheme);
+    });
+  </script>
 </body>
 </html>
