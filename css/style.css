@@ -1,7 +1,7 @@
 /* ========================== Global Styles ========================== */
 :root {
-  --navy: #001f3f;          /* deep navy blue */
-  --dark-gold: #b8860b;     /* rich dark gold */
+  --navy: #001f3f; /* deep navy blue */
+  --dark-gold: #b8860b; /* rich dark gold */
   --light-gray: #f9f9f9;
   --muted: #555;
 }
@@ -120,15 +120,18 @@ a {
   font-size: 1.2rem;
   font-weight: 600;
 }
+
 .about-section {
   padding: 80px 10%;
   background-color: #f8f9fa;
   text-align: center;
 }
+
 .about-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
+
 .about-section p {
   max-width: 800px;
   margin: 10px auto;
@@ -181,7 +184,6 @@ a {
     justify-content: center;
     padding-left: 0; /* no space needed on mobile */
   }
-
   .hero-socials {
     position: relative;
     left: auto;
@@ -191,15 +193,12 @@ a {
     transform: translateX(0);
     justify-content: center;
   }
-
   .hero-content {
     padding: 0 1rem;
   }
-
   .hero-content h1 {
     font-size: 2rem;
   }
-
   .hero-content p {
     font-size: 1rem;
   }
@@ -299,29 +298,10 @@ a {
     flex-direction: column;
     align-items: center;
   }
-
   .highlight-card {
     width: 90%;
   }
 }
-
-/* ========================== SPLIT SCREEN ABOUT CTA ========================== */
-.about-section {
-  padding: 80px 10%;
-  background-color: #f8f9fa;
-  text-align: center;
-}
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-.about-section p {
-  max-width: 800px;
-  margin: 10px auto;
-  line-height: 1.6;
-  color: #333;
-}
-
 
 /* ========================= Strategic Expertise Section ========================== */
 .highlights-section {
@@ -638,8 +618,14 @@ a {
 
 /* ========================== Animations ========================== */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ========================== Responsive ========================== */
@@ -648,29 +634,23 @@ a {
     flex-direction: column;
     text-align: center;
   }
-
   .carousel-item {
     flex-direction: column;
     position: relative;
   }
-
   .carousel-content {
     padding: 2rem;
   }
-
   .nav-buttons button {
     font-size: 2rem;
     padding: 0.3rem 0.7rem;
   }
-
   .hero-content h1 {
     font-size: 2rem;
   }
-
   .hero-content p {
     font-size: 1rem;
   }
-
   .carousel-image {
     min-height: 200px;
   }
