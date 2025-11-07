@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me - Wanjivwa Sinkala</title>
 
   <!-- Fonts & Icons -->
@@ -56,22 +56,21 @@
 
     html[data-theme='dark'] .navbar {
       background-color: var(--dark-card);
-      color: var(--text-light);
       box-shadow: 0 2px 10px rgba(255, 215, 0, 0.1);
     }
 
-    .navbar .logo {
+    .logo {
       font-family: 'Bellefair', serif;
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       font-weight: 700;
       color: var(--navy);
     }
 
-    html[data-theme='dark'] .navbar .logo {
+    html[data-theme='dark'] .logo {
       color: var(--light-gold);
     }
 
-    .navbar ul {
+    nav ul {
       list-style: none;
       display: flex;
       gap: 1.5rem;
@@ -79,40 +78,44 @@
       padding: 0;
     }
 
-    .navbar ul li a {
+    nav ul li a {
       text-decoration: none;
       color: inherit;
       font-weight: 600;
       transition: color 0.3s ease;
     }
 
-    .navbar ul li a:hover,
-    .navbar ul li a.active {
+    nav ul li a:hover,
+    nav ul li a.active {
       color: var(--gold);
     }
 
-    /* THEME TOGGLE */
+    /* THEME TOGGLE (top-right corner) */
     .theme-toggle {
       cursor: pointer;
       background: none;
       border: 2px solid var(--gold);
       color: var(--gold);
       border-radius: 50%;
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1rem;
+      font-size: 1.1rem;
       transition: all 0.4s ease;
       margin-left: 1rem;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1200;
     }
 
     .theme-toggle:hover {
       background-color: var(--gold);
       color: var(--navy);
-      box-shadow: 0 0 10px var(--gold);
-      transform: rotate(25deg);
+      box-shadow: 0 0 12px var(--light-gold);
+      transform: rotate(20deg);
     }
 
     /* VIDEO SECTION */
@@ -141,31 +144,32 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: var(--white);
-      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      background: rgba(0, 0, 0, 0.45);
       padding: 2rem;
     }
 
     .video-overlay h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 2.6rem;
       color: var(--light-gold);
       font-family: 'Bellefair', serif;
+      margin-bottom: 1rem;
     }
 
     .video-overlay p {
       font-size: 1.1rem;
-      max-width: 700px;
+      max-width: 720px;
+      margin: 0 auto;
     }
 
     /* ABOUT CONTENT */
     .about-content {
       max-width: 900px;
       margin: 4rem auto;
-      padding: 2rem;
+      padding: 0 1.5em;
       background: var(--white);
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
       transition: all 0.6s ease;
     }
 
@@ -176,12 +180,13 @@
 
     .about-content h1 {
       font-family: 'Bellefair', serif;
-      font-size: 2em;
-      color: var(--navy);
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      text-align: left;
       border-bottom: 3px solid var(--gold);
       display: inline-block;
+      margin: 2rem 0 1rem;
       padding-bottom: 0.3rem;
+      color: var(--navy);
     }
 
     html[data-theme='dark'] .about-content h1 {
@@ -190,22 +195,22 @@
     }
 
     .about-content h2 {
-      color: var(--navy);
-      margin-top: 2rem;
       font-size: 1.4rem;
+      margin-top: 2rem;
+      color: var(--navy);
     }
 
     html[data-theme='dark'] .about-content h2 {
       color: var(--light-gold);
     }
 
-    .about-content p, .about-content ul {
-      font-size: 1.05em;
+    .about-content p, .about-content li {
+      font-size: 1.05rem;
       color: #444;
     }
 
     html[data-theme='dark'] .about-content p,
-    html[data-theme='dark'] .about-content ul {
+    html[data-theme='dark'] .about-content li {
       color: var(--text-light);
     }
 
@@ -215,16 +220,15 @@
       background: var(--navy);
       color: var(--white);
       border-radius: 6px;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
       margin-right: 1rem;
-      transition: all 0.4s ease;
-      font-weight: 600;
+      transition: all 0.3s ease;
     }
 
     .btn-contact:hover {
       background: var(--gold);
       color: var(--navy);
-      box-shadow: 0 0 15px var(--gold);
+      box-shadow: 0 0 10px var(--light-gold);
     }
 
     /* FOOTER */
@@ -233,13 +237,37 @@
       color: var(--white);
       padding: 3rem 2rem 1rem;
       text-align: center;
-      margin-top: 4rem;
+      margin-top: 5rem;
       transition: all 0.6s ease;
     }
 
-    .footer h3 {
+    html[data-theme='dark'] .footer {
+      background-color: #050b13;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-column h3 {
       color: var(--gold);
       margin-bottom: 1rem;
+    }
+
+    .footer-column a,
+    .footer-column p {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: var(--light-gold);
     }
 
     .social-icons {
@@ -259,7 +287,6 @@
       align-items: center;
       justify-content: center;
       transition: all 0.4s ease;
-      font-size: 1.1rem;
     }
 
     .social-icons a:hover {
@@ -277,11 +304,9 @@
     }
 
     @media (max-width: 768px) {
-      .about-content {
-        margin: 2rem 1rem;
-      }
-      .video-overlay h2 {
-        font-size: 1.7rem;
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -295,37 +320,35 @@
       <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../projects.html">Projects</a></li>
-        <li><a href="../about.html" class="active">About Me</a></li>
+        <li><a href="../about.html" class="active">About</a></li>
         <li><a href="../articles.html">Articles</a></li>
         <li><a href="../contact.html">Contact</a></li>
       </ul>
     </nav>
-    <button id="themeToggle" class="theme-toggle" title="Toggle theme">
-      <i class="fas fa-moon"></i>
-    </button>
   </header>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
 
   <!-- Video Section -->
   <section class="video-section">
     <video autoplay muted loop playsinline poster="../images/video-fallback.jpg">
-      <source src="../videos/about-video.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
+      <source src="../videos/about-video.mp4" type="video/mp4">
     </video>
     <div class="video-overlay">
       <div>
         <h2>Shaping Impact Through Policy & Practice</h2>
-        <p>Watch a glimpse into my journey as a development economist committed to inclusive growth and sustainable transformation.</p>
+        <p>Discover my journey as a development economist fostering inclusive growth and sustainable transformation.</p>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About Content -->
   <section class="about-content">
     <h1>About Me</h1>
-    <p>
-      I am <strong>Wanjivwa Sinkala</strong>, a Zambian development economist and operations professional passionate about creating impactful solutions in both public and private sectors.
-      With over 7 years of experience, I have cultivated expertise in administration, procurement, compliance, risk management, and program evaluation.
-    </p>
+    <p>I am <strong>Wanjivwa Sinkala</strong>, a Zambian development economist and operations professional passionate about designing impactful solutions for sustainable development. With over 7 years of cross-sector experience, I bring expertise in administration, procurement, compliance, risk management, and program evaluation.</p>
 
     <h2>Education</h2>
     <p><strong>Bachelor of Arts in Development Studies with Economics</strong> – University of Zambia.</p>
@@ -334,148 +357,55 @@
 
     <h2>Professional Skills</h2>
     <ul>
-      <li><strong>Monitoring & Evaluation:</strong> Implementing frameworks for program effectiveness.</li>
-      <li><strong>Risk Management & Compliance:</strong> Strengthening internal controls and reducing operational risks.</li>
-      <li><strong>Procurement & Operations:</strong> Managing vendors, logistics, and processes efficiently.</li>
-      <li><strong>Data Analysis:</strong> Turning data into actionable development insights.</li>
-      <li><strong>Stakeholder Coordination:</strong> Engaging with public, private, and civil society actors.</li>
+      <li><strong>Monitoring & Evaluation:</strong> Designing and applying frameworks for program effectiveness.</li>
+      <li><strong>Risk Management:</strong> Strengthening institutional controls and governance systems.</li>
+      <li><strong>Procurement & Operations:</strong> Enhancing supply chain efficiency and transparency.</li>
+      <li><strong>Data Analysis:</strong> Translating data into actionable insights for policy and impact.</li>
+      <li><strong>Stakeholder Coordination:</strong> Engaging multi-sector actors for inclusive outcomes.</li>
     </ul>
 
-    <h2>Key Projects & Impact</h2>
+    <h2>Key Projects</h2>
     <ul>
-      <li><strong>USAID A2C Evaluation:</strong> Led process evaluation for clean energy alternatives.</li>
-      <li><strong>Financial Inclusion:</strong> Expanded SME credit access and empowerment.</li>
-      <li><strong>Reforestation:</strong> Worked with PAMZ, FNB, Standard Chartered on sustainability projects.</li>
-      <li><strong>Retail Operations:</strong> Enhanced compliance at Jumbo Wholesale and Jet Supermarket.</li>
+      <li><strong>USAID A2C Evaluation:</strong> Process evaluation for clean energy alternatives.</li>
+      <li><strong>Financial Inclusion:</strong> Expanded SME credit access and economic empowerment.</li>
+      <li><strong>Reforestation:</strong> Partnered with PAMZ, FNB, and Standard Chartered on green initiatives.</li>
+      <li><strong>Retail Operations:</strong> Strengthened compliance at Jumbo Wholesale and Jet Supermarket.</li>
     </ul>
 
-    <h2>Professional Values</h2>
-    <p>Accountability, transparency, and inclusive growth define my approach. I strive to promote institutional integrity and empower local communities.</p>
-
-    <div class="about-actions">
+    <div>
       <a href="../assets/Wanjivwa_Sinkala_CV.pdf" class="btn-contact" target="_blank">Download CV</a>
       <a href="../contact.html" class="btn-contact">Contact Me</a>
     </div>
   </section>
 
-  /* FOOTER */
-.footer {
-  background-color: var(--navy);
-  color: var(--white);
-  padding: 3rem 5% 1rem;
-  margin-top: 4rem;
-  transition: all 0.6s ease;
-}
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <p><a href="../index.html">Home</a></p>
+        <p><a href="../projects.html">Projects</a></p>
+        <p><a href="../articles.html">Articles</a></p>
+        <p><a href="../contact.html">Contact</a></p>
+      </div>
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:sinkalawanjivwa@gmail.com">sinkalawanjivwa@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+260966767779">+260 966 767 779</a></p>
+      </div>
+      <div class="footer-column">
+        <h3>Socials</h3>
+        <div class="social-icons">
+          <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/wanjivwa-sinkala/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          <a href="mailto:sinkaladickson@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Wanjivwa Sinkala. All Rights Reserved.</div>
+  </footer>
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 0 auto 2rem;
-}
-
-.footer-column {
-  flex: 1;
-  min-width: 250px;
-  text-align: left;
-}
-
-.footer-column h3 {
-  color: var(--gold);
-  font-family: 'Bellefair', serif;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  position: relative;
-}
-
-.footer-column h3::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background-color: var(--gold);
-  border-radius: 2px;
-}
-
-.footer-column p,
-.footer-column a {
-  color: var(--white);
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  line-height: 1.8;
-}
-
-.footer-column a:hover {
-  color: var(--light-gold);
-  text-shadow: 0 0 10px var(--gold);
-}
-
-.footer-column i {
-  color: var(--gold);
-  margin-right: 8px;
-}
-
-.social-icons {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin-top: 0.8rem;
-}
-
-.social-icons a {
-  color: var(--gold);
-  border: 2px solid var(--gold);
-  border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s ease;
-  font-size: 1.1rem;
-}
-
-.social-icons a:hover {
-  background-color: var(--gold);
-  color: var(--navy);
-  transform: scale(1.15);
-  box-shadow: 0 0 18px var(--gold);
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-top: 1rem;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
-  text-align: center;
-  width: 100%;
-}
-
-/* Responsive Layout */
-@media (max-width: 900px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-column {
-    text-align: center;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
-}
-
-  <!-- Theme Script -->
   <script>
     const themeToggle = document.getElementById('themeToggle');
     const htmlElement = document.documentElement;
