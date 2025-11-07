@@ -250,14 +250,15 @@ a {
     width: 90%;
   }
 }
-/* ========================= Strategic Expertise Section ========================= */
+
+/* ========================= Strategic Expertise Section ========================== */
 .highlights-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 60vh; /* makes it vertically centered in viewport */
+  min-height: 60vh;
   background: var(--light-gray);
   padding: 4rem 2rem;
 }
@@ -290,12 +291,12 @@ a {
   margin-top: 0.5rem;
 }
 
-/* Optional subtle hover animation on the title */
 .highlights-section h2:hover {
   transform: scale(1.02);
   transition: transform 0.3s ease;
 }
-/* ========================= Scroll Animation ========================= */
+
+/* ========================== Scroll Animation ========================== */
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
@@ -328,7 +329,7 @@ a {
   display: block;
   width: 60px;
   height: 4px;
-  background: #d4af37; /* gold accent line under the heading */
+  background: #d4af37;
   margin: 0.5rem auto 0;
   border-radius: 2px;
 }
@@ -359,15 +360,21 @@ a {
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
-/* Each Project Slide */
+/* ========================== Carousel Fade & Layout ========================== */
 .carousel-item {
-  display: none;
-  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .carousel-item.active {
-  display: flex;
+  opacity: 1;
+  position: relative;
   animation: fadeIn 0.6s ease-in-out;
 }
 
@@ -449,6 +456,8 @@ a {
   align-items: center;
   gap: 0.6rem;
   margin-top: 1.5rem;
+  position: relative;
+  z-index: 5;
 }
 
 .carousel-controls .dot {
@@ -563,6 +572,7 @@ a {
 
   .carousel-item {
     flex-direction: column;
+    position: relative;
   }
 
   .carousel-content {
@@ -580,5 +590,9 @@ a {
 
   .hero-content p {
     font-size: 1rem;
+  }
+
+  .carousel-image {
+    min-height: 200px;
   }
 }
