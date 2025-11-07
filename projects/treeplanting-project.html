@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tree Planting & Reforestation - Wanjivwa Sinkala</title>
 
@@ -34,30 +34,12 @@
       transition: background-color 0.6s ease, color 0.6s ease;
     }
 
-    /* DARK MODE VARIABLES */
-    html[data-theme='dark'] body {
-      background-color: var(--dark-bg);
-      color: var(--text-light);
-    }
-
-    html[data-theme='dark'] .navbar {
-      background-color: var(--dark-card);
-      color: var(--text-light);
-      box-shadow: 0 2px 10px rgba(255, 215, 0, 0.1);
-    }
-
-    html[data-theme='dark'] .project-detail {
-      background-color: var(--dark-card);
-      box-shadow: 0 0 20px rgba(184, 134, 11, 0.15);
-    }
-
-    html[data-theme='dark'] .footer {
-      background-color: #050b13;
-    }
-
-    html[data-theme='dark'] .footer a:hover {
-      color: var(--light-gold);
-    }
+    /* DARK MODE */
+    html[data-theme='dark'] body { background-color: var(--dark-bg); color: var(--text-light); }
+    html[data-theme='dark'] .navbar { background-color: var(--dark-card); box-shadow: 0 2px 10px rgba(255,215,0,0.1); }
+    html[data-theme='dark'] .logo { color: var(--light-gold); }
+    html[data-theme='dark'] .project-detail { background-color: var(--dark-card); box-shadow: 0 0 20px rgba(184,134,11,0.15); }
+    html[data-theme='dark'] .footer { background-color: #050b13; }
 
     /* NAVBAR */
     .navbar {
@@ -71,18 +53,14 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      transition: all 0.6s ease;
+      transition: 0.6s ease;
     }
 
-    .navbar .logo {
+    .logo {
       font-family: 'Bellefair', serif;
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       font-weight: 700;
       color: var(--navy);
-    }
-
-    html[data-theme='dark'] .navbar .logo {
-      color: var(--light-gold);
     }
 
     .navbar ul {
@@ -97,7 +75,7 @@
       text-decoration: none;
       color: inherit;
       font-weight: 600;
-      transition: color 0.3s ease;
+      transition: 0.3s;
     }
 
     .navbar ul li a:hover,
@@ -105,28 +83,31 @@
       color: var(--gold);
     }
 
-    /* TOGGLE BUTTON */
+    /* THEME TOGGLE — fixed at top right */
     .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
       cursor: pointer;
       background: none;
       border: 2px solid var(--gold);
       color: var(--gold);
       border-radius: 50%;
-      width: 38px;
-      height: 38px;
+      width: 42px;
+      height: 42px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1rem;
-      transition: all 0.4s ease;
-      margin-left: 1rem;
+      font-size: 1.2rem;
+      transition: 0.4s ease;
+      z-index: 2000;
     }
 
     .theme-toggle:hover {
       background-color: var(--gold);
       color: var(--navy);
-      box-shadow: 0 0 10px var(--gold);
-      transform: rotate(25deg);
+      transform: rotate(15deg);
+      box-shadow: 0 0 12px var(--light-gold);
     }
 
     /* PROJECT DETAIL */
@@ -137,17 +118,16 @@
       background: var(--white);
       border-radius: 15px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-      transition: all 0.6s ease;
+      transition: 0.6s ease;
     }
 
     .project-detail h1 {
       font-family: 'Bellefair', serif;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       text-align: center;
-      border-bottom: 3px solid var(--gold);
-      display: inline-block;
-      margin: 1.5rem auto;
+      margin: 1rem 0 2rem;
       padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--gold);
       color: var(--navy);
     }
 
@@ -158,17 +138,17 @@
 
     .project-detail img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
       margin: 1.5rem 0;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     .project-detail p, .project-detail ul {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.3rem;
       font-size: 1.05rem;
     }
 
-    ul {
+    .project-detail ul {
       list-style: disc;
       padding-left: 2rem;
     }
@@ -178,14 +158,15 @@
       margin-top: 2rem;
       color: var(--gold);
       font-weight: 700;
+      font-size: 1.05rem;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: 0.3s ease;
     }
 
     .back-home:hover {
       color: var(--navy);
-      transform: translateX(-5px);
-      text-shadow: 0 0 8px var(--light-gold);
+      transform: translateX(-6px);
+      text-shadow: 0 0 10px var(--light-gold);
     }
 
     html[data-theme='dark'] .back-home:hover {
@@ -199,7 +180,7 @@
       padding: 3rem 2rem 1rem;
       text-align: center;
       margin-top: 4rem;
-      transition: all 0.6s ease;
+      transition: 0.6s ease;
     }
 
     .footer-container {
@@ -218,16 +199,15 @@
     .footer-column a,
     .footer-column p {
       color: var(--white);
-      text-decoration: none;
       font-size: 0.95rem;
-      transition: color 0.3s ease;
+      text-decoration: none;
+      transition: 0.3s ease;
     }
 
     .footer-column a:hover {
       color: var(--light-gold);
     }
 
-    /* SOCIAL ICONS */
     .social-icons {
       display: flex;
       justify-content: center;
@@ -236,44 +216,37 @@
     }
 
     .social-icons a {
-      color: var(--gold);
-      border: 2px solid var(--gold);
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.4s ease;
-      font-size: 1.1rem;
-      box-shadow: 0 0 8px transparent;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      font-size: 1.2rem;
+      transition: 0.4s ease;
     }
 
     .social-icons a:hover {
       background-color: var(--gold);
       color: var(--navy);
-      transform: scale(1.1);
+      transform: scale(1.12);
       box-shadow: 0 0 15px var(--gold);
     }
 
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.2);
       padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
       font-size: 0.9rem;
-      color: rgba(255,255,255,0.7);
-    }
-
-    @media (max-width: 768px) {
-      .footer-container {
-        flex-direction: column;
-        align-items: center;
-      }
+      opacity: 0.8;
     }
   </style>
 </head>
 
 <body>
-  <!-- Navigation -->
+
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Wanjivwa Sinkala</div>
     <nav>
@@ -284,16 +257,18 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <button id="themeToggle" class="theme-toggle" title="Toggle theme">
-      <i class="fas fa-moon"></i>
-    </button>
   </header>
+
+  <!-- Manual Theme Toggle -->
+  <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
 
   <!-- Project Content -->
   <section class="project-detail">
     <h1><i class="fas fa-seedling"></i> Tree Planting & Reforestation Initiative</h1>
 
-    <img src="images/treeplanting.jpg" alt="Tree planting activity" class="project-image" />
+    <img src="images/treeplanting.jpg" alt="Tree planting activity">
 
     <p>
       As part of community and environmental conservation efforts, I contributed to a tree planting and reforestation project in collaboration with <strong>Standard Chartered Bank Zambia</strong>, <strong>PAMZ</strong>, <strong>Care International Zambia</strong>, <strong>FNB Zambia</strong>, and other partners.
@@ -357,23 +332,27 @@
     const htmlElement = document.documentElement;
     const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    // Initialize theme based on system or stored preference
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       htmlElement.setAttribute('data-theme', savedTheme);
-      themeToggle.innerHTML = savedTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      themeToggle.innerHTML = savedTheme === 'dark'
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
     } else {
       htmlElement.setAttribute('data-theme', userPrefersDark ? 'dark' : 'light');
-      themeToggle.innerHTML = userPrefersDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      themeToggle.innerHTML = userPrefersDark
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
     }
 
-    // Toggle theme manually
     themeToggle.addEventListener('click', () => {
       const currentTheme = htmlElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       htmlElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      themeToggle.innerHTML = newTheme === 'dark'
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
     });
   </script>
 
