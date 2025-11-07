@@ -585,15 +585,22 @@ a {
   padding: 0.6rem 0.9rem;
   border-radius: 50%;
   text-align: center;
-  display: none;
   cursor: pointer;
   z-index: 100;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .back-to-top:hover {
   background: var(--navy);
   color: var(--dark-gold);
+  transform: translateY(-3px);
 }
 
 /* ========================== Animations ========================== */
