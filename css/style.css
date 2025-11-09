@@ -283,27 +283,50 @@ a {
   position: relative;
 }
 
-/* ========================== STRATEGIC EXPERTISE SECTION ========================== */
-.strategic-section {
-  background: #f9fafb;
-  padding: 40px 10% 60px; /* reduced top padding from 60px to 40px */
-  color: #333;
+/* ========================== Strategic Expertise Section ========================== */
+.highlights-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  line-height: 1.8;
+  min-height: 50vh; /* reduced from 60vh to bring it closer to the next section */
+  background: var(--light-gray);
+  padding: 2rem 0.5rem 1.5rem; /* reduced bottom padding */
 }
 
-.strategic-section h2 {
+.highlights-section h2 {
   font-size: 2rem;
-  font-weight: 800;
   color: var(--navy);
-  margin-bottom: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem; /* reduced space below the title */
+  position: relative;
+  letter-spacing: 1px;
 }
 
-.strategic-section p {
-  max-width: 900px;
-  margin: 0 auto;
-  font-size: 1rem;
-  color: #444;
+.highlights-section h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: var(--dark-gold);
+  display: block;
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
+}
+
+.highlights-subtitle {
+  max-width: 800px;
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  margin-top: 0.3rem;
+  margin-bottom: 0; /* brings cards closer */
+}
+
+.highlights-section h2:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
 }
 
 
