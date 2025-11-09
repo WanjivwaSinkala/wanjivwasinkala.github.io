@@ -290,9 +290,9 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 50vh; /* reduced from 60vh to bring it closer to the next section */
+  min-height: 30vh; /* reduced from 60vh to bring it closer to the next section */
   background: var(--light-gray);
-  padding: 2rem 0.5rem 1.5rem; /* reduced bottom padding */
+  padding: 1rem 0.5rem 0.5rem; /* reduced bottom padding */
 }
 
 .highlights-section h2 {
