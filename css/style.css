@@ -283,27 +283,29 @@ a {
   position: relative;
 }
 
-/* ========================== STRATEGIC EXPERTISE ========================== */
+/* ========================== STRATEGIC EXPERTISE SECTION ========================== */
 .strategic-section {
-  background: #ffffff;
-  padding: 40px 10% 40px; /* even, balanced spacing */
+  background: #f9fafb;
+  padding: 40px 10% 60px; /* reduced top padding from 60px to 40px */
+  color: #333;
   text-align: center;
-  color: #222;
+  line-height: 1.8;
 }
 
 .strategic-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: #001f3f;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 1rem;
 }
 
 .strategic-section p {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #444;
-  max-width: 850px;
+  max-width: 900px;
   margin: 0 auto;
+  font-size: 1rem;
+  color: #444;
 }
+
 
 /* ========================== HIGHLIGHTS CARDS ========================== */
 .projects-highlights {
@@ -382,7 +384,7 @@ a {
   text-align: center;
   min-height: 60vh;
   background: var(--light-gray);
-  padding: 4rem 2rem;
+  padding: 0rem 1rem;
 }
 
 .highlights-section h2 {
