@@ -155,29 +155,24 @@ a {
 }
 
 /* ========================== ABOUT SECTION ========================== */
-.projects-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin: 3.5rem auto; /* reduce from 4rem */
-  max-width: 1100px;
-  text-align: left;
+.about-section {
+  background-color: #fff; /* ensures contrast with other sections */
+  padding: 4rem 1.5rem; /* adds breathing space on mobile */
 }
-
 
 .about-section .container {
   max-width: 1100px;
   margin: 0 auto;
 }
 
+/* Heading Styling */
 .about-section h2 {
   font-family: 'Bellefair', serif;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   color: var(--navy);
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   letter-spacing: 1px;
   position: relative;
 }
@@ -185,20 +180,50 @@ a {
 .about-section h2::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 70px;
   height: 3px;
   background-color: var(--dark-gold);
-  margin: 0.5rem auto 0;
+  margin: 0.75rem auto 0;
   border-radius: 2px;
 }
 
+/* Paragraph Styling */
 .about-section p {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.1rem;
-  margin-bottom: 1rem;
   color: #444;
   text-align: justify;
-  line-height: 1.6;
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Optional subtle fade animation when section appears */
+.about-section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
 }
 
 /* ========================= SECTION DIVIDER ========================= */
